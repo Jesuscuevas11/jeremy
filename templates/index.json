@@ -1,0 +1,1487 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_pPPkcL": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_EHyE8V": {
+          "type": "slide",
+          "settings": {
+            "caption": "Simple, Pure, and Non-GMO.",
+            "block_cap_size": 20,
+            "cap_color": "#000000",
+            "heading": "Farm Fresh, Always Organic.",
+            "heading_font_size_desktop": 50,
+            "heading_font_size_mobile": 32,
+            "heading_line_height_desktop": 1.2,
+            "heading_line_height_mobile": 1.2,
+            "subheading": "",
+            "subheading_font_size_desktop": 15,
+            "subheading_font_size_mobile": 12,
+            "subheading_line_height_desktop": 1.4,
+            "subheading_line_height_mobile": 1.4,
+            "button_label": "Shop Now",
+            "link": "shopify://collections/all",
+            "link-2": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "container_size": 600,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-2",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_jaNAAc": {
+          "type": "slide",
+          "settings": {
+            "caption": "Real Food, Zero GMO",
+            "block_cap_size": 20,
+            "cap_color": "#000000",
+            "heading": "100% Real Food.",
+            "heading_font_size_desktop": 50,
+            "heading_font_size_mobile": 32,
+            "heading_line_height_desktop": 1.2,
+            "heading_line_height_mobile": 1.2,
+            "subheading": "",
+            "subheading_font_size_desktop": 15,
+            "subheading_font_size_mobile": 12,
+            "subheading_line_height_desktop": 1.4,
+            "subheading_line_height_mobile": 1.4,
+            "button_label": "Shop Now",
+            "link": "shopify://collections/all",
+            "link-2": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "container_size": 600,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-58ff9a05-7092-43ee-84e7-6f05d1cc9431",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_EHyE8V",
+        "slide_jaNAAc"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "border_radius": 8,
+        "slide_height": "adapt_image",
+        "slider_visual": "none",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "collection_list_4RAb8F": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_bX7PeC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_zQk9rE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_LqemCL": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_matpi4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_dmcPem": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_k8BAEP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_bX7PeC",
+        "featured_collection_zQk9rE",
+        "featured_collection_LqemCL",
+        "featured_collection_matpi4",
+        "featured_collection_dmcPem",
+        "featured_collection_k8BAEP"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Shop <em>By</em> Category",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "color_scheme": "scheme-3e8c5685-5d58-4aa9-8bee-ca596e641157",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 76,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_j4qWT9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RXiFJe": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our Best Sellers</strong>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RXiFJe"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "tabs_collection_KMPX6q": {
+      "type": "tabs-collection",
+      "blocks": {
+        "tab_mN6ede": {
+          "type": "tab",
+          "settings": {
+            "heading": "Breakfast",
+            "collection": "",
+            "description": "",
+            "collection_text_alignment": "left",
+            "show_description": false,
+            "description_style": "body"
+          }
+        },
+        "tab_4JVDPe": {
+          "type": "tab",
+          "settings": {
+            "heading": "Best Seller",
+            "collection": "",
+            "description": "",
+            "collection_text_alignment": "left",
+            "show_description": false,
+            "description_style": "body"
+          }
+        },
+        "tab_BxznN9": {
+          "type": "tab",
+          "settings": {
+            "heading": "New",
+            "collection": "",
+            "description": "",
+            "collection_text_alignment": "left",
+            "show_description": false,
+            "description_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "tab_mN6ede",
+        "tab_4JVDPe",
+        "tab_BxznN9"
+      ],
+      "name": "Tabs Collection",
+      "settings": {
+        "tabs_color_scheme": "background-1",
+        "tab_font": 16,
+        "tab_font_align": "center",
+        "tab_font_mb": 14,
+        "tab_font_mb_align": "center",
+        "show_border": false,
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "image_ratio": "adapt",
+        "image_no_crop": true,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_scroll_tags": false,
+        "show_product_description": true,
+        "description_font_size": 14,
+        "description_word_limit": 11,
+        "quick_add": "standard",
+        "show_secondary_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "lumin_cards_U67tHQ": {
+      "type": "lumin-cards",
+      "blocks": {
+        "card_NtPzbR": {
+          "type": "card",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "33.3333333",
+            "medium_hide": false,
+            "grid_width_tablet": "33.3333333",
+            "small_hide": false,
+            "grid_width_mobile": "100",
+            "desktop_card_height": "auto",
+            "padding_size": 30,
+            "padding_size_mobile": 30,
+            "padding_left_mobile": 30,
+            "text_border": 0,
+            "use_video": false,
+            "media_ratio": "100%",
+            "icon_size": 100,
+            "icon_corner": 0,
+            "head": "Bread & bakery",
+            "use_body_font": false,
+            "head_size_d": 30,
+            "head_size_m": 24,
+            "margin_bottom": 15,
+            "subtitle": "<p>Baked with Love, Served with Warmth.</p>",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "Select Options",
+            "button_link": "shopify://collections/bread-bakery",
+            "show_secondary": false,
+            "desktop_content_alignment": "center",
+            "show_border": false,
+            "border_color": "#eeeeee",
+            "bg_color": "#c1c4b5",
+            "head_color": "#212121",
+            "text_color": "#212121"
+          }
+        },
+        "card_qhA76y": {
+          "type": "card",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "33.3333333",
+            "medium_hide": false,
+            "grid_width_tablet": "33.3333333",
+            "small_hide": false,
+            "grid_width_mobile": "100",
+            "desktop_card_height": "auto",
+            "padding_size": 30,
+            "padding_size_mobile": 30,
+            "padding_left_mobile": 30,
+            "text_border": 0,
+            "use_video": false,
+            "media_ratio": "100%",
+            "icon_size": 100,
+            "icon_corner": 0,
+            "head": "Organic Food",
+            "use_body_font": false,
+            "head_size_d": 30,
+            "head_size_m": 24,
+            "margin_bottom": 15,
+            "subtitle": "<p>Taste the Difference of True Organic</p>",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "Shop Now",
+            "button_link": "shopify://collections/food-1",
+            "show_secondary": false,
+            "desktop_content_alignment": "center",
+            "show_border": false,
+            "border_color": "#eeeeee",
+            "bg_color": "#d5dedd",
+            "head_color": "#212121",
+            "text_color": "#212121"
+          }
+        },
+        "card_cxEKXq": {
+          "type": "card",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "33.3333333",
+            "medium_hide": false,
+            "grid_width_tablet": "33.3333333",
+            "small_hide": false,
+            "grid_width_mobile": "100",
+            "desktop_card_height": "auto",
+            "padding_size": 30,
+            "padding_size_mobile": 30,
+            "padding_left_mobile": 30,
+            "text_border": 0,
+            "use_video": false,
+            "media_ratio": "100%",
+            "icon_size": 100,
+            "icon_corner": 0,
+            "head": "Healthy Living",
+            "use_body_font": false,
+            "head_size_d": 30,
+            "head_size_m": 24,
+            "margin_bottom": 15,
+            "subtitle": "<p>Real Food, Real Flavor, Real Organic.</p>",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "Learn More",
+            "button_link": "shopify://collections/all",
+            "show_secondary": false,
+            "desktop_content_alignment": "center",
+            "show_border": false,
+            "border_color": "#eeeeee",
+            "bg_color": "#f4e5e5",
+            "head_color": "#212121",
+            "text_color": "#212121"
+          }
+        }
+      },
+      "block_order": [
+        "card_NtPzbR",
+        "card_qhA76y",
+        "card_cxEKXq"
+      ],
+      "settings": {
+        "video_border": 14,
+        "zoom_hover": true,
+        "loading_color": "#f2f2f2",
+        "grid_gap": 18,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "lumin_grids_RCkjM8": {
+      "type": "lumin-grids",
+      "blocks": {
+        "text_a67Qn4": {
+          "type": "text",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "50",
+            "medium_hide": false,
+            "grid_width_tablet": "50",
+            "small_hide": false,
+            "show_border": false,
+            "border_color": "#f9f9f9",
+            "padding_size": 30,
+            "padding_size_mobile": 30,
+            "padding_left_mobile": 30,
+            "text_border": 0,
+            "bg_color": "#f9f9f9",
+            "icon_size": 25,
+            "icon_corner": 0,
+            "head": "Up to 50% discount",
+            "use_body_font": true,
+            "head_color": "#212121",
+            "head_size_d": 20,
+            "head_size_m": 18,
+            "margin_bottom": 10,
+            "subtitle": "<h1>Kitchen & Dining Summer Sale</h1><p>Common kitchen tasks include cutting food items to size, heating food on an open fire or on a stove...</p>",
+            "text_color": "#212121",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "Learn More",
+            "show_secondary": true,
+            "button_link": "shopify://collections/food-1",
+            "image_content_position": "middle-center",
+            "desktop_content_alignment": "left",
+            "grid-url": ""
+          }
+        },
+        "image_CcijgW": {
+          "type": "image",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "50",
+            "medium_hide": false,
+            "grid_width_tablet": "50",
+            "small_hide": false,
+            "overlay_opacity": 0,
+            "opacity_color": "#000000",
+            "opacity_color_full": false,
+            "padding_size": 30,
+            "padding_size_in": 10,
+            "text_border": 0,
+            "bg_color": "rgba(0,0,0,0)",
+            "head": "",
+            "head_color": "#212121",
+            "head_size_d": 30,
+            "head_size_m": 24,
+            "margin_bottom": 15,
+            "text": "",
+            "text_color": "#212121",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "button",
+            "button_link": "",
+            "desktop_content_alignment": "left",
+            "image_content_position": "middle-center",
+            "grid-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_a67Qn4",
+        "image_CcijgW"
+      ],
+      "settings": {
+        "video_border": 0,
+        "zoom_hover": false,
+        "loading_color": "#f2f2f2",
+        "grid_gap": 0,
+        "color_scheme": "background-2",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    },
+    "logo_scroll_mqnHAA": {
+      "type": "Logo-scroll",
+      "blocks": {
+        "image_nXXtgB": {
+          "type": "image",
+          "settings": {
+            "logo_image_width": 134
+          }
+        },
+        "image_3ThCb7": {
+          "type": "image",
+          "settings": {
+            "logo_image_width": 134
+          }
+        },
+        "image_Jr6qGf": {
+          "type": "image",
+          "settings": {
+            "logo_image_width": 134
+          }
+        },
+        "image_pC4WeF": {
+          "type": "image",
+          "settings": {
+            "logo_image_width": 134
+          }
+        }
+      },
+      "block_order": [
+        "image_nXXtgB",
+        "image_3ThCb7",
+        "image_Jr6qGf",
+        "image_pC4WeF"
+      ],
+      "name": "Brand Slider",
+      "settings": {
+        "scroll_speed": 15,
+        "color_scheme": "",
+        "fade": false,
+        "background_color": "#ffffff",
+        "announcement_head": "Featured Everywhere",
+        "announcement_head_d": 18,
+        "announcement_head_m": 15,
+        "announcement_color": "#212121",
+        "padding_desktop": 16,
+        "padding_mobile": 8,
+        "padding_item_desktop": 36,
+        "padding_item_mobile": 24,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_list_7aRUmR": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_J7BzkD": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_mW4G6M": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_WwArrC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_YGChBG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_J7BzkD",
+        "featured_collection_mW4G6M",
+        "featured_collection_WwArrC",
+        "featured_collection_YGChBG"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "lumin_multicolumns_UzAGMj": {
+      "type": "lumin-multicolumns",
+      "blocks": {
+        "column_FzQLXw": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<h2>I am absolutely in love! My skin has never felt so smooth and hydrated.<br/>\t\t\t\t\t\t\t\t\t\t    </h2><p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac velit nec metus tincidunt varius. In hac habitasse platea dictumst. Suspendisse potenti.</p><h6><strong>Sofia R. - Los Angeles</strong></h6>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_efJyUG": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<h2>I've tried countless skincare brands, but <em>Organic™</em> stands out! <br/>\t\t\t\t\t\t\t\t\t\t    </h2><p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac velit nec metus tincidunt varius. In hac habitasse platea dictumst. Suspendisse potenti.</p><h6><strong>Sofia R. - Los Angeles</strong></h6>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CTiWRw": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<h2>I started using <em>Organic™</em>, and the difference is astonishing.<br/>\t\t\t\t\t\t\t\t\t\t    </h2><p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac velit nec metus tincidunt varius. In hac habitasse platea dictumst. Suspendisse potenti.</p><h6><strong>Sofia R. - Los Angeles</strong></h6>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NUXaaE": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<h2>I started using <em>Organic™</em>, and the difference is astonishing.<br/>\t\t\t\t\t\t\t\t\t\t    </h2><p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac velit nec metus tincidunt varius. In hac habitasse platea dictumst. Suspendisse potenti.</p><h6><strong>Sofia R. - Los Angeles</strong></h6>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_i6qKNf": {
+          "type": "column",
+          "settings": {
+            "title": "★★★★★",
+            "text": "<h2>I started using <em>Organic™</em>, and the difference is astonishing.<br/>\t\t\t\t\t\t\t\t\t\t    </h2><p></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac velit nec metus tincidunt varius. In hac habitasse platea dictumst. Suspendisse potenti.</p><h6><strong>Sofia R. - Los Angeles</strong></h6>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FzQLXw",
+        "column_efJyUG",
+        "column_CTiWRw",
+        "column_NUXaaE",
+        "column_i6qKNf"
+      ],
+      "name": "Lumin Multicolumns",
+      "settings": {
+        "title": "What our customers say about us...",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_radius": 0,
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "enable_desktop_slider": true,
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "background_style": "primary",
+        "color_scheme_2": "scheme-58ff9a05-7092-43ee-84e7-6f05d1cc9431",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_with_text_overlay_EeLKCN": {
+      "type": "video-with-text-overlay",
+      "name": "Video Text Overlay",
+      "settings": {
+        "layout": "full_bleed",
+        "video_border": 0,
+        "video_height": "adapt",
+        "image_overlay_opacity": 0,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "video_content_border": 0,
+        "mobile_content_position": "middle",
+        "color_scheme": "",
+        "desktop_content_alignment": "center",
+        "heading": "",
+        "heading_size": "h1",
+        "text": "",
+        "button_label_1": "",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_Fhrxpe": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_CR3cn8": {
+          "type": "caption",
+          "settings": {
+            "caption": "OUR PRODUCT PHILOSOPHY",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "heading_8qDrmm": {
+          "type": "heading",
+          "settings": {
+            "heading": "We sustainably and ethically source — our ingredients, to create [clean and sustainable products] that are good for your skin — and good for the planet.",
+            "heading_size": "h1"
+          }
+        },
+        "text_9Y8a94": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"/collections/all\" title=\"All products\">Learn More</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "caption_CR3cn8",
+        "heading_8qDrmm",
+        "text_9Y8a94"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "lumin_slider_2_YRJYPC": {
+      "type": "lumin-slider-2",
+      "blocks": {
+        "review_image_QY9JKE": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_Fdx3FH": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_K38L8R": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_JkykMB": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_YFK6AE": {
+          "type": "review_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "review_image_QY9JKE",
+        "review_image_Fdx3FH",
+        "review_image_K38L8R",
+        "review_image_JkykMB",
+        "review_image_YFK6AE"
+      ],
+      "settings": {
+        "content_alignment": "center",
+        "layout": "0",
+        "heading": "<strong>Look At How Others Are Loving Their Product!</strong>",
+        "subheading": "Real Reviews From Real People",
+        "button_text": "CLAIM OFFER",
+        "button_link": "shopify://collections/all",
+        "rating_text": "Rated 4.8/5 by 1,319+ Happy Customers",
+        "color_scheme": "scheme-58ff9a05-7092-43ee-84e7-6f05d1cc9431",
+        "button_color": "#212121",
+        "star_color": "#000000",
+        "navigation_color": "#212121",
+        "autoplay_slider_video": false,
+        "hide_play_icon": false,
+        "modal_border": 0,
+        "modal_border_radius": 12,
+        "modal_background_color": "#ffffff",
+        "auto_play": true,
+        "show_navigation": false,
+        "scroll_speed": 4,
+        "head_size": 42,
+        "head_size_mb": 32,
+        "subhead_size": 18,
+        "subhead_size_mb": 16,
+        "review_size": 16,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "image_height": 300,
+        "image_height_mb": 200,
+        "image_custom_width": "custom",
+        "image_width": 240,
+        "image_width_mb": 160
+      }
+    },
+    "scroll_text_fEbc43": {
+      "type": "scroll-text",
+      "blocks": {
+        "text_E8QPKM": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Good Food, Grown Right</strong>",
+            "url": "",
+            "icon": "none",
+            "outline_all": false,
+            "outline_text": "scrolling",
+            "text_color": "#000000",
+            "text_size": 50,
+            "text_size_mobile": 32,
+            "text_height": 130,
+            "text_mr": 50,
+            "text_mr_mobile": 40
+          }
+        },
+        "text_dH6LXN": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Organic Living, One Bite at a Time</strong>",
+            "url": "",
+            "icon": "none",
+            "outline_all": false,
+            "outline_text": "scrolling",
+            "text_color": "#000000",
+            "text_size": 50,
+            "text_size_mobile": 32,
+            "text_height": 130,
+            "text_mr": 50,
+            "text_mr_mobile": 40
+          }
+        }
+      },
+      "block_order": [
+        "text_E8QPKM",
+        "text_dH6LXN"
+      ],
+      "name": "Scrolling text",
+      "settings": {
+        "reverse_direction": false,
+        "pause_hover": true,
+        "lazy": true,
+        "scrolling_velocity": 50,
+        "scrolling_velocity_mobile": 54,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 8,
+        "padding_bottom": 8,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0
+      }
+    },
+    "image_banner_timer_TQHmn4": {
+      "type": "image-banner-timer",
+      "blocks": {
+        "heading_cNTbbc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Flash Sale",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_AUJ3eV": {
+          "type": "text",
+          "settings": {
+            "text": "Get yours before sale ends",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "timer_cPqEj3": {
+          "type": "timer",
+          "settings": {
+            "date": "2025-12-31",
+            "timer_days": "Days",
+            "hide_days": false,
+            "timer_hrs": "Hours",
+            "timer_min": "Minutes",
+            "timer_sec": "Seconds",
+            "number_size": "medium",
+            "head_font": false,
+            "timer_color": "#ffffff",
+            "timer_color_bg": "#ffffff",
+            "tm_bg_opacity": 0.2,
+            "message": "<p>Sale is end!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cNTbbc",
+        "text_AUJ3eV",
+        "timer_cPqEj3"
+      ],
+      "name": "t:sections.image-banner.presets.name-2",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "lookbook_Kf6fYC": {
+      "type": "lookbook",
+      "blocks": {
+        "point_RdM86L": {
+          "type": "point",
+          "settings": {
+            "title": "Inclusive Options",
+            "description": "Our collection includes vegan, organic, and allergy-friendly choices, catering to diverse dietary needs.",
+            "product": "",
+            "show_image": true,
+            "show_price": true,
+            "btn_text": "View product",
+            "mobile_pos_left": 41,
+            "mobile_pos_top": 51,
+            "desktop_pos_left": 48,
+            "desktop_pos_top": 49
+          }
+        },
+        "point_KmMpxY": {
+          "type": "point",
+          "settings": {
+            "title": "High-Quality Ingredients",
+            "description": "We prioritize natural, wholesome ingredients to bring you delicious, gluten-free options without compromise.",
+            "product": "",
+            "show_image": true,
+            "show_price": true,
+            "btn_text": "View product",
+            "mobile_pos_left": 57,
+            "mobile_pos_top": 61,
+            "desktop_pos_left": 57,
+            "desktop_pos_top": 59
+          }
+        },
+        "point_tTDmWq": {
+          "type": "point",
+          "settings": {
+            "title": "High-Quality Ingredients",
+            "description": "We prioritize natural, wholesome ingredients to bring you delicious, gluten-free options without compromise.",
+            "product": "",
+            "show_image": true,
+            "show_price": true,
+            "btn_text": "View product",
+            "mobile_pos_left": 34,
+            "mobile_pos_top": 20,
+            "desktop_pos_left": 36,
+            "desktop_pos_top": 20
+          }
+        }
+      },
+      "block_order": [
+        "point_RdM86L",
+        "point_KmMpxY",
+        "point_tTDmWq"
+      ],
+      "name": "lumin - Lookbook",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#121212",
+        "container": true,
+        "container_max_width": "",
+        "header_text_align": "center",
+        "heading": "Lookbook",
+        "heading_size": "h1",
+        "description": "<h2>Explore Organic</h2>",
+        "image_border_radius": 1,
+        "point_color": "#ffffff",
+        "point_diameter": 2,
+        "tooltip_width": 260,
+        "tooltip_text_align": "center",
+        "tooltip_bg_color": "#ffffff",
+        "tooltip_color": "#121212",
+        "pt": 3,
+        "pb": 3
+      }
+    },
+    "rich_text_Ai94Jb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DeVtEd": {
+          "type": "heading",
+          "settings": {
+            "heading": "See it in action",
+            "heading_size": "h1"
+          }
+        },
+        "text_dLPQLC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DeVtEd",
+        "text_dLPQLC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 12
+      }
+    },
+    "lumin_slider_1_m7Ryf3": {
+      "type": "lumin-slider-1",
+      "blocks": {
+        "review_image_mtybAi": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_inFCEd": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_X69V94": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_hDpHrH": {
+          "type": "review_image",
+          "settings": {}
+        },
+        "review_image_bgqLCA": {
+          "type": "review_image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "review_image_mtybAi",
+        "review_image_inFCEd",
+        "review_image_X69V94",
+        "review_image_hDpHrH",
+        "review_image_bgqLCA"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "button_color": "#212121",
+        "navigation_color": "#212121",
+        "hide_play_icon": false,
+        "autoplay_slider_video": true,
+        "auto_play": "slide",
+        "show_navigation": true,
+        "show_pagination": true,
+        "scroll_speed": 3,
+        "slide_count": 5,
+        "slide_count_mb": 2,
+        "slide_count_tb": 3,
+        "custom_height": false,
+        "slide_height": 290,
+        "slide_height_mb": 210,
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "modal_border": 0,
+        "modal_border_radius": 12,
+        "modal_background_color": "#ffffff"
+      }
+    },
+    "bundle_deals_kgicFY": {
+      "type": "bundle-deals",
+      "blocks": {
+        "product_MQc9Wg": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_QFBRQJ": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "product_rLNWGi": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_MQc9Wg",
+        "product_QFBRQJ",
+        "product_rLNWGi"
+      ],
+      "name": "Bundle deals",
+      "settings": {
+        "width": "full",
+        "max_width": 1200,
+        "container_alignment": "center",
+        "heading": "Lumin Bundle deals",
+        "heading_tag": "h2",
+        "heading_size": "h1",
+        "text": "",
+        "color_scheme": "scheme-fdfdcaaf-e2a4-4d25-9bf4-98cdca1b4883",
+        "layout": "horizontal-images-left",
+        "content_alignment": "center",
+        "enable_price_changes": true,
+        "total_price_label": "Total Price:",
+        "btn_label": "Add selected to cart",
+        "bundle_deals_customisation": true,
+        "bundle_deals_compare_price_color": "#c16452",
+        "bundle_deals_background_color": "#f9f9f9",
+        "bundle_deals_padding": 20,
+        "bundle_deals_border_width": 1,
+        "bundle_deals_border_radius": 5,
+        "bundle_deals_border_color": "#eaeaea",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "before_after_HJackU": {
+      "type": "before-after",
+      "blocks": {
+        "text_BadK4B": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "heading": "Before & After",
+            "heading_tag": "h2",
+            "heading_size": 32,
+            "content": "See the stunning transformations our products deliver — real results from real customers.",
+            "text_position": "center",
+            "color": "#000000"
+          }
+        },
+        "images_PrgtTn": {
+          "type": "images",
+          "settings": {
+            "desktop_height": 500,
+            "mobile_height": 280,
+            "border_radius": 12,
+            "drag_initial_position": 50,
+            "cover": true,
+            "before_text": "Before",
+            "after_text": "After",
+            "before_after_text_position": "top",
+            "before_text_color": "#ffffff",
+            "after_text_color": "#ffffff",
+            "drag_cursor_bg": "#ffffff",
+            "drag_cursor_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "text_BadK4B",
+        "images_PrgtTn"
+      ],
+      "name": "Before & After",
+      "settings": {
+        "background_color": "#ffffff",
+        "background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_fBa8yp": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7tKMVq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Shop by lifestyle",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7tKMVq"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "testimonial_slider_7eiQkh": {
+      "type": "testimonial-slider",
+      "blocks": {
+        "icon_H738iM": {
+          "type": "icon",
+          "settings": {
+            "slide_radius": 0,
+            "link": "shopify://collections/all",
+            "show_icon": true,
+            "title": "Vegan",
+            "text": "<p>Savor the Goodness of Nature</p>"
+          }
+        },
+        "icon_TJ8qKk": {
+          "type": "icon",
+          "settings": {
+            "slide_radius": 0,
+            "link": "",
+            "show_icon": true,
+            "title": "Vegan",
+            "text": "<p>Plant base godess</p>"
+          }
+        },
+        "icon_WeTWbP": {
+          "type": "icon",
+          "settings": {
+            "slide_radius": 0,
+            "link": "",
+            "show_icon": true,
+            "title": "Keto",
+            "text": "<p>Plant base godess</p>"
+          }
+        },
+        "icon_ddCH3y": {
+          "type": "icon",
+          "settings": {
+            "slide_radius": 0,
+            "link": "",
+            "show_icon": true,
+            "title": "Vegan",
+            "text": "<p>Plant base godess</p>"
+          }
+        },
+        "icon_pE88t7": {
+          "type": "icon",
+          "settings": {
+            "slide_radius": 0,
+            "link": "",
+            "show_icon": true,
+            "title": "Vegan",
+            "text": "<p>Plant base godess</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon_H738iM",
+        "icon_TJ8qKk",
+        "icon_WeTWbP",
+        "icon_ddCH3y",
+        "icon_pE88t7"
+      ],
+      "settings": {
+        "icon_alignment": "center",
+        "icon_size": 50,
+        "per_row": 4,
+        "no_padding": false,
+        "gap": 30,
+        "show_arrows": "false",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "text_size": 80,
+        "heading_color": "#000000",
+        "text_color": "#8c8c8c",
+        "color_scheme": "",
+        "color_scheme_main": "",
+        "show_border": false,
+        "content_border_color": "rgba(0,0,0,0)",
+        "content_buttons_radius": 0,
+        "block_padding": 20,
+        "content_padding_top_bottom": 20,
+        "content_padding_left_right": 10,
+        "mobile_icon_alignment": "center",
+        "mobile_icon_size": 81,
+        "mobile_per_row": "2",
+        "base_width": 100,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "lumin_mega_iMbxrW": {
+      "type": "lumin-mega",
+      "blocks": {
+        "feature_text_Eq8kzh": {
+          "type": "feature-text",
+          "settings": {
+            "text": "<em>★★★★★</em> Excellent<strong> </strong>4.8/5 Rated",
+            "font_size": 14,
+            "text_bg": "#ffffff",
+            "italic_text": "#000000",
+            "bold_text": "#000000",
+            "border": "#eaeaea"
+          }
+        },
+        "heading_rrkeQt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Non-Stick Black Fry Pan",
+            "heading_size": "h1"
+          }
+        },
+        "caption_8Dfyzq": {
+          "type": "caption",
+          "settings": {
+            "caption": "Limited Time Offer",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "countdown_timer_VGBVGh": {
+          "type": "countdown_timer",
+          "settings": {
+            "style_option": "style_4",
+            "block_alignment": "default",
+            "block_size": 1,
+            "timezone": "-05:00 ~ (GMT-05:00) Eastern Time (US & Canada)",
+            "timer_day": "Days",
+            "hide_days": true,
+            "timer_hrs": "Hours",
+            "timer_min": "Minutes",
+            "timer_sec": "Seconds",
+            "start_month": "January",
+            "start_day": 1,
+            "start_year": "2025",
+            "start_time": "23:30:00",
+            "end_month": "December",
+            "end_day": 1,
+            "end_year": "2026",
+            "end_time": "23:30:00"
+          }
+        },
+        "text_qkGU3p": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Upgrade your everyday cooking with this premium Non-Stick Black Fry Pan. Designed for effortless performance, it features a durable non-stick coating that ensures food releases smoothly without sticking or burning – making both cooking and cleaning quick and easy.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_wBUUbh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/frying-pan",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "feature_text_Eq8kzh",
+        "heading_rrkeQt",
+        "caption_8Dfyzq",
+        "countdown_timer_VGBVGh",
+        "text_qkGU3p",
+        "button_wBUUbh"
+      ],
+      "name": "Lumin Mega Section",
+      "settings": {
+        "color_scheme_main": "scheme-58ff9a05-7092-43ee-84e7-6f05d1cc9431",
+        "full-width": false,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "scheme-58ff9a05-7092-43ee-84e7-6f05d1cc9431",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_KL9nNm": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "lumin_grids_ntXA7R": {
+      "type": "lumin-grids",
+      "blocks": {
+        "image_xnALpH": {
+          "type": "image",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "50",
+            "medium_hide": false,
+            "grid_width_tablet": "50",
+            "small_hide": false,
+            "overlay_opacity": 0,
+            "opacity_color": "#000000",
+            "opacity_color_full": false,
+            "padding_size": 60,
+            "padding_size_in": 10,
+            "text_border": 0,
+            "bg_color": "rgba(0,0,0,0)",
+            "head": "Real Food, Real Flavor",
+            "head_color": "#000000",
+            "head_size_d": 30,
+            "head_size_m": 24,
+            "margin_bottom": 15,
+            "text": "Naturally Nourishing, Truly Organic",
+            "text_color": "#000000",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "EXPLORE",
+            "button_link": "shopify://collections/all",
+            "desktop_content_alignment": "left",
+            "image_content_position": "top-left",
+            "grid-url": ""
+          }
+        },
+        "image_qpAx6Y": {
+          "type": "image",
+          "settings": {
+            "large_up_hide": false,
+            "grid_width_desktop": "50",
+            "medium_hide": false,
+            "grid_width_tablet": "50",
+            "small_hide": false,
+            "overlay_opacity": 0,
+            "opacity_color": "#000000",
+            "opacity_color_full": false,
+            "padding_size": 60,
+            "padding_size_in": 10,
+            "text_border": 0,
+            "bg_color": "rgba(0,0,0,0)",
+            "head": "Pure Nature, Pure Taste",
+            "head_color": "#000000",
+            "head_size_d": 30,
+            "head_size_m": 24,
+            "margin_bottom": 15,
+            "text": "From Our Farm to Your Table.",
+            "text_color": "#000000",
+            "text_size_d": 16,
+            "text_size_m": 14,
+            "button-text": "EXPLORE",
+            "button_link": "shopify://collections/all",
+            "desktop_content_alignment": "left",
+            "image_content_position": "top-left",
+            "grid-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xnALpH",
+        "image_qpAx6Y"
+      ],
+      "settings": {
+        "video_border": 6,
+        "zoom_hover": true,
+        "loading_color": "#f2f2f2",
+        "grid_gap": 20,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_pPPkcL",
+    "collection_list_4RAb8F",
+    "rich_text_j4qWT9",
+    "tabs_collection_KMPX6q",
+    "lumin_cards_U67tHQ",
+    "lumin_grids_RCkjM8",
+    "logo_scroll_mqnHAA",
+    "collection_list_7aRUmR",
+    "lumin_multicolumns_UzAGMj",
+    "video_with_text_overlay_EeLKCN",
+    "rich_text_Fhrxpe",
+    "lumin_slider_2_YRJYPC",
+    "scroll_text_fEbc43",
+    "image_banner_timer_TQHmn4",
+    "lookbook_Kf6fYC",
+    "rich_text_Ai94Jb",
+    "lumin_slider_1_m7Ryf3",
+    "bundle_deals_kgicFY",
+    "before_after_HJackU",
+    "rich_text_fBa8yp",
+    "testimonial_slider_7eiQkh",
+    "lumin_mega_iMbxrW",
+    "featured_blog_KL9nNm",
+    "lumin_grids_ntXA7R"
+  ]
+}
