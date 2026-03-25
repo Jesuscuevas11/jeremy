@@ -57,6 +57,26 @@
           "type": "description",
           "settings": {}
         },
+        "pb_volume_bundle_Xk9m2Q": {
+          "type": "pebblebee-volume-bundle",
+          "settings": {
+            "widget_title": "Buy More, Save More",
+            "tier1_title": "Buy 1",
+            "tier2_title": "Buy 2",
+            "tier2_subtitle": "Save 15% & free gift!",
+            "tier2_badge": "POPULAR",
+            "tier2_discount": 15,
+            "free_gift_tier2": "",
+            "tier3_title": "Buy 3",
+            "tier3_subtitle": "Get 1 Free",
+            "tier3_badge": "BEST VALUE MULTIPACK",
+            "tier3_free_gift_text": "4th unit is free!",
+            "addon_product": "",
+            "addon_text": "Add Alert Live",
+            "default_tier": "2",
+            "atc_text": "Add to Cart"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -615,6 +635,7 @@
         "review_mMj4kD",
         "title_Fnnnm3",
         "description_LmEWHn",
+        "pb_volume_bundle_Xk9m2Q",
         "price",
         "promo_Vq6wfB",
         "promo_jH4HVf",

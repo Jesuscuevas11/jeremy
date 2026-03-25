@@ -1089,6 +1089,8 @@
                   {% endif %}
               {%- when 'lumin-quantity-break' -%}
                 {% render 'lumin-product-block-quantity-break', block: block %}
+              {%- when 'pebblebee-volume-bundle' -%}
+                {% render 'pebblebee-volume-bundle', block: block, product: product %}
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -10558,6 +10560,129 @@
           "label": "Shadow Color",
           "default": "#ECECEC",
           "visible_if": "{{ block.settings.show_shadow == true }}"
+        }
+      ]
+    },
+    {
+      "type": "pebblebee-volume-bundle",
+      "name": "PB Volume Bundle",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "widget_title",
+          "label": "Widget title",
+          "default": "Buy More, Save More"
+        },
+        {
+          "type": "header",
+          "content": "Tier 1 - Single"
+        },
+        {
+          "type": "text",
+          "id": "tier1_title",
+          "label": "Tier 1 title",
+          "default": "Buy 1"
+        },
+        {
+          "type": "header",
+          "content": "Tier 2 - Double"
+        },
+        {
+          "type": "text",
+          "id": "tier2_title",
+          "label": "Tier 2 title",
+          "default": "Buy 2"
+        },
+        {
+          "type": "text",
+          "id": "tier2_subtitle",
+          "label": "Tier 2 subtitle",
+          "default": "Save 15% & free gift!"
+        },
+        {
+          "type": "text",
+          "id": "tier2_badge",
+          "label": "Tier 2 badge text",
+          "default": "POPULAR"
+        },
+        {
+          "type": "range",
+          "id": "tier2_discount",
+          "label": "Tier 2 discount %",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 15
+        },
+        {
+          "type": "product",
+          "id": "free_gift_tier2",
+          "label": "Tier 2 free gift product"
+        },
+        {
+          "type": "header",
+          "content": "Tier 3 - Triple"
+        },
+        {
+          "type": "text",
+          "id": "tier3_title",
+          "label": "Tier 3 title",
+          "default": "Buy 3"
+        },
+        {
+          "type": "text",
+          "id": "tier3_subtitle",
+          "label": "Tier 3 subtitle",
+          "default": "Get 1 Free"
+        },
+        {
+          "type": "text",
+          "id": "tier3_badge",
+          "label": "Tier 3 badge text",
+          "default": "BEST VALUE MULTIPACK"
+        },
+        {
+          "type": "text",
+          "id": "tier3_free_gift_text",
+          "label": "Tier 3 free gift label",
+          "default": "4th unit is free!"
+        },
+        {
+          "type": "header",
+          "content": "Add-on"
+        },
+        {
+          "type": "product",
+          "id": "addon_product",
+          "label": "Add-on product"
+        },
+        {
+          "type": "text",
+          "id": "addon_text",
+          "label": "Add-on link text",
+          "default": "Add Alert Live"
+        },
+        {
+          "type": "header",
+          "content": "General"
+        },
+        {
+          "type": "select",
+          "id": "default_tier",
+          "label": "Default selected tier",
+          "options": [
+            { "value": "1", "label": "Tier 1" },
+            { "value": "2", "label": "Tier 2" },
+            { "value": "3", "label": "Tier 3" }
+          ],
+          "default": "2"
+        },
+        {
+          "type": "text",
+          "id": "atc_text",
+          "label": "Add to cart text",
+          "default": "Add to Cart"
         }
       ]
     }

@@ -1,0 +1,489 @@
+{% comment %}
+  PebbeBee Volume Bundle Widget
+  Renders a "Buy More, Save More" tiered volume discount selector
+  with per-item variant selection, add-ons, and free gifts.
+
+  Settings come from block.settings in the schema.
+{% endcomment %}
+
+{{ 'pebblebee-volume-bundle.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign base_price = current_variant.price
+  assign compare_price = current_variant.compare_at_price | default: base_price
+
+  comment
+    Tier 1: Buy 1
+  endcomment
+  assign tier1_price = base_price
+  assign tier1_compare = 0
+
+  comment
+    Tier 2: Buy 2 — configurable discount
+  endcomment
+  assign tier2_discount_pct = block.settings.tier2_discount | default: 15
+  assign tier2_unit_raw = base_price | times: 100 | minus: 0 | times: 1.0
+  assign tier2_discount_amount = tier2_unit_raw | times: tier2_discount_pct | divided_by: 10000.0
+  assign tier2_unit_price = base_price | times: 1.0 | minus: 0
+  assign tier2_each_cents = 100.0 | minus: tier2_discount_pct | divided_by: 100.0 | times: base_price
+  assign tier2_total = tier2_each_cents | times: 2
+  assign tier2_compare = base_price | times: 2
+
+  comment
+    Tier 3: Buy 3 Get 1 Free (pay for 3)
+  endcomment
+  assign tier3_total = base_price | times: 3
+  assign tier3_compare = 0
+
+  comment
+    Addon product (Alert Live)
+  endcomment
+  assign addon_product = block.settings.addon_product
+  assign addon_variant = nil
+  if addon_product != blank
+    assign addon_variant = addon_product.selected_or_first_available_variant
+  endif
+
+  comment
+    Free gift product for tier 2 (Link Labels)
+  endcomment
+  assign free_gift_tier2_product = block.settings.free_gift_tier2
+
+  comment
+    Free gift for tier 3 is the same product (4th unit free)
+  endcomment
+  assign free_gift_tier3_is_same_product = true
+
+  comment
+    Default selected tier
+  endcomment
+  assign default_tier = block.settings.default_tier | default: 2
+%}
+
+<pb-volume-bundle
+  id="pb-volume-bundle-{{ block.id }}"
+  class="pb-volume-bundle quick-add-hidden"
+  {{ block.shopify_attributes }}
+>
+  {%- comment -%} Title {%- endcomment -%}
+  <div class="pb-volume-bundle__title-wrapper">
+    <div class="pb-volume-bundle__title-line"></div>
+    <div class="pb-volume-bundle__title">{{ block.settings.widget_title | default: 'Buy More, Save More' }}</div>
+    <div class="pb-volume-bundle__title-line"></div>
+  </div>
+
+  <div class="pb-volume-bundle__tiers">
+
+    {%- comment -%} ====== TIER 1: Buy 1 ====== {%- endcomment -%}
+    <div class="pb-volume-bundle__tier{% if default_tier == 1 %} is-selected{% endif %}" data-tier="1">
+      <div class="pb-volume-bundle__tier-header">
+        <div class="pb-volume-bundle__tier-left">
+          <div class="pb-volume-bundle__radio-wrapper">
+            <input type="radio" name="pb-tier-{{ block.id }}" value="1" class="pb-volume-bundle__radio-input" {% if default_tier == 1 %}checked{% endif %}>
+            <div class="pb-volume-bundle__radio-circle"></div>
+          </div>
+          <div class="pb-volume-bundle__tier-info">
+            <div class="pb-volume-bundle__tier-title-row">
+              <span class="pb-volume-bundle__tier-name">{{ block.settings.tier1_title | default: 'Buy 1' }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="pb-volume-bundle__tier-right">
+          <span class="pb-volume-bundle__discount-price">{{ tier1_price | money }}</span>
+        </div>
+      </div>
+
+      {%- comment -%} Tier 1 Body - Variant Selection {%- endcomment -%}
+      <div class="pb-volume-bundle__tier-body">
+        <div class="pb-volume-bundle__options-label">{{ product.options.first | default: 'Color' }}</div>
+        <div class="pb-volume-bundle__product-row" data-variant-id="{{ current_variant.id }}">
+          <img
+            class="pb-volume-bundle__product-image"
+            src="{{ current_variant.image | default: product.featured_image | image_url: width: 120 }}"
+            alt="{{ product.title }}"
+            width="60" height="60"
+            loading="lazy"
+          >
+          <div class="pb-volume-bundle__product-options">
+            {% for option in product.options_with_values %}
+              <div class="pb-volume-bundle__dropdown-wrapper">
+                <div class="pb-volume-bundle__dropdown-label">{{ option.name }}</div>
+                <div class="pb-volume-bundle__dropdown" data-selected-variant-id="{{ current_variant.id }}" data-option-position="{{ option.position }}">
+                  <div class="pb-volume-bundle__dropdown-selected">
+                    {% assign selected_value = current_variant.options[forloop.index0] %}
+                    {% for variant in product.variants %}
+                      {% if variant.options[forloop.parentloop.index0] == selected_value %}
+                        {% if variant.image %}
+                          <img class="pb-volume-bundle__dropdown-selected-img" src="{{ variant.image | image_url: width: 60 }}" alt="{{ selected_value }}">
+                        {% elsif variant.featured_image %}
+                          <img class="pb-volume-bundle__dropdown-selected-img" src="{{ variant.featured_image | image_url: width: 60 }}" alt="{{ selected_value }}">
+                        {% endif %}
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+                    <span class="pb-volume-bundle__dropdown-selected-text">{{ selected_value }}</span>
+                    <div class="pb-volume-bundle__dropdown-arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6.5 0 32 32" width="16" height="16"><path d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z"/></svg>
+                    </div>
+                  </div>
+                  <div class="pb-volume-bundle__dropdown-menu">
+                    {% assign seen_values = '' %}
+                    {% for variant in product.variants %}
+                      {% unless variant.available == false %}
+                        {% assign opt_val = variant.options[forloop.parentloop.index0] %}
+                        {% unless seen_values contains opt_val %}
+                          {% assign seen_values = seen_values | append: opt_val | append: '|' %}
+                          <div class="pb-volume-bundle__dropdown-option{% if opt_val == selected_value %} is-active{% endif %}"
+                            data-value="{{ opt_val }}"
+                            data-variant-id="{{ variant.id }}"
+                            data-label="{{ opt_val }}"
+                            data-img="{{ variant.image | default: product.featured_image | image_url: width: 120 }}"
+                          >
+                            {% if variant.image %}
+                              <img class="pb-volume-bundle__dropdown-option-img" src="{{ variant.image | image_url: width: 60 }}" alt="{{ opt_val }}">
+                            {% endif %}
+                            <span>{{ opt_val }}</span>
+                          </div>
+                        {% endunless %}
+                      {% endunless %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="pb-volume-bundle__qty-wrapper">
+            <div class="pb-volume-bundle__qty-label">Quantity</div>
+            <input type="number" class="pb-volume-bundle__qty-input" value="1" min="1" max="10">
+          </div>
+          <div class="pb-volume-bundle__tier-index">#1</div>
+        </div>
+      </div>
+
+      {%- comment -%} Tier 1 Add-on {%- endcomment -%}
+      {% if addon_product != blank and addon_variant != nil %}
+        <div class="pb-volume-bundle__addon" data-variant-id="{{ addon_variant.id }}" data-qty="1">
+          <label class="pb-volume-bundle__addon-checkbox-wrapper">
+            <input type="checkbox" class="pb-volume-bundle__addon-checkbox">
+            <div class="pb-volume-bundle__addon-checkmark">
+              <svg class="pb-volume-bundle__addon-checkmark-icon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </label>
+          <img class="pb-volume-bundle__addon-image" src="{{ addon_product.featured_image | image_url: width: 100 }}" alt="{{ addon_product.title }}" loading="lazy">
+          <div class="pb-volume-bundle__addon-text">
+            <a href="{{ addon_product.url }}" target="_blank">{{ block.settings.addon_text | default: addon_product.title }}</a>
+          </div>
+          <div class="pb-volume-bundle__addon-prices">
+            {% if addon_variant.compare_at_price and addon_variant.compare_at_price > addon_variant.price %}
+              <span class="pb-volume-bundle__addon-discount-price">{{ addon_variant.price | money }}</span>
+              <span class="pb-volume-bundle__addon-original-price">{{ addon_variant.compare_at_price | money }}</span>
+            {% else %}
+              <span class="pb-volume-bundle__addon-discount-price">{{ addon_variant.price | money }}</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {%- comment -%} ====== TIER 2: Buy 2 ====== {%- endcomment -%}
+    <div class="pb-volume-bundle__tier{% if default_tier == 2 %} is-selected{% endif %}" data-tier="2" data-badge="{{ block.settings.tier2_badge | default: 'POPULAR' }}">
+      <div class="pb-volume-bundle__badge">{{ block.settings.tier2_badge | default: 'POPULAR' }}</div>
+      <div class="pb-volume-bundle__tier-header">
+        <div class="pb-volume-bundle__tier-left">
+          <div class="pb-volume-bundle__radio-wrapper">
+            <input type="radio" name="pb-tier-{{ block.id }}" value="2" class="pb-volume-bundle__radio-input" {% if default_tier == 2 %}checked{% endif %}>
+            <div class="pb-volume-bundle__radio-circle"></div>
+          </div>
+          <div class="pb-volume-bundle__tier-info">
+            <div class="pb-volume-bundle__tier-title-row">
+              <span class="pb-volume-bundle__tier-name">{{ block.settings.tier2_title | default: 'Buy 2' }}</span>
+              <span class="pb-volume-bundle__tier-per-unit">{{ tier2_each_cents | money }}/each</span>
+            </div>
+            <div class="pb-volume-bundle__tier-subtitle">{{ block.settings.tier2_subtitle | default: 'Save 15% & free gift!' }}</div>
+          </div>
+        </div>
+        <div class="pb-volume-bundle__tier-right">
+          <span class="pb-volume-bundle__discount-price">{{ tier2_total | money }}</span>
+          {% if tier2_compare > tier2_total %}
+            <span class="pb-volume-bundle__original-price">{{ tier2_compare | money }}</span>
+          {% endif %}
+        </div>
+      </div>
+
+      {%- comment -%} Tier 2 Body - 2 product rows {%- endcomment -%}
+      <div class="pb-volume-bundle__tier-body">
+        <div class="pb-volume-bundle__options-label">{{ product.options.first | default: 'Color' }}</div>
+
+        {% for item_num in (1..2) %}
+          <div class="pb-volume-bundle__product-row" data-variant-id="{{ current_variant.id }}">
+            <img
+              class="pb-volume-bundle__product-image"
+              src="{{ current_variant.image | default: product.featured_image | image_url: width: 120 }}"
+              alt="{{ product.title }}"
+              width="60" height="60"
+              loading="lazy"
+            >
+            <div class="pb-volume-bundle__product-options">
+              {% for option in product.options_with_values %}
+                <div class="pb-volume-bundle__dropdown-wrapper">
+                  <div class="pb-volume-bundle__dropdown-label">{{ option.name }}</div>
+                  <div class="pb-volume-bundle__dropdown" data-selected-variant-id="{{ current_variant.id }}" data-option-position="{{ option.position }}">
+                    <div class="pb-volume-bundle__dropdown-selected">
+                      {% assign selected_value = current_variant.options[forloop.index0] %}
+                      {% for variant in product.variants %}
+                        {% if variant.options[forloop.parentloop.index0] == selected_value %}
+                          {% if variant.image %}
+                            <img class="pb-volume-bundle__dropdown-selected-img" src="{{ variant.image | image_url: width: 60 }}" alt="{{ selected_value }}">
+                          {% elsif variant.featured_image %}
+                            <img class="pb-volume-bundle__dropdown-selected-img" src="{{ variant.featured_image | image_url: width: 60 }}" alt="{{ selected_value }}">
+                          {% endif %}
+                          {% break %}
+                        {% endif %}
+                      {% endfor %}
+                      <span class="pb-volume-bundle__dropdown-selected-text">{{ selected_value }}</span>
+                      <div class="pb-volume-bundle__dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6.5 0 32 32" width="16" height="16"><path d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z"/></svg>
+                      </div>
+                    </div>
+                    <div class="pb-volume-bundle__dropdown-menu">
+                      {% assign seen_values = '' %}
+                      {% for variant in product.variants %}
+                        {% unless variant.available == false %}
+                          {% assign opt_val = variant.options[forloop.parentloop.index0] %}
+                          {% unless seen_values contains opt_val %}
+                            {% assign seen_values = seen_values | append: opt_val | append: '|' %}
+                            <div class="pb-volume-bundle__dropdown-option{% if opt_val == selected_value %} is-active{% endif %}"
+                              data-value="{{ opt_val }}"
+                              data-variant-id="{{ variant.id }}"
+                              data-label="{{ opt_val }}"
+                              data-img="{{ variant.image | default: product.featured_image | image_url: width: 120 }}"
+                            >
+                              {% if variant.image %}
+                                <img class="pb-volume-bundle__dropdown-option-img" src="{{ variant.image | image_url: width: 60 }}" alt="{{ opt_val }}">
+                              {% endif %}
+                              <span>{{ opt_val }}</span>
+                            </div>
+                          {% endunless %}
+                        {% endunless %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="pb-volume-bundle__qty-wrapper">
+              <div class="pb-volume-bundle__qty-label">Quantity</div>
+              <input type="number" class="pb-volume-bundle__qty-input" value="1" min="1" max="10">
+            </div>
+            <div class="pb-volume-bundle__tier-index">#{{ item_num }}</div>
+          </div>
+        {% endfor %}
+      </div>
+
+      {%- comment -%} Tier 2 Add-on {%- endcomment -%}
+      {% if addon_product != blank and addon_variant != nil %}
+        {% assign addon_qty_tier2 = 2 %}
+        {% assign addon_total_tier2 = addon_variant.price | times: addon_qty_tier2 %}
+        {% assign addon_compare_tier2 = addon_variant.compare_at_price | default: addon_variant.price | times: addon_qty_tier2 %}
+        <div class="pb-volume-bundle__addon" data-variant-id="{{ addon_variant.id }}" data-qty="{{ addon_qty_tier2 }}">
+          <label class="pb-volume-bundle__addon-checkbox-wrapper">
+            <input type="checkbox" class="pb-volume-bundle__addon-checkbox">
+            <div class="pb-volume-bundle__addon-checkmark">
+              <svg class="pb-volume-bundle__addon-checkmark-icon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </label>
+          <img class="pb-volume-bundle__addon-image" src="{{ addon_product.featured_image | image_url: width: 100 }}" alt="{{ addon_product.title }}" loading="lazy">
+          <div class="pb-volume-bundle__addon-text">
+            <a href="{{ addon_product.url }}" target="_blank">{{ block.settings.addon_text | default: addon_product.title }}</a>
+          </div>
+          <div class="pb-volume-bundle__addon-prices">
+            {% if addon_compare_tier2 > addon_total_tier2 %}
+              <span class="pb-volume-bundle__addon-discount-price">{{ addon_total_tier2 | money }}</span>
+              <span class="pb-volume-bundle__addon-original-price">{{ addon_compare_tier2 | money }}</span>
+            {% else %}
+              <span class="pb-volume-bundle__addon-discount-price">{{ addon_total_tier2 | money }}</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      {%- comment -%} Tier 2 Free Gift {%- endcomment -%}
+      {% if free_gift_tier2_product != blank %}
+        {% assign fg2_variant = free_gift_tier2_product.selected_or_first_available_variant %}
+        <div class="pb-volume-bundle__free-gift-collapsed">
+          <img class="pb-volume-bundle__free-gift-collapsed-img" src="{{ free_gift_tier2_product.featured_image | image_url: width: 80 }}" alt="{{ free_gift_tier2_product.title }}" loading="lazy">
+          <span class="pb-volume-bundle__free-gift-label">FREE with purchase</span>
+        </div>
+        <div class="pb-volume-bundle__free-gift-expanded" data-variant-id="{{ fg2_variant.id }}">
+          <div class="pb-volume-bundle__free-gift-left">
+            <img class="pb-volume-bundle__free-gift-img" src="{{ free_gift_tier2_product.featured_image | image_url: width: 100 }}" alt="{{ free_gift_tier2_product.title }}" loading="lazy">
+            <span class="pb-volume-bundle__free-gift-name">{{ free_gift_tier2_product.title }}</span>
+          </div>
+          <span class="pb-volume-bundle__free-gift-price">{{ fg2_variant.price | money }}</span>
+        </div>
+      {% endif %}
+    </div>
+
+    {%- comment -%} ====== TIER 3: Buy 3 Get 1 Free ====== {%- endcomment -%}
+    <div class="pb-volume-bundle__tier{% if default_tier == 3 %} is-selected{% endif %}" data-tier="3" data-badge="{{ block.settings.tier3_badge | default: 'BEST VALUE MULTIPACK' }}">
+      <div class="pb-volume-bundle__badge">{{ block.settings.tier3_badge | default: 'BEST VALUE MULTIPACK' }}</div>
+      <div class="pb-volume-bundle__tier-header">
+        <div class="pb-volume-bundle__tier-left">
+          <div class="pb-volume-bundle__radio-wrapper">
+            <input type="radio" name="pb-tier-{{ block.id }}" value="3" class="pb-volume-bundle__radio-input" {% if default_tier == 3 %}checked{% endif %}>
+            <div class="pb-volume-bundle__radio-circle"></div>
+          </div>
+          <div class="pb-volume-bundle__tier-info">
+            <div class="pb-volume-bundle__tier-title-row">
+              <span class="pb-volume-bundle__tier-name">{{ block.settings.tier3_title | default: 'Buy 3' }}</span>
+            </div>
+            <div class="pb-volume-bundle__tier-subtitle">{{ block.settings.tier3_subtitle | default: 'Get 1 Free' }}</div>
+          </div>
+        </div>
+        <div class="pb-volume-bundle__tier-right">
+          <span class="pb-volume-bundle__discount-price">{{ tier3_total | money }}</span>
+        </div>
+      </div>
+
+      {%- comment -%} Tier 3 Body - 3 product rows {%- endcomment -%}
+      <div class="pb-volume-bundle__tier-body">
+        <div class="pb-volume-bundle__options-label">{{ product.options.first | default: 'Color' }}</div>
+
+        {% for item_num in (1..3) %}
+          <div class="pb-volume-bundle__product-row" data-variant-id="{{ current_variant.id }}">
+            <img
+              class="pb-volume-bundle__product-image"
+              src="{{ current_variant.image | default: product.featured_image | image_url: width: 120 }}"
+              alt="{{ product.title }}"
+              width="60" height="60"
+              loading="lazy"
+            >
+            <div class="pb-volume-bundle__product-options">
+              {% for option in product.options_with_values %}
+                <div class="pb-volume-bundle__dropdown-wrapper">
+                  <div class="pb-volume-bundle__dropdown-label">{{ option.name }}</div>
+                  <div class="pb-volume-bundle__dropdown" data-selected-variant-id="{{ current_variant.id }}" data-option-position="{{ option.position }}">
+                    <div class="pb-volume-bundle__dropdown-selected">
+                      {% assign selected_value = current_variant.options[forloop.index0] %}
+                      {% for variant in product.variants %}
+                        {% if variant.options[forloop.parentloop.index0] == selected_value %}
+                          {% if variant.image %}
+                            <img class="pb-volume-bundle__dropdown-selected-img" src="{{ variant.image | image_url: width: 60 }}" alt="{{ selected_value }}">
+                          {% elsif variant.featured_image %}
+                            <img class="pb-volume-bundle__dropdown-selected-img" src="{{ variant.featured_image | image_url: width: 60 }}" alt="{{ selected_value }}">
+                          {% endif %}
+                          {% break %}
+                        {% endif %}
+                      {% endfor %}
+                      <span class="pb-volume-bundle__dropdown-selected-text">{{ selected_value }}</span>
+                      <div class="pb-volume-bundle__dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6.5 0 32 32" width="16" height="16"><path d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z"/></svg>
+                      </div>
+                    </div>
+                    <div class="pb-volume-bundle__dropdown-menu">
+                      {% assign seen_values = '' %}
+                      {% for variant in product.variants %}
+                        {% unless variant.available == false %}
+                          {% assign opt_val = variant.options[forloop.parentloop.index0] %}
+                          {% unless seen_values contains opt_val %}
+                            {% assign seen_values = seen_values | append: opt_val | append: '|' %}
+                            <div class="pb-volume-bundle__dropdown-option{% if opt_val == selected_value %} is-active{% endif %}"
+                              data-value="{{ opt_val }}"
+                              data-variant-id="{{ variant.id }}"
+                              data-label="{{ opt_val }}"
+                              data-img="{{ variant.image | default: product.featured_image | image_url: width: 120 }}"
+                            >
+                              {% if variant.image %}
+                                <img class="pb-volume-bundle__dropdown-option-img" src="{{ variant.image | image_url: width: 60 }}" alt="{{ opt_val }}">
+                              {% endif %}
+                              <span>{{ opt_val }}</span>
+                            </div>
+                          {% endunless %}
+                        {% endunless %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="pb-volume-bundle__qty-wrapper">
+              <div class="pb-volume-bundle__qty-label">Quantity</div>
+              <input type="number" class="pb-volume-bundle__qty-input" value="1" min="1" max="10">
+            </div>
+            <div class="pb-volume-bundle__tier-index">#{{ item_num }}</div>
+          </div>
+        {% endfor %}
+      </div>
+
+      {%- comment -%} Tier 3 Add-on {%- endcomment -%}
+      {% if addon_product != blank and addon_variant != nil %}
+        {% assign addon_qty_tier3 = 3 %}
+        {% assign addon_total_tier3 = addon_variant.price | times: addon_qty_tier3 %}
+        {% assign addon_compare_tier3 = addon_variant.compare_at_price | default: addon_variant.price | times: addon_qty_tier3 %}
+        <div class="pb-volume-bundle__addon" data-variant-id="{{ addon_variant.id }}" data-qty="{{ addon_qty_tier3 }}">
+          <label class="pb-volume-bundle__addon-checkbox-wrapper">
+            <input type="checkbox" class="pb-volume-bundle__addon-checkbox">
+            <div class="pb-volume-bundle__addon-checkmark">
+              <svg class="pb-volume-bundle__addon-checkmark-icon" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6L5 9L10 3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </label>
+          <img class="pb-volume-bundle__addon-image" src="{{ addon_product.featured_image | image_url: width: 100 }}" alt="{{ addon_product.title }}" loading="lazy">
+          <div class="pb-volume-bundle__addon-text">
+            <a href="{{ addon_product.url }}" target="_blank">{{ block.settings.addon_text | default: addon_product.title }}</a>
+          </div>
+          <div class="pb-volume-bundle__addon-prices">
+            {% if addon_compare_tier3 > addon_total_tier3 %}
+              <span class="pb-volume-bundle__addon-discount-price">{{ addon_total_tier3 | money }}</span>
+              <span class="pb-volume-bundle__addon-original-price">{{ addon_compare_tier3 | money }}</span>
+            {% else %}
+              <span class="pb-volume-bundle__addon-discount-price">{{ addon_total_tier3 | money }}</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+      {%- comment -%} Tier 3 Free Gift (4th unit of same product) {%- endcomment -%}
+      <div class="pb-volume-bundle__free-gift-collapsed">
+        <img class="pb-volume-bundle__free-gift-collapsed-img" src="{{ product.featured_image | image_url: width: 80 }}" alt="{{ product.title }}" loading="lazy">
+        <span class="pb-volume-bundle__free-gift-label">FREE with purchase</span>
+      </div>
+      <div class="pb-volume-bundle__free-gift-expanded" data-variant-id="{{ current_variant.id }}">
+        <div class="pb-volume-bundle__free-gift-left">
+          <img class="pb-volume-bundle__free-gift-img" src="{{ product.featured_image | image_url: width: 100 }}" alt="{{ product.title }}" loading="lazy">
+          <span class="pb-volume-bundle__free-gift-name">{{ block.settings.tier3_free_gift_text | default: '4th unit is free!' }}</span>
+          {% if product.variants.size > 1 %}
+            <select class="pb-volume-bundle__free-gift-select" title="{{ current_variant.title }}">
+              {% for variant in product.variants %}
+                {% if variant.available %}
+                  <option value="{{ variant.id }}" {% if variant.id == current_variant.id %}selected{% endif %}>
+                    {{ variant.title }}
+                  </option>
+                {% endif %}
+              {% endfor %}
+            </select>
+          {% endif %}
+        </div>
+        <span class="pb-volume-bundle__free-gift-price">{{ base_price | money }}</span>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} Error {%- endcomment -%}
+  <div class="pb-volume-bundle__error"></div>
+
+  {%- comment -%} Add to Cart {%- endcomment -%}
+  <div class="pb-volume-bundle__atc-wrapper">
+    <button type="button" class="pb-volume-bundle__atc-btn">
+      {{ block.settings.atc_text | default: 'Add to Cart' }}
+    </button>
+  </div>
+</pb-volume-bundle>
+
+<script src="{{ 'pebblebee-volume-bundle.js' | asset_url }}" defer="defer"></script>
