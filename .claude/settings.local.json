@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:pebblebee.com)",
-      "WebFetch(domain:cdn.judge.me)"
+      "WebFetch(domain:cdn.judge.me)",
+      "Bash(curl -s \"https://pebblebee.com/cdn/shop/t/106/assets/base.css\")",
+      "Bash(tr '}' '\\\\n')",
+      "Bash(curl -s \"https://pebblebee.com/cdn/shop/t/106/assets/section-main-product.css\")"
     ]
   }
 }
