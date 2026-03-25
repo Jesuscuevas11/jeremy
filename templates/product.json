@@ -38,6 +38,10 @@
             "title_font_weight": 700
           }
         },
+        "description_LmEWHn": {
+          "type": "description",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -124,6 +128,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
+            "hide_sold_out_variants": true,
             "label_style": "body",
             "font_size": 14,
             "font_style": "normal",
@@ -179,6 +184,7 @@
             "selected_collection": "",
             "selected": false,
             "hide_variant": false,
+            "hide_sold_out_variants": true,
             "compare_price_type": "original",
             "discount_type": "percentage",
             "discount": 0,
@@ -265,6 +271,7 @@
             "selected_collection": "",
             "selected": true,
             "hide_variant": false,
+            "hide_sold_out_variants": true,
             "compare_price_type": "original",
             "discount_type": "percentage",
             "discount": 10,
@@ -351,6 +358,7 @@
             "selected_collection": "",
             "selected": false,
             "hide_variant": false,
+            "hide_sold_out_variants": true,
             "compare_price_type": "original",
             "discount_type": "percentage",
             "discount": 20,
@@ -535,7 +543,6 @@
           "settings": {
             "alignment": "center",
             "show_icon": true,
-            "icon": "shopify://shop_images/circle-wavy-check-thin-svgrepo-com.svg",
             "icon_size": 90,
             "heading": "100% Money <strong>Back</strong>!!",
             "heading_size": 16,
@@ -586,15 +593,12 @@
             "description": "<p>Save up to 50% with one click!</p>",
             "description_font_size": "fs-sm"
           }
-        },
-        "description_LmEWHn": {
-          "type": "description",
-          "settings": {}
         }
       },
       "block_order": [
         "review_mMj4kD",
         "title_Fnnnm3",
+        "description_LmEWHn",
         "price",
         "promo_Vq6wfB",
         "promo_jH4HVf",
@@ -614,8 +618,7 @@
         "feature_VLqeyQ",
         "collapsible_tab_ptCdTk",
         "collapsible_tab_EBKNVc",
-        "lumin_cross_sells_PdKwRH",
-        "description_LmEWHn"
+        "lumin_cross_sells_PdKwRH"
       ],
       "custom_css": [],
       "settings": {
@@ -636,6 +639,8 @@
         "image_zoom": "lightbox",
         "hide_variants": false,
         "enable_video_looping": true,
+        "enable_video_autoplay": true,
+        "enable_video_controls": false,
         "variant_image_filtering": "none",
         "filtering_products": [],
         "mobile_thumbnails": "show",
@@ -1177,6 +1182,7 @@
         "link": "",
         "button_style_secondary": false,
         "layout": "table_second",
+        "content_center": "left",
         "color_scheme": "background-2",
         "logo_width": 90,
         "mobile_logo_width": 60,
