@@ -79,6 +79,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "hide_tax_shipping": true,
             "reverse_price": false,
@@ -102,6 +103,7 @@
         },
         "promo_Vq6wfB": {
           "type": "promo",
+          "disabled": true,
           "settings": {
             "icon": "lock",
             "icon_width": 20,
@@ -111,6 +113,7 @@
         },
         "promo_jH4HVf": {
           "type": "promo",
+          "disabled": true,
           "settings": {
             "icon": "truck",
             "icon_width": 20,
@@ -120,6 +123,7 @@
         },
         "promo_Bx3tTb": {
           "type": "promo",
+          "disabled": true,
           "settings": {
             "icon": "chat_bubble",
             "icon_width": 20,
@@ -129,6 +133,7 @@
         },
         "promo_CpVHfJ": {
           "type": "promo",
+          "disabled": true,
           "settings": {
             "icon": "plant",
             "icon_width": 20,
@@ -138,6 +143,7 @@
         },
         "fomo_WcGAVR": {
           "type": "fomo",
+          "disabled": true,
           "settings": {
             "fomo_text_before": "Hurry! (x) are viewing this!",
             "fomo_text_alignment": "left",
@@ -161,6 +167,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "hide_sold_out_variants": true,
@@ -181,6 +188,7 @@
         },
         "inventory_4fpVhP": {
           "type": "inventory",
+          "disabled": true,
           "settings": {
             "text_style": "body",
             "bar_font_size": 13,
@@ -473,6 +481,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true,
@@ -494,6 +503,7 @@
         },
         "testimonial_images_tt4rXz": {
           "type": "testimonial-images",
+          "disabled": true,
           "settings": {
             "image_size": 1,
             "image_space": -11,
@@ -509,6 +519,7 @@
         },
         "order_timeline_9VkjVk": {
           "type": "order_timeline",
+          "disabled": true,
           "settings": {
             "timeline_color_scheme": "background-2",
             "order_within_label": "Order within",
@@ -529,6 +540,7 @@
         },
         "shipping_CGrYT3": {
           "type": "shipping",
+          "disabled": true,
           "settings": {
             "ship_days": 2,
             "skip_saturday": true,
@@ -555,6 +567,7 @@
         },
         "usp_rbUihm": {
           "type": "usp",
+          "disabled": true,
           "settings": {
             "usp_1_text": "Fresh Food",
             "usp_1_icon": "serving_dish",
@@ -575,6 +588,7 @@
         },
         "feature_VLqeyQ": {
           "type": "feature",
+          "disabled": true,
           "settings": {
             "alignment": "center",
             "show_icon": true,
@@ -754,6 +768,7 @@
         "announcement_4TqTFB",
         "announcement_aAtQdC"
       ],
+      "disabled": true,
       "name": "t:sections.announcement-bar.presets.name-scrolling",
       "settings": {
         "background_color": "#ffffff",
