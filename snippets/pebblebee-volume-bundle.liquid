@@ -480,8 +480,9 @@
 
   {%- comment -%} Add to Cart {%- endcomment -%}
   <div class="pb-volume-bundle__atc-wrapper">
-    <button type="button" class="pb-volume-bundle__atc-btn">
-      {{ block.settings.atc_text | default: 'Add to Cart' }}
+    <button type="button" class="pb-volume-bundle__atc-btn product-form__submit button button--full-width button--primary">
+      <span>{{ block.settings.atc_text | default: 'Add to Cart' }}</span>
+      {%- render 'loading-spinner' -%}
     </button>
   </div>
 </pb-volume-bundle>

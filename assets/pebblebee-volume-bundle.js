@@ -1,6 +1,7 @@
 /**
  * PebbeBee Volume Bundle Widget
  * Handles tier selection, variant dropdowns, quantity, and add-to-cart
+ * Integrates with the theme's cart drawer / cart notification system.
  */
 (function () {
   'use strict';
@@ -15,23 +16,30 @@
     connectedCallback() {
       this.tiers = Array.from(this.querySelectorAll('.pb-volume-bundle__tier'));
       this.atcBtn = this.querySelector('.pb-volume-bundle__atc-btn');
+      this.atcBtnText = this.atcBtn ? this.atcBtn.querySelector('span') : null;
+      this.spinner = this.atcBtn ? this.atcBtn.querySelector('.loading__spinner') : null;
       this.errorEl = this.querySelector('.pb-volume-bundle__error');
+
+      // Cart element — same reference product-form.js uses
+      this.cart =
+        document.querySelector('cart-notification') ||
+        document.querySelector('cart-drawer');
 
       this.initTierSelection();
       this.initDropdowns();
       this.initAddToCart();
 
-      // Select default tier
+      // Mark pre-selected tier
       const defaultTier = this.querySelector('.pb-volume-bundle__tier.is-selected');
       if (defaultTier) {
         this.selectedTierIndex = this.tiers.indexOf(defaultTier);
       }
     }
 
+    /* ── Tier selection ───────────────────────────────────────── */
     initTierSelection() {
       this.tiers.forEach((tier, index) => {
         tier.addEventListener('click', (e) => {
-          // Don't switch tier when clicking dropdowns, inputs, checkboxes, selects, or addon areas
           if (
             e.target.closest('.pb-volume-bundle__dropdown') ||
             e.target.closest('.pb-volume-bundle__qty-input') ||
@@ -40,9 +48,7 @@
             e.target.tagName === 'INPUT' ||
             e.target.tagName === 'SELECT' ||
             e.target.tagName === 'A'
-          ) {
-            return;
-          }
+          ) return;
           this.selectTier(index);
         });
       });
@@ -63,61 +69,44 @@
       this.hideError();
     }
 
+    /* ── Dropdowns ────────────────────────────────────────────── */
     initDropdowns() {
-      const dropdowns = this.querySelectorAll('.pb-volume-bundle__dropdown');
-
-      dropdowns.forEach((dropdown) => {
+      this.querySelectorAll('.pb-volume-bundle__dropdown').forEach((dropdown) => {
         const selected = dropdown.querySelector('.pb-volume-bundle__dropdown-selected');
-        const menu = dropdown.querySelector('.pb-volume-bundle__dropdown-menu');
         const options = dropdown.querySelectorAll('.pb-volume-bundle__dropdown-option');
         const productRow = dropdown.closest('.pb-volume-bundle__product-row');
 
-        // Toggle dropdown on click
         selected.addEventListener('click', (e) => {
           e.stopPropagation();
-
-          // Close all other dropdowns
           this.querySelectorAll('.pb-volume-bundle__dropdown.is-open').forEach((d) => {
             if (d !== dropdown) d.classList.remove('is-open');
           });
-
           dropdown.classList.toggle('is-open');
         });
 
-        // Option selection
         options.forEach((option) => {
           option.addEventListener('click', (e) => {
             e.stopPropagation();
-            const value = option.dataset.value;
-            const variantId = option.dataset.variantId;
-            const imgSrc = option.dataset.img;
-            const label = option.dataset.label;
+            const { value, variantId, img, label } = option.dataset;
 
-            // Update selected display
             const selectedText = dropdown.querySelector('.pb-volume-bundle__dropdown-selected-text');
             const selectedImg = dropdown.querySelector('.pb-volume-bundle__dropdown-selected-img');
             if (selectedText) selectedText.textContent = label;
-            if (selectedImg && imgSrc) selectedImg.src = imgSrc;
+            if (selectedImg && img) selectedImg.src = img;
 
-            // Update product row image
             if (productRow) {
               const rowImg = productRow.querySelector('.pb-volume-bundle__product-image');
-              if (rowImg && imgSrc) rowImg.src = imgSrc;
+              if (rowImg && img) rowImg.src = img;
             }
 
-            // Store variant id
             dropdown.dataset.selectedVariantId = variantId;
-
-            // Mark active
             options.forEach((o) => o.classList.remove('is-active'));
             option.classList.add('is-active');
-
             dropdown.classList.remove('is-open');
           });
         });
       });
 
-      // Close dropdowns when clicking outside
       document.addEventListener('click', (e) => {
         if (!e.target.closest('.pb-volume-bundle__dropdown')) {
           this.querySelectorAll('.pb-volume-bundle__dropdown.is-open').forEach((d) => {
@@ -127,9 +116,9 @@
       });
     }
 
+    /* ── Add to Cart ──────────────────────────────────────────── */
     initAddToCart() {
       if (!this.atcBtn) return;
-
       this.atcBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -137,136 +126,131 @@
       });
     }
 
-    getSelectedTierItems() {
+    getSelectedItems() {
       const tier = this.tiers[this.selectedTierIndex];
       if (!tier) return [];
 
       const items = [];
-      const productRows = tier.querySelectorAll('.pb-volume-bundle__product-row');
 
-      productRows.forEach((row) => {
+      // Main product rows
+      tier.querySelectorAll('.pb-volume-bundle__product-row').forEach((row) => {
         const dropdown = row.querySelector('.pb-volume-bundle__dropdown');
         const qtyInput = row.querySelector('.pb-volume-bundle__qty-input');
-        const variantId = dropdown ? dropdown.dataset.selectedVariantId : row.dataset.variantId;
+        const variantId = dropdown
+          ? dropdown.dataset.selectedVariantId
+          : row.dataset.variantId;
         const qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
-
-        if (variantId) {
-          items.push({ id: parseInt(variantId, 10), quantity: qty });
-        }
+        if (variantId) items.push({ id: parseInt(variantId, 10), quantity: qty });
       });
 
-      // Check for free gift
-      const freeGift = tier.querySelector('.pb-volume-bundle__free-gift-expanded');
-      if (freeGift && tier.classList.contains('is-selected')) {
-        const giftSelect = freeGift.querySelector('.pb-volume-bundle__free-gift-select');
-        const giftVariantId = freeGift.dataset.variantId;
-
-        let freeGiftId = null;
-        if (giftSelect) {
-          freeGiftId = giftSelect.value;
-        } else if (giftVariantId) {
-          freeGiftId = giftVariantId;
-        }
-
-        if (freeGiftId) {
+      // Free gift (tier 3 same-product)
+      const freeGiftExpanded = tier.querySelector('.pb-volume-bundle__free-gift-expanded');
+      if (freeGiftExpanded) {
+        const giftSelect = freeGiftExpanded.querySelector('.pb-volume-bundle__free-gift-select');
+        const giftVariantId = giftSelect
+          ? giftSelect.value
+          : freeGiftExpanded.dataset.variantId;
+        if (giftVariantId) {
           items.push({
-            id: parseInt(freeGiftId, 10),
+            id: parseInt(giftVariantId, 10),
             quantity: 1,
             properties: { _free_gift: 'true' },
           });
         }
       }
 
-      return items;
-    }
-
-    getAddonItems() {
-      const tier = this.tiers[this.selectedTierIndex];
-      if (!tier) return [];
-
-      const items = [];
-      const addons = tier.querySelectorAll('.pb-volume-bundle__addon');
-
-      addons.forEach((addon) => {
+      // Add-on (optional checkbox)
+      const addon = tier.querySelector('.pb-volume-bundle__addon');
+      if (addon) {
         const checkbox = addon.querySelector('.pb-volume-bundle__addon-checkbox');
         if (checkbox && checkbox.checked) {
           const variantId = addon.dataset.variantId;
           const qty = parseInt(addon.dataset.qty, 10) || 1;
-          if (variantId) {
-            items.push({ id: parseInt(variantId, 10), quantity: qty });
-          }
+          if (variantId) items.push({ id: parseInt(variantId, 10), quantity: qty });
         }
-      });
+      }
 
       return items;
     }
 
+    setLoading(isLoading) {
+      if (!this.atcBtn) return;
+      if (isLoading) {
+        this.atcBtn.setAttribute('aria-disabled', 'true');
+        this.atcBtn.classList.add('loading');
+        if (this.spinner) this.spinner.classList.remove('hidden');
+      } else {
+        this.atcBtn.removeAttribute('aria-disabled');
+        this.atcBtn.classList.remove('loading');
+        if (this.spinner) this.spinner.classList.add('hidden');
+      }
+    }
+
     async addToCart() {
+      if (this.atcBtn && this.atcBtn.getAttribute('aria-disabled') === 'true') return;
+
       if (this.selectedTierIndex < 0) {
-        this.showError('Please select an option');
+        this.showError('Please select an option.');
         return;
       }
 
-      const tierItems = this.getSelectedTierItems();
-      const addonItems = this.getAddonItems();
-      const allItems = [...tierItems, ...addonItems];
-
-      if (allItems.length === 0) {
-        this.showError('No items to add');
+      const items = this.getSelectedItems();
+      if (!items.length) {
+        this.showError('No items to add.');
         return;
       }
 
-      this.atcBtn.classList.add('is-loading');
-      this.atcBtn.textContent = 'Adding...';
+      this.setLoading(true);
       this.hideError();
 
       try {
+        // Build sections list so the cart drawer can re-render — same as product-form.js
+        const sectionsToRender = this.cart
+          ? this.cart.getSectionsToRender().map((s) => s.id)
+          : [];
+
+        const body = {
+          items,
+          sections: sectionsToRender,
+          sections_url: window.location.pathname,
+        };
+
         const response = await fetch('/cart/add.js', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ items: allItems }),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest',
+          },
+          body: JSON.stringify(body),
         });
 
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.description || 'Could not add to cart');
+        const data = await response.json();
+
+        if (data.status) {
+          throw new Error(data.description || data.message || 'Could not add to cart.');
         }
 
-        // Success - redirect to cart or open cart drawer
-        this.atcBtn.textContent = 'Added!';
+        // Publish cart update — same event product-form.js dispatches
+        if (typeof publish === 'function' && typeof PUB_SUB_EVENTS !== 'undefined') {
+          publish(PUB_SUB_EVENTS.cartUpdate, {
+            source: 'pb-volume-bundle',
+            cartData: data,
+          });
+        }
 
-        // Try to open cart drawer if available
-        const cartDrawer = document.querySelector('cart-drawer');
-        if (cartDrawer && typeof cartDrawer.open === 'function') {
-          // Refresh the cart drawer contents
-          const cartResponse = await fetch('/cart.js');
-          const cartData = await cartResponse.json();
-
-          // Dispatch event for theme cart updates
-          document.dispatchEvent(
-            new CustomEvent('cart:updated', { detail: { cart: cartData } })
-          );
-
-          // Try multiple approaches to refresh and open the drawer
-          if (typeof cartDrawer.renderContents === 'function') {
-            const sectionResponse = await fetch('/?sections=cart-drawer');
-            const sections = await sectionResponse.json();
-            cartDrawer.renderContents({ sections });
+        // Re-render cart drawer or notification — same as product-form.js
+        if (this.cart && typeof this.cart.renderContents === 'function') {
+          if (this.cart.classList.contains('is-empty')) {
+            this.cart.classList.remove('is-empty');
           }
-          cartDrawer.open();
+          this.cart.renderContents(data);
         } else {
-          // Fallback: redirect to cart page
-          window.location.href = '/cart';
+          window.location = window.routes ? window.routes.cart_url : '/cart';
         }
-
-        setTimeout(() => {
-          this.atcBtn.textContent = 'Add to Cart';
-          this.atcBtn.classList.remove('is-loading');
-        }, 1500);
       } catch (error) {
         this.showError(error.message);
-        this.atcBtn.textContent = 'Add to Cart';
-        this.atcBtn.classList.remove('is-loading');
+      } finally {
+        this.setLoading(false);
       }
     }
 
