@@ -80,7 +80,122 @@
       padding-top: 0.5rem;
     }
   }
-   
+
+  /* Match Pebblebee header: 3.2rem padding at all desktop sizes */
+  @media screen and (min-width: 990px) {
+    .header:not(.drawer-menu).page-width {
+      padding-left: 3.2rem !important;
+      padding-right: 3.2rem !important;
+    }
+  }
+
+  /* Hide account icon */
+  .header__icon--account {
+    display: none !important;
+  }
+
+  /* Nav font: Source Sans Pro 600, matches Pebblebee */
+  @media screen and (min-width: 990px) {
+    .header__menu-item,
+    .header__menu-item-title,
+    .header__inline-menu .list-menu__item--link {
+      font-family: 'Source Sans Pro', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
+      text-transform: none !important;
+    }
+  }
+
+  /* Header bar height: 64px to match Pebblebee */
+  @media screen and (min-width: 990px) {
+    .header {
+      min-height: 64px !important;
+    }
+  }
+
+  /* Match icon SVG size to Pebblebee (24px) */
+  .header__icon .icon {
+    height: 24px !important;
+    width: 24px !important;
+  }
+
+  /* Search icon: fix to 24px inside wrapper */
+  .header__icon--search .svg-wrapper > svg,
+  .header__icon--search .svg-wrapper svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Icons container: 28px gap between icons, 77px right padding on desktop */
+  .header__icons {
+    padding-right: 0 !important;
+    gap: 17px !important;
+  }
+  @media screen and (min-width: 990px) {
+    .header__icons {
+      padding-right: 81,5px !important;
+    }
+  }
+  .desktop-localization-wrapper:empty {
+    display: none !important;
+  }
+
+  /* Cart: white circle with border, black text */
+  .header__icon--cart {
+    margin-right: 0 !important;
+  }
+  .cart-icon-bubble-svg {
+    width: 34.56px;
+    height: 34.56px;
+    display: block;
+    flex-shrink: 0;
+    overflow: visible;
+  }
+  .cart-icon-bubble-svg__bg-circle {
+    fill: #ffffff;
+    stroke: #cccccc;
+    stroke-width: 1;
+    r: 15;
+  }
+  /* Progress ring: animates on hover around the circle border */
+  .cart-icon-bubble-svg__progress-circle {
+    fill: none;
+    stroke: #2a2a2a;
+    stroke-width: 2;
+    r: 15;
+    stroke-dasharray: 94.25;
+    stroke-dashoffset: 94.25;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.4s ease;
+  }
+  .header__icon--cart:hover .cart-icon-bubble-svg__progress-circle {
+    stroke-dashoffset: 0;
+  }
+  .header__icon--cart .cart-count-bubble {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #2a2a2a !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    line-height: 1 !important;
+    background: none !important;
+    border-radius: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+  }
+
 </style>
 
 
@@ -367,45 +482,16 @@
       {% render 'lumin-header-icons', icon: 'wishlist' %}
     
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {% if cart == empty %}
-          {% if settings.cart_icon_custom != blank %}
-            <span class="svg-wrapper">{{ settings.cart_icon_custom | image_url: width: settings.custom_cart_icon | image_tag }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-bag' %}
-            <span class="svg-wrapper">{{ 'icon-cart-bag.svg' | inline_asset_content }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-bag-2' %}
-            <span class="svg-wrapper">{{ 'icon-cart-bag-2.svg' | inline_asset_content }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-bag-3' %}
-            <span class="svg-wrapper">{{ 'icon-cart-bag-3.svg' | inline_asset_content }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-2' %}
-            <span class="svg-wrapper">{{ 'icon-cart-2.svg' | inline_asset_content }}</span>
-          {% else %}
-            <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
-          {% endif %}
-        {% else %}
-          {% if settings.cart_icon_custom != blank %}
-            <span class="svg-wrapper">{{ settings.cart_icon_custom | image_url: width: settings.custom_cart_icon | image_tag }}</span> 
-          {% elsif settings.cart_icon == 'icon-cart-bag' %}
-            <span class="svg-wrapper">{{ 'icon-cart-bag.svg' | inline_asset_content }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-bag-2' %}
-            <span class="svg-wrapper">{{ 'icon-cart-bag-2.svg' | inline_asset_content }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-bag-3' %}
-            <span class="svg-wrapper">{{ 'icon-cart-bag-3.svg' | inline_asset_content }}</span>
-          {% elsif settings.cart_icon == 'icon-cart-2' %}
-            <span class="svg-wrapper">{{ 'icon-cart-2.svg' | inline_asset_content }}</span>
-          {% else %}
-            <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
-          {% endif %}
-        {% endif %}
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart focus-inset" id="cart-icon-bubble" aria-label="View Cart" role="button">
+        <svg class="cart-icon-bubble-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <circle class="cart-icon-bubble-svg__bg-circle" cx="16" cy="16" r="16"></circle>
+          <circle class="cart-icon-bubble-svg__progress-circle" cx="16" cy="16" r="16"></circle>
+        </svg>
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
+        <div class="cart-count-bubble">
+          <span aria-hidden="true">{{ cart.item_count }}</span>
+          <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        </div>
       </a>
     </div>
   </header>
