@@ -2778,6 +2778,13 @@ a.product__text {
   }
 }
 
+/* Hide buy form and GFB widget embedded inside product description HTML */
+.product__description .product__buy-buttons,
+.product__description .gfbPageWrapper,
+.product__description form[data-type="add-to-cart-form"] {
+  display: none !important;
+}
+
 /* Description */
 .product__description {
   font-family: 'Source Sans Pro', sans-serif !important;
