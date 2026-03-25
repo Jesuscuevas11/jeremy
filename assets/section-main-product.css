@@ -2792,7 +2792,8 @@ a.product__text {
 @media screen and (max-width: 749px) {
   .product__description,
   .product__description p,
-  .product__description li {
-    font-size: 14.95px !important;
+  .product__description li,
+  .product__description span {
+    font-size: 13.8px !important;
   }
 }
