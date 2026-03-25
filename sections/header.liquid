@@ -94,6 +94,16 @@
     display: none !important;
   }
 
+  /* Nav: 18px from logo, 25px gap between items */
+  @media screen and (min-width: 990px) {
+    .header__inline-menu {
+      margin-left: 50px !important;
+    }
+    .header__inline-menu .list-menu--inline {
+      gap: 25px !important;
+    }
+  }
+
   /* Nav font: Source Sans Pro 600, matches Pebblebee */
   @media screen and (min-width: 990px) {
     .header__menu-item,
@@ -111,6 +121,44 @@
   @media screen and (min-width: 990px) {
     .header {
       min-height: 64px !important;
+    }
+  }
+
+  /* Logo size: 132x35px on desktop, offset 200px from left */
+  @media screen and (min-width: 990px) {
+    .header__heading-logo-wrapper {
+      width: 132px !important;
+    }
+    .header__heading-logo {
+      width: 132px !important;
+      height: 35px !important;
+      object-fit: contain;
+    }
+    .header__heading,
+    .header__heading-link {
+      margin-left: 200px !important;
+    }
+  }
+
+  /* Logo size: 132x35px on mobile, flush left next to hamburger */
+  @media screen and (max-width: 989px) {
+    .header__heading-logo-wrapper {
+      width: 132px !important;
+    }
+    .header__heading-logo {
+      width: 132px !important;
+      height: 35px !important;
+      object-fit: contain;
+    }
+    .header__heading,
+    .header__heading-link {
+      justify-self: start !important;
+      text-align: left !important;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+    .header {
+      column-gap: 0 !important;
     }
   }
 
