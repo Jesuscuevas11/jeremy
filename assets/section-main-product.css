@@ -983,7 +983,7 @@ a.product__text {
   .thumbnail-slider {
     display: flex;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: -10px;
   }
 
   .thumbnail-slider .thumbnail-list.slider {
@@ -2637,6 +2637,10 @@ a.product__text {
 }
 
 @media screen and (max-width: 749px) {
+  /* Carousel padding top */
+  .product__media-wrapper {
+    padding-top: 10px !important;
+  }
   /* Reset slider negative margins so image can be centered */
   .product__media-wrapper slider-component:not(.thumbnail-slider) {
     margin-left: 0 !important;
@@ -2742,6 +2746,14 @@ a.product__text {
   }
   .thumbnail-slider .thumbnail-list.slider {
     padding-left: 0 !important;
+  }
+}
+
+/* Product info container width */
+@media screen and (min-width: 750px) {
+  .product__info-container {
+    width: 416px !important;
+    max-width: 416px !important;
   }
 }
 
