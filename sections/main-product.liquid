@@ -135,6 +135,43 @@
 
 
   <style>
+    @media screen and (min-width: 750px) {
+      /* Thumbnails: 62.4x62.4px */
+      .thumbnail-list .thumbnail-list__item { width: 62.4px !important; height: 62.4px !important; min-width: 62.4px !important; flex-shrink: 0 !important; }
+      .thumbnail-list .thumbnail-list__item::before { display: none !important; }
+      .thumbnail-list .thumbnail-list__item .thumbnail { width: 62.4px !important; height: 62.4px !important; }
+      .thumbnail-list .thumbnail-list__item img { width: 62.4px !important; height: 62.4px !important; object-fit: cover !important; }
+      /* Main image: 632x632px */
+      .product__media-item .product-media-container,
+      .product__media-item .media { width: 632px !important; height: 632px !important; border-radius: 16px !important; overflow: hidden !important; }
+      .product__media-item .media img,
+      .product__media-item .media video { width: 632px !important; height: 632px !important; object-fit: cover !important; }
+      .product__media-item { width: 632px !important; }
+      /* Carousel: show all images in scrollable row so slider arrows work */
+      .product--thumbnail_slider .product__media-item:not(.is-active) {
+        display: block !important;
+      }
+      .product--thumbnail_slider .product__media-list {
+        width: 632px !important;
+        max-width: 632px !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        scroll-behavior: smooth !important;
+        flex-wrap: nowrap !important;
+        margin-left: 0 !important;
+        scrollbar-width: none !important;
+      }
+      .product--thumbnail_slider .product__media-list::-webkit-scrollbar {
+        display: none !important;
+      }
+      .product--thumbnail_slider .product__media-item {
+        scroll-snap-align: start !important;
+        flex-shrink: 0 !important;
+      }
+    }
+  </style>
+
+  <style>
     @media screen and (max-width: 749px){
     .product__info-container-{{section.id}}  {
       {% if section.settings.show_container_mb %}
