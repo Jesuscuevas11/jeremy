@@ -12,6 +12,7 @@
     "hide_collections": "",
     "icon_stroke": "default",
     "highlight_background_color": "linear-gradient(278deg, rgba(190, 136, 104, 1) 4%, rgba(154, 148, 115, 1) 50%, rgba(96, 95, 71, 1) 100%)",
+    "logo": "shopify://shop_images/pebblebee_primary_black.avif",
     "logo_width": 100,
     "option_names": "Color,Type",
     "swatch_type": "color",
