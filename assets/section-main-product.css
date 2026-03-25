@@ -1551,6 +1551,27 @@ a.product__text {
     height: 100%;
   }
 
+  /* Carousel main image: 350x350px on mobile */
+  .product__media-list .product__media-item .product-media-container,
+  .product__media-list .product__media-item .media {
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .product__media-list .product__media-item .media img {
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: cover;
+  }
+
+  /* Thumbnail size: 62.4x62.4px on mobile */
+  .thumbnail-list__item {
+    width: 62.4px !important;
+    height: 62.4px !important;
+  }
+  .thumbnail-list__item::before {
+    display: none;
+  }
+
   /* Quick-add modal mobile height options */
   .quick-add-modal .product-media-container.mobile-height-square,
   .quick-add-modal .product-media-container.mobile-height-portrait,
