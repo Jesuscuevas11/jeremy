@@ -2736,3 +2736,35 @@ a.product__text {
     object-fit: cover !important;
   }
 }
+
+/* Title */
+.product__title h1,
+.product__title .h1 {
+  color: #2a2a2a !important;
+}
+
+/* Description */
+.product__description {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16.1px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #2a2a2a !important;
+}
+.product__description p,
+.product__description li {
+  font-size: 16.1px !important;
+  line-height: 1.5 !important;
+  color: #2a2a2a !important;
+}
+.product__description ul,
+.product__description ol {
+  padding-left: 1.2em !important;
+}
+@media screen and (max-width: 749px) {
+  .product__description,
+  .product__description p,
+  .product__description li {
+    font-size: 14.95px !important;
+  }
+}

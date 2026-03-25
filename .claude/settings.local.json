@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:pebblebee.com)"
+      "WebFetch(domain:pebblebee.com)",
+      "WebFetch(domain:cdn.judge.me)"
     ]
   }
 }
