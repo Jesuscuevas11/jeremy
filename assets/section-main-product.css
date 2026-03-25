@@ -2735,12 +2735,28 @@ a.product__text {
     height: 62.4px !important;
     object-fit: cover !important;
   }
+  /* Fix thumbnail strip left alignment on mobile */
+  .product__media-wrapper .thumbnail-slider {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .thumbnail-slider .thumbnail-list.slider {
+    padding-left: 0 !important;
+  }
 }
 
 /* Title */
 .product__title h1,
 .product__title .h1 {
+  font-family: 'Poppins', sans-serif !important;
   color: #2a2a2a !important;
+  font-size: 25.2px !important;
+}
+@media screen and (min-width: 750px) {
+  .product__title h1,
+  .product__title .h1 {
+    font-size: 42px !important;
+  }
 }
 
 /* Description */
