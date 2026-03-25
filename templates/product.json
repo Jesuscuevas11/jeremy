@@ -606,6 +606,7 @@
         },
         "collapsible_tab_ptCdTk": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Returns",
             "icon": "return",
@@ -617,6 +618,7 @@
         },
         "collapsible_tab_EBKNVc": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Care Instructions",
             "icon": "washing",
