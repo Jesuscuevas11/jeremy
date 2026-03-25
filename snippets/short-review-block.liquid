@@ -35,7 +35,7 @@
 
           <!-- Loop to show full stars -->
           {% for i in (1..full_stars) %}
-            <svg class="star-short full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16.1" height="15.2" fill="var(--short-star-color)">
+            <svg class="star-short full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16.1" height="15.2" fill="#008080">
               <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.826 1.608 8.144L12 18.896l-7.544 4.38 1.608-8.144L.587 9.306l8.332-1.151z"/>
             </svg>
           {% endfor %}
@@ -45,8 +45,8 @@
             <svg class="star-short half" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16.1" height="15.2">
               <defs>
                 <linearGradient id="halfStarGradientShort">
-                  <stop offset="50%" stop-color="var(--short-star-color)"/>
-                  <stop offset="50%" stop-color="var(--short-star-inactive)"/>
+                  <stop offset="50%" stop-color="#008080"/>
+                  <stop offset="50%" stop-color="#eeeeee"/>
                 </linearGradient>
               </defs>
               <path fill="url(#halfStarGradientShort)" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.826 1.608 8.144L12 18.896l-7.544 4.38 1.608-8.144L.587 9.306l8.332-1.151z"/>
@@ -72,8 +72,8 @@
         </span>
       {% endif %}
 
-      <span style="color: {{ block.settings.lrw_color }}; font-size: {{ block.settings.text_size }}px; font-weight: 400; line-height: 1; text-decoration: underline; text-underline-offset: 2px;">
-        {{- block.settings.lrw_text -}}
+      <span style="color: #000000; font-size: 14px; font-weight: 400; line-height: 1; text-decoration: underline; text-underline-offset: 2px;">
+        136 Reviews
       </span>
     </span>
   </a>
