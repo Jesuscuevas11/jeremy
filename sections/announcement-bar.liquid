@@ -41,9 +41,13 @@
 {% endif %}
 
 <div
-  class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
+  class="utility-bar {% if section.settings.gradient_color_1 == blank or section.settings.gradient_color_2 == blank %}color-{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% elsif section.settings.show_line_separator and section.settings.show_social and social_icons%} utility-bar--bottom-border-social-only{% endif %}{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header-localization{% endif %}"
+  {% if section.settings.gradient_color_1 != blank and section.settings.gradient_color_2 != blank %}style="background: linear-gradient({{ section.settings.gradient_angle }}deg, {{ section.settings.gradient_color_1 }} {{ section.settings.gradient_stop_1 }}%, {{ section.settings.gradient_color_2 }} {{ section.settings.gradient_stop_2 }}%) !important; height: {{ section.settings.bar_height_mobile }}px; display:flex; align-items:center;"{% endif %}
   {{ block.shopify_attributes }}
 >
+{%- if section.settings.gradient_color_1 != blank -%}
+<style>#shopify-section-{{ section.id }} .utility-bar__grid{height:100%;display:flex!important;align-items:center;justify-content:center}#shopify-section-{{ section.id }} .announcement-bar{height:100%;display:flex!important;align-items:center;justify-content:center}#shopify-section-{{ section.id }} .announcement-bar__message{font-size:12.8px!important;padding:0!important}@media(min-width:765px){#shopify-section-{{ section.id }} .utility-bar{min-height:{{ section.settings.bar_height_desktop }}px!important;max-height:{{ section.settings.bar_height_desktop }}px!important}}</style>
+{%- endif -%}
   <div class="page-width utility-bar__grid{% if announcement_bar and language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--3-col{% elsif language_country_selector or section.settings.show_social and social_icons %} utility-bar__grid--2-col{% endif %}">
     {%- if section.settings.show_social and social_icons -%}
       {%- render 'social-icons' -%}
@@ -53,6 +57,7 @@
         class="announcement-bar{% if section.settings.show_social %} announcement-bar--one-announcement{% endif %}"
         role="region"
         aria-label="{{ 'sections.header.announcement' | t }}"
+        {% if section.blocks.first.settings.use_custom_color == true %}style="color:{{ section.blocks.first.settings.text_color }};"{% endif %}
         {{ block.shopify_attributes }}
       >
         {%- if section.blocks.first.type == 'announcement' -%}
@@ -60,11 +65,16 @@
             {%- if section.blocks.first.settings.link != blank -%}
               <a
                 href="{{ section.blocks.first.settings.link }}"
-                class="announcement-bar__link link link--text focus-inset animate-arrow"
+                {% if section.blocks.first.settings.use_custom_color == true %}
+                  class="focus-inset"
+                  style="display:flex;width:100%;text-decoration:none;height:100%;justify-content:center;align-items:center;color:{{ section.blocks.first.settings.text_color }};"
+                {% else %}
+                  class="announcement-bar__link link link--text focus-inset animate-arrow"
+                {% endif %}
               >
             {%- endif -%}
-            <p class="announcement-bar__message h5{% if section.blocks.first.settings.font_family == 'heading' %} font-heading-family{% else %} font-body-family{% endif %}" 
-            style="font-size: {{ section.blocks.first.settings.font_size }}px; {% if section.blocks.first.settings.use_custom_color == true %} color: {{ section.blocks.first.settings.text_color }}; {% endif %} {% if section.blocks.first.settings.use_custom_weight == true %} font-weight: {{ section.blocks.first.settings.font_weight }}; {% endif %}">
+            <p class="announcement-bar__message{% if section.settings.gradient_color_1 == blank or section.settings.gradient_color_2 == blank %} h5{% endif %}{% if section.blocks.first.settings.font_family == 'heading' %} font-heading-family{% else %} font-body-family{% endif %}"
+            style="{% unless section.settings.gradient_color_1 != blank and section.settings.gradient_color_2 != blank %}font-size: {{ section.blocks.first.settings.font_size }}px; {% endunless %}margin:0; line-height:1; {% if section.blocks.first.settings.use_custom_color == true %} color: {{ section.blocks.first.settings.text_color }}; {% endif %} {% if section.blocks.first.settings.use_custom_weight == true %} font-weight: {{ section.blocks.first.settings.font_weight }}; {% endif %}">
               <span>{{ section.blocks.first.settings.text }}</span>
               {%- if section.blocks.first.settings.link != blank -%}
                 {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -324,6 +334,68 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-4"
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_1",
+      "label": "Gradient color 1",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "gradient_stop_1",
+      "label": "Gradient stop 1 (%)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_2",
+      "label": "Gradient color 2",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "gradient_stop_2",
+      "label": "Gradient stop 2 (%)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "gradient_angle",
+      "label": "Gradient angle (deg)",
+      "min": 0,
+      "max": 360,
+      "step": 5,
+      "unit": "deg",
+      "default": 135
+    },
+    {
+      "type": "range",
+      "id": "bar_height_mobile",
+      "label": "Height mobile (px)",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "bar_height_desktop",
+      "label": "Height desktop (px)",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 34
     },
     {
       "type": "checkbox",

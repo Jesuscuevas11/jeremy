@@ -11,101 +11,45 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement_bar_scrolling_VL3jq6": {
-      "type": "announcement-bar-scrolling",
-      "blocks": {
-        "announcement_jwi3wc": {
-          "type": "announcement",
-          "settings": {
-            "text": "<strong>[SEASONAL] SALE IS [LIVE</strong><em><strong>]</strong></em>",
-            "link": "",
-            "font_family": "body",
-            "text_size": 14,
-            "text_size_mobile": 14,
-            "text_color": "#000000",
-            "use_gradient": false,
-            "gradient_color_1": "#000000",
-            "gradient_color_2": "#a3a1a1",
-            "gradient_angle": 90,
-            "margin": 20,
-            "letter_spacing": 1.5,
-            "letter_spacing_mobile": 0,
-            "icon": "stopwatch",
-            "custom_image_height": 20
-          }
-        },
-        "button_aJpXin": {
-          "type": "button",
-          "settings": {
-            "text": "Shop Now",
-            "link": "shopify://collections/all",
-            "show_arrow": true,
-            "text_size": 14,
-            "text_color": "#ffffff",
-            "background_color": "#4d7053",
-            "hover_text_color": "#000000",
-            "hover_background_color": "#e6e6e6",
-            "border_radius": 50,
-            "padding_vertical": 2,
-            "padding_horizontal": 20,
-            "margin": 20
-          }
-        }
-      },
-      "block_order": [
-        "announcement_jwi3wc",
-        "button_aJpXin"
-      ],
-      "name": "t:sections.announcement-bar.presets.name-scrolling",
-      "settings": {
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "show_line_separator": true,
-        "scroll_speed": 80,
-        "scroll_direction": "1",
-        "mobile_height": 40,
-        "desktop_height": 40
-      }
-    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "announcement_evercolor": {
           "type": "announcement",
           "settings": {
-            "text": "Orders can be return in 30 days",
+            "text": "<em>Evercolor Freeze Frame drop!&nbsp;</em><strong>Meet Subzero &amp; Hot Coral</strong>",
             "font_family": "body",
             "font_size": 14,
-            "use_custom_color": false,
-            "text_color": "#000000",
-            "link": ""
-          }
-        },
-        "announcement_GBXkUW": {
-          "type": "announcement",
-          "settings": {
-            "text": "Save 20% use code: BULKSAVE",
-            "font_family": "body",
-            "font_size": 14,
-            "use_custom_color": false,
-            "text_color": "#000000",
-            "link": ""
+            "use_custom_color": true,
+            "text_color": "#ffffff",
+            "link": "/products/clip-5"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_GBXkUW"
+        "announcement_evercolor"
       ],
       "settings": {
-        "color_scheme": "inverse",
+        "color_scheme": "scheme-4",
         "show_line_separator": false,
-        "show_social": true,
-        "auto_rotate": true,
+        "show_social": false,
+        "auto_rotate": false,
         "change_slides_speed": 5,
-        "enable_country_selector": true,
-        "enable_language_selector": true
-      }
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "gradient_color_1": "#3ec4ed",
+        "gradient_stop_1": 20,
+        "gradient_color_2": "#ce3d3d",
+        "gradient_stop_2": 80,
+        "gradient_angle": 135,
+        "bar_height_mobile": 42,
+        "bar_height_desktop": 34
+      },
+      "custom_css": [
+        ".icon-arrow{display:none!important}",
+        ".announcement-bar__link,.announcement-bar__link *,.announcement-bar__message{color:#fff!important}",
+        ".announcement-bar__message{font-family:'Source Sans Pro',sans-serif!important;font-weight:bolder!important;letter-spacing:normal!important;text-transform:none!important}"
+      ]
     },
     "header": {
       "type": "header",
@@ -134,7 +78,6 @@
     }
   },
   "order": [
-    "announcement_bar_scrolling_VL3jq6",
     "announcement-bar",
     "header"
   ]
