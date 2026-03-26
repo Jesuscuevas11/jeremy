@@ -203,70 +203,19 @@
         "padding_bottom": 0
       }
     },
-    "footer": {
-      "type": "footer",
-      "blocks": {
-        "brand_information_Br4bBK": {
-          "type": "brand_information",
-          "settings": {
-            "show_social": true
-          }
-        },
-        "link_list_JWiGYM": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Information",
-            "menu": "footer"
-          }
-        },
-        "link_list_JinYBi": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Shop",
-            "menu": "main-menu"
-          }
-        },
-        "text_iiFTQr": {
-          "type": "text",
-          "settings": {
-            "heading": "Need to Get in Touch?",
-            "subtext": "<p><strong>hello@yourdomain.com</strong></p><p>Call: <strong>+1 (917) 642-8765</strong></p><p>Live chat available - Monday - Friday 9am - 5pm CET</p>"
-          }
-        }
-      },
-      "block_order": [
-        "brand_information_Br4bBK",
-        "link_list_JWiGYM",
-        "link_list_JinYBi",
-        "text_iiFTQr"
-      ],
+    "footer_pebblebee": {
+      "type": "footer-pebblebee-clone",
       "settings": {
-        "color_scheme": "scheme-58ff9a05-7092-43ee-84e7-6f05d1cc9431",
-        "newsletter_enable": false,
-        "show_collapse": true,
-        "collapse_mode": "menu_only",
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "original": "original",
-        "payment_icon": "visa,master,paypal,apple_pay,shopify-pay,google-pay",
-        "show_policy": true,
-        "custom_icon_1_width": 34,
-        "custom_icon_2_width": 34,
-        "custom_icon_3_width": 34,
-        "hide_shopify": true,
-        "copyright": "- Theme by LuminTheme © 2025",
-        "show_bottom_text": true,
-        "bottom_text_align": "center",
-        "bottom_text": "",
-        "bottom_text_font_size": 10,
-        "color_bottom_text": "#868686",
-        "margin_top": 0,
-        "padding_top": 60,
-        "padding_bottom": 36
+        "bg_color": "#0f2518",
+        "text_color": "#ffffff",
+        "logo_width": 160,
+        "tagline": "Find Anything, Anytime, From Any Device",
+        "newsletter_heading": "Sign Up & Save",
+        "newsletter_text": "Receive exclusive email-only deals. Stay connected and ensure you never lose track of what matters most.",
+        "newsletter_placeholder": "Your email",
+        "newsletter_btn": "Subscribe",
+        "copyright_name": "PB Inc.",
+        "info_text": "Apple\u00ae, the Apple logo, and Find My\u00ae are trademarks of Apple Inc. Google\u2122, Google Play\u2122, Find Hub\u2122, and Android\u2122 are trademarks of Google LLC. The Bluetooth\u00ae word mark and logos are registered trademarks owned by Bluetooth SIG, Inc."
       }
     }
   },
@@ -275,6 +224,6 @@
     "trust_badges_FHUXaB",
     "newsletter_VVgzTd",
     "section_divider_RzyyxR",
-    "footer"
+    "footer_pebblebee"
   ]
 }
