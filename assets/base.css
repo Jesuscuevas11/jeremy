@@ -6,6 +6,7 @@
   --focused-base-outline: .2rem solid rgba(var(--color-foreground), .5);
   --focused-base-outline-offset: .3rem;
   --focused-base-box-shadow: 0 0 0 .3rem rgb(var(--color-background)), 0 0 .5rem .4rem rgba(var(--color-foreground), .3)
+  --color-foreground-secondary: 34, 34, 34;
 }
 
 .contains-card--product, 
