@@ -38,6 +38,7 @@
       "block_order": [
         "announcement_dTpxWa"
       ],
+      "disabled": true,
       "name": "t:sections.announcement-bar.presets.name-scrolling",
       "settings": {
         "background_color": "#000000",
@@ -95,6 +96,7 @@
         "image_NcbnLf",
         "image_aPngVT"
       ],
+      "disabled": true,
       "name": "Feature Blocks",
       "settings": {
         "feature_row": 4,
@@ -251,10 +253,10 @@
         "payment_enable": true,
         "original": "original",
         "payment_icon": "visa,master,paypal,apple_pay,shopify-pay,google-pay",
+        "show_policy": true,
         "custom_icon_1_width": 34,
         "custom_icon_2_width": 34,
         "custom_icon_3_width": 34,
-        "show_policy": true,
         "hide_shopify": true,
         "copyright": "- Theme by LuminTheme © 2025",
         "show_bottom_text": true,
