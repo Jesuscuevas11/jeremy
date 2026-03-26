@@ -1727,54 +1727,6 @@
         "padding_bottom": 44
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "También te puede interesar",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-6d40021f-e55e-49ec-a8a3-6a2fa5087120",
-        "image_ratio": "adapt",
-        "image_no_crop": false,
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "show_scroll_tags": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
-    },
-    "impact_banner_main": {
-      "type": "impact-banner-native",
-      "settings": {
-        "background_image": "shopify://shop_images/image_9834bd61-a0f5-498c-bf9e-2fb263c09c58.png",
-        "overlay_color": "#0a2e1a",
-        "overlay_opacity": 75,
-        "logo_width_desktop": 120,
-        "logo_width_mobile": 80,
-        "text_color": "#ffffff",
-        "title": "Impacto positivo",
-        "stat": "Más de 1,000,000 de botellas plásticas salvadas",
-        "description": "Estamos construyendo un futuro donde la tecnología ayuda, no daña, al planeta. Esto no es una campaña, es una promesa. Para ti. Para la Tierra. Para el futuro. Cada pedido genera una acción climática positiva, desde plantar árboles y restaurar hábitats hasta financiar proyectos de energía limpia y recuperación de plásticos.",
-        "badge_1_label": "Árboles plantados",
-        "badge_2_label": "Botellas plásticas salvadas",
-        "cta_label": "Saber más",
-        "cta_url": "",
-        "cta_new_tab": false,
-        "padding_top_mobile": 2,
-        "padding_bottom_mobile": 2,
-        "padding_top_desktop": 3.2,
-        "padding_bottom_desktop": 3.2
-      }
-    },
-    "174300570336aa0ded": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
     "lumin_review_VwUUBa": {
       "type": "Lumin-review",
       "blocks": {
@@ -1782,7 +1734,7 @@
           "type": "rating_summary",
           "settings": {
             "rating_summary_score": "4.8",
-            "rating_summary_total": "731 Reviews",
+            "rating_summary_total": "731 Revisiones",
             "rating_bar_5_width": 85,
             "rating_bar_5_count": "624",
             "rating_bar_4_width": 14,
@@ -1909,12 +1861,12 @@
       "settings": {
         "editing": true,
         "color_scheme": "",
-        "header_text": "what our customers say about us",
+        "header_text": "Lo que dicen nuestros clientes sobre nosotros",
         "show_top": true,
         "rating_text": "4.8",
         "rating_range": 4.5,
         "star_size_top": 1,
-        "rating_count": "Based on 16 Reviews",
+        "rating_count": "Basado en 16 Reviews",
         "show_customer_images": true,
         "show_country_flags": true,
         "customer_image_size": 40,
@@ -1988,6 +1940,54 @@
         "popup_image_quality": "800",
         "popup_customer_image_size": 60,
         "enable_image_enlarge": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "También te puede interesar",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-6d40021f-e55e-49ec-a8a3-6a2fa5087120",
+        "image_ratio": "adapt",
+        "image_no_crop": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_scroll_tags": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "impact_banner_main": {
+      "type": "impact-banner-native",
+      "settings": {
+        "background_image": "shopify://shop_images/image_9834bd61-a0f5-498c-bf9e-2fb263c09c58.png",
+        "overlay_color": "#0a2e1a",
+        "overlay_opacity": 75,
+        "logo_width_desktop": 120,
+        "logo_width_mobile": 80,
+        "text_color": "#ffffff",
+        "title": "Impacto positivo",
+        "stat": "Más de 1,000,000 de botellas plásticas salvadas",
+        "description": "Estamos construyendo un futuro donde la tecnología ayuda, no daña, al planeta. Esto no es una campaña, es una promesa. Para ti. Para la Tierra. Para el futuro. Cada pedido genera una acción climática positiva, desde plantar árboles y restaurar hábitats hasta financiar proyectos de energía limpia y recuperación de plásticos.",
+        "badge_1_label": "Árboles plantados",
+        "badge_2_label": "Botellas plásticas salvadas",
+        "cta_label": "Saber más",
+        "cta_url": "",
+        "cta_new_tab": false,
+        "padding_top_mobile": 2,
+        "padding_bottom_mobile": 2,
+        "padding_top_desktop": 3.2,
+        "padding_bottom_desktop": 3.2
+      }
+    },
+    "174300570336aa0ded": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
       }
     }
   },
