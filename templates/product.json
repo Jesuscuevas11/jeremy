@@ -1797,11 +1797,19 @@
         "text_heading": "Subzero & Hot Coral",
         "text_content": "<p>Temperature is an invisible force that shapes your instincts long before you\u2019re aware of it. Freeze Frame explores how temperature becomes memory and memory becomes intuition. More than a colorway, Freeze Frame is a reminder that the unseen forces often shape us the most. <strong>When they\u2019re gone, they\u2019re gone. <\/strong><a href=\"\/pages\/evercolor\" target=\"_blank\" title=\"Evercolor\">Learn More<\/a><\/p>"
       }
+    },
+    "multicolumn_features_main": {
+      "type": "multicolumn-features",
+      "settings": {
+        "subtitle": "Built to Keep You Connected",
+        "title": "Every Feature, Thoughtfully Designed"
+      }
     }
   },
   "order": [
     "main",
     "images_with_content_evercolor",
+    "multicolumn_features_main",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",
