@@ -1756,6 +1756,7 @@
         },
         "thumbnail_gallery_MzWfL7": {
           "type": "thumbnail_gallery",
+          "disabled": true,
           "settings": {
             "thumbnail_align": "center",
             "gallery_title": "Customer Reviews",
@@ -1772,7 +1773,7 @@
           "settings": {
             "selected_product": "",
             "star_rating": 5,
-            "name_text": "Johan D.",
+            "name_text": "Alejandro Bello.",
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2025",
