@@ -216,7 +216,8 @@
         "newsletter_placeholder": "Your email",
         "newsletter_btn": "Subscribe",
         "copyright_name": "PB Inc.",
-        "info_text": "Apple\u00ae, the Apple logo, and Find My\u00ae are trademarks of Apple Inc. Google\u2122, Google Play\u2122, Find Hub\u2122, and Android\u2122 are trademarks of Google LLC. The Bluetooth\u00ae word mark and logos are registered trademarks owned by Bluetooth SIG, Inc."
+        "info_text": "Apple\u00ae, the Apple logo, and Find My\u00ae are trademarks of Apple Inc. Google\u2122, Google Play\u2122, Find Hub\u2122, and Android\u2122 are trademarks of Google LLC. The Bluetooth\u00ae word mark and logos are registered trademarks owned by Bluetooth SIG, Inc.",
+        "enable_country_selector": true
       }
     }
   },

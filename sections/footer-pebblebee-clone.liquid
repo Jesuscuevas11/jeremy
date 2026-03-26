@@ -23,10 +23,16 @@
     --fpb-tc75: {{ tc75 }};
     font-family: inherit;
     font-size: 1.4rem;
+    max-width: 1280px;
+    min-height: 825.75px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.6rem;
+    box-sizing: border-box;
   }
 
-  /* ── Container (same as other sections) ── */
-  .fpb__container {
+  /* ── Container ── */
+  .section-{{ section.id }}-fpb-container {
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -34,23 +40,12 @@
     margin-right: auto;
     box-sizing: border-box;
   }
-  @media screen and (min-width: 1200px) {
-    .fpb__container { padding-left: 8rem; padding-right: 8rem; }
-  }
-  @media screen and (min-width: 1360px) {
-    .fpb__container { max-width: 1440px; }
-  }
 
   /* ── Main area ── */
   .fpb__main {
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-  @media screen and (min-width: 750px) {
-    .fpb__main { padding-top: 5.6rem; padding-bottom: 5.6rem; }
-  }
-  @media screen and (min-width: 1440px) {
-    .fpb__main { padding-top: 8rem; padding-bottom: 8rem; }
+    box-sizing: border-box;
   }
 
   /* ── Main wrapper: head col + blocks col ── */
@@ -249,14 +244,14 @@
 
   /* ── Bottom bar ── */
   .fpb__bottom {
-    border-top: 1px solid {{ tc15 }};
+    background: #ffffff;
   }
   .fpb__bottom-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
-    padding: 2rem 0;
+    padding: 1.6rem 0;
     text-align: center;
   }
   @media screen and (min-width: 750px) {
@@ -266,15 +261,15 @@
       text-align: left;
     }
   }
-  .fpb__copyright { font-size: 1.2rem; color: {{ tc60 }}; margin: 0; }
+  .fpb__copyright { font-size: 1.2rem; color: #555; margin: 0; }
   .fpb__policies {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem 2rem;
     justify-content: center;
   }
-  .fpb__policies a { font-size: 1.2rem; color: {{ tc60 }}; text-decoration: none; }
-  .fpb__policies a:hover { color: {{ tc }}; }
+  .fpb__policies a { font-size: 1.2rem; color: #555; text-decoration: none; }
+  .fpb__policies a:hover { color: #000; }
   .fpb__payments {
     display: flex;
     flex-wrap: wrap;
@@ -283,13 +278,54 @@
     justify-content: center;
   }
   .fpb__payments svg, .fpb__payments img { height: 22px; width: auto; }
+
+  /* ── Localization (white bar) ── */
+  .fpb__localization { position: relative; }
+  .fpb__localization .disclosure__button {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .fpb__localization .disclosure__button:hover { color: #000; }
+  .fpb__localization .disclosure__list {
+    position: absolute;
+    bottom: calc(100% + 0.4rem);
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    padding: 0.4rem 0;
+    min-width: 22rem;
+    max-height: 24rem;
+    overflow-y: auto;
+    z-index: 10;
+    list-style: none;
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .fpb__localization .disclosure__link {
+    display: block;
+    padding: 0.7rem 1.4rem;
+    font-size: 1.3rem;
+    color: #333;
+    text-decoration: none;
+  }
+  .fpb__localization .disclosure__link:hover { background: #f5f5f5; }
+  .fpb__localization .icon-caret { width: 12px; height: 12px; }
 </style>
 
 <div class="fpb">
 
   {%- comment -%} ── MAIN AREA ── {%- endcomment -%}
   <div class="fpb__main">
-    <div class="fpb__container">
+    <div class="fpb__container section-{{ section.id }}-fpb-container">
       <div class="fpb__wrapper">
 
         {%- comment -%} HEAD: logo + tagline + social {%- endcomment -%}
@@ -420,41 +456,51 @@
     </div>{%- comment -%} /container {%- endcomment -%}
   </div>{%- comment -%} /main {%- endcomment -%}
 
-  {%- comment -%} ── BOTTOM BAR ── {%- endcomment -%}
-  <div class="fpb__bottom">
-    <div class="fpb__container">
-      <div class="fpb__bottom-inner">
+</div>{%- comment -%} /fpb ── end dark rounded block ── {%- endcomment -%}
 
-        <p class="fpb__copyright">&copy; {{ 'now' | date: '%Y' }} {{ section.settings.copyright_name | default: shop.name | escape }}</p>
+{%- comment -%} ── BOTTOM BAR (white, outside dark block) ── {%- endcomment -%}
+<div class="fpb__bottom">
+  <div class="fpb__container section-{{ section.id }}-fpb-container">
+    <div class="fpb__bottom-inner">
 
-        {%- if section.settings.policy_1_label != blank and section.settings.policy_1_url != blank
-            or section.settings.policy_2_label != blank and section.settings.policy_2_url != blank
-            or section.settings.policy_3_label != blank and section.settings.policy_3_url != blank -%}
-          <ul class="fpb__policies list-unstyled">
-            {%- if section.settings.policy_1_label != blank and section.settings.policy_1_url != blank -%}
-              <li><a href="{{ section.settings.policy_1_url }}">{{ section.settings.policy_1_label | escape }}</a></li>
-            {%- endif -%}
-            {%- if section.settings.policy_2_label != blank and section.settings.policy_2_url != blank -%}
-              <li><a href="{{ section.settings.policy_2_url }}">{{ section.settings.policy_2_label | escape }}</a></li>
-            {%- endif -%}
-            {%- if section.settings.policy_3_label != blank and section.settings.policy_3_url != blank -%}
-              <li><a href="{{ section.settings.policy_3_url }}">{{ section.settings.policy_3_label | escape }}</a></li>
-            {%- endif -%}
-          </ul>
-        {%- endif -%}
+      <p class="fpb__copyright">&copy; {{ 'now' | date: '%Y' }} {{ section.settings.copyright_name | default: shop.name | escape }}</p>
 
-        {%- unless shop.enabled_payment_types == empty -%}
-          <ul class="fpb__payments list-unstyled">
-            {%- for type in shop.enabled_payment_types -%}
-              <li>{{ type | payment_type_svg_tag }}</li>
-            {%- endfor -%}
-          </ul>
-        {%- endunless -%}
+      {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+        <div class="fpb__localization">
+          <localization-form>
+            {%- form 'localization', id: 'FpbFooterCountryForm', class: 'localization-form' -%}
+              {%- render 'country-localization', localPosition: 'FpbFooterCountry' -%}
+            {%- endform -%}
+          </localization-form>
+        </div>
+      {%- endif -%}
 
-      </div>
+      {%- if section.settings.policy_1_label != blank and section.settings.policy_1_url != blank
+          or section.settings.policy_2_label != blank and section.settings.policy_2_url != blank
+          or section.settings.policy_3_label != blank and section.settings.policy_3_url != blank -%}
+        <ul class="fpb__policies list-unstyled">
+          {%- if section.settings.policy_1_label != blank and section.settings.policy_1_url != blank -%}
+            <li><a href="{{ section.settings.policy_1_url }}">{{ section.settings.policy_1_label | escape }}</a></li>
+          {%- endif -%}
+          {%- if section.settings.policy_2_label != blank and section.settings.policy_2_url != blank -%}
+            <li><a href="{{ section.settings.policy_2_url }}">{{ section.settings.policy_2_label | escape }}</a></li>
+          {%- endif -%}
+          {%- if section.settings.policy_3_label != blank and section.settings.policy_3_url != blank -%}
+            <li><a href="{{ section.settings.policy_3_url }}">{{ section.settings.policy_3_label | escape }}</a></li>
+          {%- endif -%}
+        </ul>
+      {%- endif -%}
+
+      {%- unless shop.enabled_payment_types == empty -%}
+        <ul class="fpb__payments list-unstyled">
+          {%- for type in shop.enabled_payment_types -%}
+            <li>{{ type | payment_type_svg_tag }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endunless -%}
+
     </div>
   </div>
-
 </div>
 
 <script>
@@ -619,6 +665,12 @@
     {
       "type": "header",
       "content": "Barra inferior"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "label": "Mostrar selector de país",
+      "default": true
     },
     {
       "type": "text",
