@@ -2034,7 +2034,7 @@
     "impact_banner_main": {
       "type": "impact-banner-native",
       "settings": {
-        "background_image": "shopify://shop_images/Cloud-Forest.-Chirripo-National-Park.-Costa-Rica.jpg",
+        "background_image": "shopify://shop_images/image_9834bd61-a0f5-498c-bf9e-2fb263c09c58.png",
         "overlay_color": "#0a2e1a",
         "overlay_opacity": 75,
         "logo_width_desktop": 120,
@@ -2043,6 +2043,8 @@
         "title": "Positive Impact",
         "stat": "Over 1,000,000 plastic bottles saved",
         "description": "We’re building a future where technology helps, not harms, the planet. This isn’t a campaign. It’s a promise. To you. To the Earth. To the future. Every order triggers a tangible climate-positive action, from planting trees and restoring habitats to funding clean-energy and plastic-recovery projects.",
+        "badge_1_label": "Trees planted",
+        "badge_2_label": "Plastic bottles saved",
         "cta_label": "Learn More",
         "cta_url": "",
         "cta_new_tab": false,
