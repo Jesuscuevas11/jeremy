@@ -1,0 +1,292 @@
+{{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'split-type.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'testimonials.js' | asset_url }}" defer="defer"></script>
+
+<section class="testimonials-section testimonials--slider-isBeggining" data-section-id="{{ section.id }}">
+  <style>
+    #shopify-section-{{ section.id }} {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .testimonials-section-{{ section.id }}-padding {
+      padding-top: 5.6rem;
+      padding-bottom: 5.6rem;
+    }
+    @media screen and (min-width: 750px) {
+      .testimonials-section-{{ section.id }}-padding {
+        padding-top: 7.2rem;
+        padding-bottom: 7.2rem;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      .testimonials-section-{{ section.id }}-padding {
+        padding-top: 11rem;
+        padding-bottom: 11rem;
+      }
+    }
+  </style>
+
+  <div class="testimonials color-background-1 background testimonials-section-{{ section.id }}-padding testimonials--visible-overflow" dir="ltr">
+    <div class="container">
+      <div class="testimonials-content content">
+
+        <!-- Desktop image slider -->
+        <div class="testimonials-images-slider swiper testimonials-images-slider--visible-overflow">
+          <div class="testimonials-images-slider-wrapper swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="testimonials-images-slider-slide testimonials-images-slider-slide--portrait swiper-slide">
+                {% if block.settings.image %}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 854 }}"
+                    alt="{{ block.settings.image.alt | escape }}"
+                    srcset="
+                      {{ block.settings.image | image_url: width: 360 }} 360w,
+                      {{ block.settings.image | image_url: width: 535 }} 535w,
+                      {{ block.settings.image | image_url: width: 600 }} 600w,
+                      {{ block.settings.image | image_url: width: 720 }} 720w
+                    "
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
+                    loading="lazy"
+                    sizes="(min-width: 1440px) calc(516px * 1), (min-width: 1360px) calc(36vw * 1), (min-width: 1200px) calc(37vw * 1), (min-width: 750px) calc(44vw * 1), (min-width: 576px) 95vw, calc(91vw * 1)"
+                    class="testimonials-images-slider-image"
+                    {% if block.settings.image_position != blank %}
+                      style="object-position: {{ block.settings.image_position }}; object-fit: cover;"
+                    {% else %}
+                      style="object-fit: cover;"
+                    {% endif %}
+                  >
+                {% elsif block.settings.fallback_image_url != blank %}
+                  <img
+                    src="{{ block.settings.fallback_image_url }}"
+                    alt="{{ block.settings.author }}"
+                    width="854"
+                    height="1068"
+                    loading="lazy"
+                    class="testimonials-images-slider-image"
+                    {% if block.settings.image_position != blank %}
+                      style="object-position: {{ block.settings.image_position }}; object-fit: cover;"
+                    {% else %}
+                      style="object-fit: cover;"
+                    {% endif %}
+                  >
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Main right column -->
+        <div class="testimonials-main">
+
+          <!-- Prev / Next buttons -->
+          <div class="testimonials-slider-buttons no-js-hidden">
+            <button class="testimonials-slider-button testimonials-slider-button--prev" aria-label="Previous slide">
+              <svg width="36" height="36" class="icon icon-arrow" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" role="presentation">
+                <path d="M3 18L33 18M33 18L20.1429 6M33 18L20.1429 30" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </button>
+            <button class="testimonials-slider-button testimonials-slider-button--next" aria-label="Next slide">
+              <svg width="36" height="36" class="icon icon-arrow" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" role="presentation">
+                <path d="M3 18L33 18M33 18L20.1429 6M33 18L20.1429 30" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Header -->
+          <div class="testimonials-main-header">
+            {% if section.settings.heading != blank %}
+              <h2 class="testimonials-main-header__heading subtitle">{{ section.settings.heading }}</h2>
+            {% endif %}
+            {% if section.settings.review_count != blank %}
+              <p class="testimonials-main-header__text body-small">{{ section.settings.review_count }}</p>
+            {% endif %}
+          </div>
+
+          <!-- Text + mobile image slider -->
+          <div class="testimonials-slider swiper testimonials-slider--visible-overflow">
+            <div class="testimonials-slider-wrapper swiper-wrapper">
+              {% for block in section.blocks %}
+                <div class="testimonials-slider-slide swiper-slide" {{ block.shopify_attributes }}>
+
+                  <!-- Mobile image (hidden on desktop via CSS) -->
+                  <div class="testimonials-slider-slide__image-wrapper testimonials-slider-slide__image-wrapper--portrait">
+                    {% if block.settings.image %}
+                      <img
+                        src="{{ block.settings.image | image_url: width: 854 }}"
+                        alt="{{ block.settings.image.alt | escape }}"
+                        srcset="
+                          {{ block.settings.image | image_url: width: 360 }} 360w,
+                          {{ block.settings.image | image_url: width: 535 }} 535w,
+                          {{ block.settings.image | image_url: width: 600 }} 600w,
+                          {{ block.settings.image | image_url: width: 720 }} 720w
+                        "
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        loading="lazy"
+                        sizes="(min-width: 1440px) calc(516px * 1), (min-width: 1360px) calc(36vw * 1), (min-width: 1200px) calc(37vw * 1), (min-width: 750px) calc(44vw * 1), (min-width: 576px) 95vw, calc(91vw * 1)"
+                        class="testimonials-slider-slide__image"
+                        {% if block.settings.image_position != blank %}
+                          style="object-position: {{ block.settings.image_position }}; object-fit: cover;"
+                        {% else %}
+                          style="object-fit: cover;"
+                        {% endif %}
+                      >
+                    {% elsif block.settings.fallback_image_url != blank %}
+                      <img
+                        src="{{ block.settings.fallback_image_url }}"
+                        alt="{{ block.settings.author }}"
+                        width="854"
+                        height="1068"
+                        loading="lazy"
+                        class="testimonials-slider-slide__image"
+                        {% if block.settings.image_position != blank %}
+                          style="object-position: {{ block.settings.image_position }}; object-fit: cover;"
+                        {% else %}
+                          style="object-fit: cover;"
+                        {% endif %}
+                      >
+                    {% endif %}
+                  </div>
+
+                  <!-- Stars -->
+                  <div class="testimonials-slider-slide__rating">
+                    {% assign star_count = block.settings.stars | default: 5 %}
+                    {% for i in (1..star_count) %}
+                      <svg class="icon icon-star" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.34694 0L9.42842 4.48203L14.3343 5.07661L10.7148 8.44124L11.6654 13.2907L7.34694 10.8882L3.02852 13.2907L3.97903 8.44124L0.359585 5.07661L5.26546 4.48203L7.34694 0Z" fill="currentColor"/>
+                      </svg>
+                    {% endfor %}
+                  </div>
+
+                  <!-- Quote -->
+                  <div class="testimonials-slider-slide__text h3">{{ block.settings.quote }}</div>
+
+                  <!-- Author -->
+                  <div class="testimonials-slider-slide__bottom">
+                    <span class="testimonials-slider-slide__author body-normal">{{ block.settings.author }}</span>
+                  </div>
+
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Custom cursor (desktop pointer devices) -->
+        <div class="testimonials-cursor">
+          <svg width="36" height="36" class="icon icon-arrow" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" role="presentation">
+            <path d="M3 18L33 18M33 18L20.1429 6M33 18L20.1429 30" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "millions of devices sold"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review count text",
+      "default": "Over 1,500 5-Star Reviews"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo"
+        },
+        {
+          "type": "text",
+          "id": "fallback_image_url",
+          "label": "Fallback photo URL (used if no photo uploaded)"
+        },
+        {
+          "type": "text",
+          "id": "image_position",
+          "label": "Photo focal point (CSS object-position)",
+          "placeholder": "e.g. 44% 67%"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author name"
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Star rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Brilliant idea, I have the Clip, Card and Tags. Great re-assurance for all my important things.\"",
+            "author": "Lacy M.",
+            "stars": 5,
+            "image_position": "44.224% 67.3793%"
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Zero issues. Works great with my android. Sustainable packaging, quick delivery, quality products that work as advertised.\"",
+            "author": "Jack R.",
+            "stars": 5
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Android or Apple. It doesn't matter. It's an amazing product that works every time.\"",
+            "author": "Steph T.",
+            "stars": 5
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Works great with my android. Sustainable packaging, quick delivery, quality products that work as advertised.\"",
+            "author": "Haley B.",
+            "stars": 5
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

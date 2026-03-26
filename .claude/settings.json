@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -o 'color-background-[123][^,{]*{[^}]*background-color[^}]*}')",
+      "Bash(curl -s https://pebblebee.com/cdn/shop/t/106/assets/base.css)",
+      "Bash(python3.exe -:*)",
+      "Bash(node -e \":*)",
+      "Bash(\"$TEMP/base.css\")",
+      "Read(//c/Users/Usuario/Documents/Repos Rojan/jeremy/$TEMP/**)"
+    ],
+    "additionalDirectories": [
+      "\\tmp",
+      "C:\\Users\\Usuario\\AppData\\Local\\Temp"
+    ]
+  }
+}

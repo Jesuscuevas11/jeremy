@@ -1818,6 +1818,58 @@
         "title": "Meet Alert",
         "description": "Alert, a free feature inside every Pebblebee Clip, turns an ordinary key ring into a lifeline: rapid presses activate a strobe, blasts a siren, and sends your location straight to the people you trust."
       }
+    },
+    "testimonials_main": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_lacy": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/lacy.jpg?v=1752173654",
+            "image_position": "44.224% 67.3793%",
+            "quote": "\"Brilliant idea, I have the Clip, Card and Tags. Great re-assurance for all my important things.\"",
+            "author": "Lacy M.",
+            "stars": 5
+          }
+        },
+        "testimonial_jack": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/jack.jpg?v=1752174846",
+            "quote": "\"Zero issues. Works great with my android. Sustainable packaging, quick delivery, quality products that work as advertised.\"",
+            "author": "Jack R.",
+            "stars": 5
+          }
+        },
+        "testimonial_steph": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/steph2.jpg?v=1752174370",
+            "quote": "\"Android or Apple. It doesn't matter. It's an amazing product that works every time.\"",
+            "author": "Steph T.",
+            "stars": 5
+          }
+        },
+        "testimonial_haley": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/haley.jpg?v=1752174186",
+            "quote": "\"Works great with my android. Sustainable packaging, quick delivery, quality products that work as advertised.\"",
+            "author": "Haley B.",
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_lacy",
+        "testimonial_jack",
+        "testimonial_steph",
+        "testimonial_haley"
+      ],
+      "settings": {
+        "heading": "millions of devices sold",
+        "review_count": "Over 1,500 5-Star Reviews"
+      }
     }
   },
   "order": [
@@ -1826,6 +1878,7 @@
     "multicolumn_features_main",
     "content_tabs_specs",
     "multicolumn_alert_main",
+    "testimonials_main",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",
