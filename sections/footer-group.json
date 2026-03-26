@@ -217,9 +217,9 @@
         "youtube_url": "",
         "menu_1": "footer",
         "menu_1_heading": "",
-        "menu_2": "",
+        "menu_2": "footer",
         "menu_2_heading": "",
-        "menu_3": "",
+        "menu_3": "footer",
         "menu_3_heading": "",
         "newsletter_heading": "Sign Up & Save",
         "newsletter_text": "Receive exclusive email-only deals. Stay connected and ensure you never lose track of what matters most.",
@@ -229,11 +229,11 @@
         "enable_country_selector": true,
         "copyright_name": "PB Inc.",
         "policy_1_label": "Privacy Policy",
-        "policy_1_url": "",
+        "policy_1_url": "shopify://pages/contact",
         "policy_2_label": "Terms of Service",
-        "policy_2_url": "",
+        "policy_2_url": "shopify://pages/contact",
         "policy_3_label": "Terms of use",
-        "policy_3_url": ""
+        "policy_3_url": "shopify://pages/contact"
       }
     }
   },
