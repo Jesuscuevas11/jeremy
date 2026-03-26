@@ -1804,12 +1804,19 @@
         "subtitle": "Built to Keep You Connected",
         "title": "Every Feature, Thoughtfully Designed"
       }
+    },
+    "content_tabs_specs": {
+      "type": "content-tabs",
+      "settings": {
+        "title": "Technical Specifications"
+      }
     }
   },
   "order": [
     "main",
     "images_with_content_evercolor",
     "multicolumn_features_main",
+    "content_tabs_specs",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",

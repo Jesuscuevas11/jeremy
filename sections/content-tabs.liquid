@@ -1,0 +1,123 @@
+{{ 'section-content-tabs.css' | asset_url | stylesheet_tag }}
+{{ 'content-tabs.js' | asset_url | script_tag }}
+
+<div class="content-tabs-section color-background-1 background">
+  <div class="content-tabs-section-padding">
+
+    <div class="content-tabs__titles titles titles--center">
+      <h2 class="content-tabs__title title h3">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="content-tabs__wrapper">
+      <div class="content-tabs__tabs">
+        <div class="content-tabs__tabs-wrapper content-tabs__tabs-wrapper--5 content-tabs__tabs-wrapper--equal">
+          <div class="content-tabs__tab content-tabs__tab--active focus-inset" data-content-tab-id="#content-tab-tech-specs" tabindex="0">
+            <span>Tech Specs</span>
+          </div>
+          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-description" tabindex="0">
+            <span>Description</span>
+          </div>
+          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-whats-included" tabindex="0">
+            <span>What's Included</span>
+          </div>
+          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-battery-life" tabindex="0">
+            <span>Battery Life</span>
+          </div>
+          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-requirements" tabindex="0">
+            <span>Requirements</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Specs -->
+      <div class="content-tabs__content content-tabs__content--2-column content-tabs__content--active animate left" data-content-tab-id="#content-tab-tech-specs">
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Product Dimensions</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>1.77 in (45 mm) x 1.49 in (38 mm) x 0.37 in (9.50 mm)</p></div>
+        </div>
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Warranty Period</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>1 year limited warranty against product defects, effective from the time of delivery.</p></div>
+        </div>
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Product Weight</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>0.35 oz (10 g)</p></div>
+        </div>
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Bluetooth Range</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>Up to 500 ft (150 m)</p></div>
+        </div>
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Water Resistance</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>IP66 rating</p></div>
+        </div>
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Package Dimensions</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>3.8 in x 4.2 in x 0.5 in (96 mm x 106 mm x 14 mm)</p></div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-description">
+        <div class="content-tabs__content-block">
+          <div class="content-tabs__content-text rte rte__container">
+            <p>The <b>Pebblebee Clip 5</b> is a compact and versatile Bluetooth item finder designed to help you keep track of your valuable items. With its durable clip-on design, it easily attaches to keychains, bags, luggage, or any item you want to monitor. Featuring a loud audible alert, bright LEDs and extended Bluetooth range, the Clip 5 ensures you can quickly locate your belongings using your smartphone. The free personal safety feature <a href="/alert" title="Alert personal safety feature"><strong>Alert</strong></a> helps keep you safe.</p>
+            <p>It seamlessly integrates with either&nbsp;<b>Apple Find My</b> or <b>Google's Find Hub</b> networks, providing broad compatibility and global coverage. The rechargeable battery offers long-lasting power, making it an eco-friendly and convenient solution for everyday use.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What's Included -->
+      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-whats-included">
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Includes</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>Pebblebee Clip 5</p></div>
+        </div>
+      </div>
+
+      <!-- Battery Life -->
+      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-battery-life">
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Battery Life</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>Up to 12 months on a single charge</p></div>
+        </div>
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Charging Type</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>USB-C (cable not included)</p></div>
+        </div>
+      </div>
+
+      <!-- Requirements -->
+      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-requirements">
+        <div class="content-tabs__content-block">
+          <h4 class="content-tabs__content-title">Minimum Requirements</h4>
+          <div class="content-tabs__content-text rte rte__container"><p>Apple Find My or Google's Find Hub app.<br>
+Location services and Bluetooth to be turned on.<br>
+Requires cell service or internet connection.<br>
+Works on Android 9+ and in certain countries for age-eligible users.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Content Tabs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Technical Specifications"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content Tabs"
+    }
+  ]
+}
+{% endschema %}
