@@ -1837,6 +1837,38 @@
           "settings": {
             "selected_product": "",
             "star_rating": 5,
+            "name_text": "Asuncion Prieto.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "June 2025",
+            "review_head": "Gran compra",
+            "review_text": "Me ayuda a encontrar mis llaves y cartera fácilmente. La integración con la app es perfecta.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_wkMajB": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Pedro Salvatierra.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "June 2025",
+            "review_head": "Gran compra",
+            "review_text": "Me ayuda a encontrar mis llaves y cartera fácilmente. La integración con la app es perfecta.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_7JqJTF": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
             "name_text": "Pedro Salvatierra.",
             "country_code": "US",
             "show_country_flag": true,
@@ -1856,7 +1888,9 @@
         "review_gFK9wh",
         "review_q7BbJh",
         "review_PTqV7C",
-        "review_p9jwdH"
+        "review_p9jwdH",
+        "review_wkMajB",
+        "review_7JqJTF"
       ],
       "name": "Lumin Review",
       "settings": {
