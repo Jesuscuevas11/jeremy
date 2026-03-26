@@ -722,6 +722,247 @@
         "padding_bottom": 64
       }
     },
+    "images_with_content_evercolor": {
+      "type": "images-with-content",
+      "settings": {
+        "subtitle": "New Evercolor Drop",
+        "title": "Limited Colors. Never Repeated.",
+        "vimeo_id": "1159913822",
+        "images_aspect_ratio": "2/1",
+        "text_subheading": "About The Drop",
+        "text_heading": "Subzero & Hot Coral",
+        "text_content": "<p>Temperature is an invisible force that shapes your instincts long before you’re aware of it. Freeze Frame explores how temperature becomes memory and memory becomes intuition. More than a colorway, Freeze Frame is a reminder that the unseen forces often shape us the most. <strong>When they’re gone, they’re gone. </strong><a href=\"/pages/evercolor\" target=\"_blank\" title=\"Evercolor\">Learn More</a></p>"
+      }
+    },
+    "multicolumn_features_main": {
+      "type": "multicolumn-features",
+      "settings": {
+        "subtitle": "Built to Keep You Connected",
+        "title": "Every Feature, Thoughtfully Designed"
+      }
+    },
+    "content_tabs_specs": {
+      "type": "content-tabs",
+      "settings": {
+        "title": "Technical Specifications"
+      }
+    },
+    "multicolumn_alert_main": {
+      "type": "multicolumn-alert",
+      "settings": {
+        "subtitle": "All-new personal safety feature",
+        "title": "Meet Alert",
+        "description": "Alert, a free feature inside every Pebblebee Clip, turns an ordinary key ring into a lifeline: rapid presses activate a strobe, blasts a siren, and sends your location straight to the people you trust."
+      }
+    },
+    "testimonials_main": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_lacy": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/lacy.jpg?v=1752173654",
+            "image_position": "44.224% 67.3793%",
+            "quote": "\"Brilliant idea, I have the Clip, Card and Tags. Great re-assurance for all my important things.\"",
+            "author": "Lacy M.",
+            "stars": 5
+          }
+        },
+        "testimonial_jack": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/jack.jpg?v=1752174846",
+            "image_position": "",
+            "quote": "\"Zero issues. Works great with my android. Sustainable packaging, quick delivery, quality products that work as advertised.\"",
+            "author": "Jack R.",
+            "stars": 5
+          }
+        },
+        "testimonial_steph": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/steph2.jpg?v=1752174370",
+            "image_position": "",
+            "quote": "\"Android or Apple. It doesn't matter. It's an amazing product that works every time.\"",
+            "author": "Steph T.",
+            "stars": 5
+          }
+        },
+        "testimonial_haley": {
+          "type": "testimonial",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/haley.jpg?v=1752174186",
+            "image_position": "",
+            "quote": "\"Works great with my android. Sustainable packaging, quick delivery, quality products that work as advertised.\"",
+            "author": "Haley B.",
+            "stars": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_lacy",
+        "testimonial_jack",
+        "testimonial_steph",
+        "testimonial_haley"
+      ],
+      "settings": {
+        "heading": "millions of devices sold",
+        "review_count": "Over 1,500 5-Star Reviews"
+      }
+    },
+    "image_gallery_main": {
+      "type": "image-gallery",
+      "blocks": {
+        "slide_car_keys": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_car-keys.png?v=1762378617",
+            "image_position": ""
+          }
+        },
+        "slide_snowmobile": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_snowmobile.png?v=1770713081",
+            "image_position": ""
+          }
+        },
+        "slide_open_backpack": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_open-backpack.png?v=1770712962",
+            "image_position": ""
+          }
+        },
+        "slide_gym_bag": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_gym-bag_5f0a4edd-f125-4562-b172-2562d6fdc34e.png?v=1762378755",
+            "image_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_car_keys",
+        "slide_snowmobile",
+        "slide_open_backpack",
+        "slide_gym_bag"
+      ],
+      "settings": {}
+    },
+    "images_with_content_protection_main": {
+      "type": "images-with-content-protection",
+      "settings": {
+        "subtitle": "Unmatched Protection",
+        "title": "Find Anything, Anytime, From Anywhere",
+        "images_aspect_ratio": "2/1",
+        "text_1": "<p><strong>Detection of unwanted location tracking</strong> — Receive alerts on both Apple and Android when an unknown tracker has been traveling with you.</p>",
+        "text_2": "<p><strong>Your lost item isn’t really lost</strong> — not when billions of Apple or Android devices can anonymously ping your tracker’s location back to you.</p>"
+      }
+    },
+    "faq_pebblebee_main": {
+      "type": "collapsible-content-pebblebee",
+      "blocks": {
+        "faq_block_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Does this tracker work with both Android and iOS?",
+            "answer": "<p>Yes, Pebblebee Clip 5 pairs with Apple Find My on iOS or Google’s Find Hub on Android. That multi-network compatibility means one Clip 5 can be used on either iOS or Android, unlike single-platform trackers that force you to buy a new product if you switch handsets.</p>"
+          }
+        },
+        "faq_block_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "How long does the battery last on a key tracker?",
+            "answer": "<p>Pebblebee Clip 5 runs for up to 12 months on a single USB-C charge. Its rechargeable design eliminates wasteful coin cells and saves you money, giving Pebblebee a greener edge over disposable-battery tags.</p>"
+          }
+        },
+        "faq_block_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "How far can a Bluetooth tracker reach before it disconnects?",
+            "answer": "<p>Pebblebee Clip 5 holds a direct Bluetooth link out to about 500 feet in open space, nearly double many competitors. Once an item goes beyond direct Bluetooth range it can still be located via the global networks of either Apple Find My or Google’s Find Hub.</p>"
+          }
+        },
+        "faq_block_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Is there a better alternative to AirTag for Android users?",
+            "answer": "<p>Yes, Pebblebee Clip 5 integrates natively with Google’s Find Hub while AirTag is iPhone-only. Pebblebee still supports Apple Find My too, so you get true cross-platform coverage in one tag instead of being locked into a single ecosystem.</p>"
+          }
+        },
+        "faq_block_5": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Will the company behind my tracker see everywhere I go?",
+            "answer": "<p>No. Pebblebee never receives or stores your location when connected to Apple or Google; all data stays end-to-end encrypted inside the network you choose. This strict privacy stance delivers peace of mind that many trackers simply can’t match.</p>"
+          }
+        },
+        "faq_block_6": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "What is Pebblebee’s return and refund policy?",
+            "answer": "<p>We want you to be completely satisfied with your purchase. If you are not happy with your product, you can return it within 30 days of purchase for a full refund, as long as the item is in its original condition and packaging.</p>"
+          }
+        },
+        "faq_block_7": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "How can I track my Pebblebee order?",
+            "answer": "<p>Once your order has been processed and shipped, you will receive a confirmation email with your tracking number. You can use it to monitor your delivery from the ‘Track Your Order’ link at the bottom of the site.</p>"
+          }
+        },
+        "faq_block_8": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Will Pebblebee item finders work with my phone?",
+            "answer": "<p>Yes! Pebblebee products work seamlessly with both Android and iOS. You can connect to Apple Find My (iOS) or Google’s Find Hub (Android). Note: each device can be paired with one network at a time. To switch networks, a factory reset is required.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_1",
+        "faq_block_2",
+        "faq_block_3",
+        "faq_block_4",
+        "faq_block_5",
+        "faq_block_6",
+        "faq_block_7",
+        "faq_block_8"
+      ],
+      "settings": {
+        "background_color": "#f9f7ef",
+        "title": "FAQs",
+        "heading_alignment": "center",
+        "open_first": true,
+        "padding_top_mobile": 4,
+        "padding_bottom_mobile": 6.4,
+        "padding_top_tablet": 5.6,
+        "padding_bottom_tablet": 8.8,
+        "padding_top_desktop": 8,
+        "padding_bottom_desktop": 14
+      }
+    },
+    "compare_pebblebee_main": {
+      "type": "compare-pebblebee",
+      "settings": {
+        "background_color": "#000000",
+        "subtitle": "Universal Compatibility",
+        "title": "Bigger Networks, Better Privacy",
+        "description": "We’ve partnered with both Apple & Google to develop, test, and certify our item finders to ensure they work seamlessly with the Find My network for iOS users or the Find Hub network for Android users.",
+        "label_1": "Apple Find My",
+        "heading_1": "Rechargeable Item Finders for iOS",
+        "label_2": "Google’s Find Hub",
+        "heading_2": "Market Leading Item Finders for Android",
+        "aspect_ratio": "56.25",
+        "padding_top_mobile": 3.2,
+        "padding_bottom_mobile": 3.2,
+        "padding_top_tablet": 4,
+        "padding_bottom_tablet": 4,
+        "padding_top_desktop": 5.6,
+        "padding_bottom_desktop": 5.6
+      }
+    },
     "announcement_bar_scrolling_iYN9yh": {
       "type": "announcement-bar-scrolling",
       "blocks": {
@@ -854,6 +1095,7 @@
         "icons_xKnc3W",
         "button_bBTTD7"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme_main": "",
         "full-width": false,
@@ -992,6 +1234,7 @@
         "card_EqdD4P",
         "card_kGeRqq"
       ],
+      "disabled": true,
       "settings": {
         "video_border": 14,
         "zoom_hover": true,
@@ -1050,6 +1293,7 @@
         "divider_cMbKBr",
         "text_columns_xXAzYm"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme_main": "background-1",
         "full-width": false,
@@ -1095,6 +1339,7 @@
         "product_Wpn6NK",
         "product_xYF4hy"
       ],
+      "disabled": true,
       "name": "Bundle deals",
       "settings": {
         "width": "full",
@@ -1228,6 +1473,7 @@
         "row_eeYFxr",
         "row_nVYhLx"
       ],
+      "disabled": true,
       "settings": {
         "title": "What makes Organic right for you?",
         "heading_size": "h1",
@@ -1294,6 +1540,7 @@
       "block_order": [
         "hero_bh8eN3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "background-1",
         "color_scheme_2": "background-1",
@@ -1313,6 +1560,7 @@
     },
     "extra_button_rJamqn": {
       "type": "extra-button",
+      "disabled": true,
       "settings": {
         "custom_text": "Get Yours Now 👉",
         "custom_text_small": "Offer End Soon ✦ Buy Before Price Increase",
@@ -1368,6 +1616,7 @@
         "column_w3DEP7",
         "column_fda4jN"
       ],
+      "disabled": true,
       "settings": {
         "title": "Every product is sourced from certified organic farms, ensuring zero synthetic pesticides or GMOs.",
         "heading_size": "h2",
@@ -1462,6 +1711,7 @@
         "collapsible_row_96H3iX",
         "collapsible_row_gVcnnE"
       ],
+      "disabled": true,
       "settings": {
         "caption": "Frequently Ask Questions",
         "heading": "FAQs",
