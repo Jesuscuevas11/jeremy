@@ -29,33 +29,33 @@
       "block_order": [
         "announcement_evercolor"
       ],
+      "custom_css": [
+        ".icon-arrow {display: none !important;}",
+        ".announcement-bar__link,.announcement-bar__link *,.announcement-bar__message {color: #fff !important;}",
+        ".announcement-bar__message {font-family: \"Source Sans Pro\", sans-serif !important; font-weight: bolder !important; letter-spacing: normal !important; text-transform: none !important;}"
+      ],
       "settings": {
         "color_scheme": "scheme-4",
-        "show_line_separator": false,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
         "gradient_color_1": "#3ec4ed",
         "gradient_stop_1": 20,
         "gradient_color_2": "#ce3d3d",
         "gradient_stop_2": 80,
         "gradient_angle": 135,
         "bar_height_mobile": 42,
-        "bar_height_desktop": 34
-      },
-      "custom_css": [
-        ".icon-arrow{display:none!important}",
-        ".announcement-bar__link,.announcement-bar__link *,.announcement-bar__message{color:#fff!important}",
-        ".announcement-bar__message{font-family:'Source Sans Pro',sans-serif!important;font-weight:bolder!important;letter-spacing:normal!important;text-transform:none!important}"
-      ]
+        "bar_height_desktop": 34,
+        "show_line_separator": false,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
     },
     "header": {
       "type": "header",
       "custom_css": [
-        ".header__menu-item,.header__menu-item-title{font-family:'Source Sans Pro',sans-serif!important;font-size:15px!important;font-weight:600!important;letter-spacing:-0.01em!important}",
-        ".header__icon--account{display:none!important}"
+        ".header__menu-item,.header__menu-item-title {font-family: \"Source Sans Pro\", sans-serif !important; font-size: 15px !important; font-weight: 600 !important; letter-spacing: -0.01em !important;}",
+        ".header__icon--account {display: none !important;}"
       ],
       "settings": {
         "enable_transparent-header": false,
@@ -64,7 +64,7 @@
         "color-hover-background": "#ffffff",
         "color-hover-text": "#212121",
         "logo_position": "middle-left",
-        "menu": "main-menu",
+        "menu": "",
         "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": false,
