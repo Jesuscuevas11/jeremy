@@ -30,7 +30,7 @@
         "review_mMj4kD": {
           "type": "review",
           "settings": {
-            "lrw_text": "4.8 From 136 Reviews",
+            "lrw_text": "4.8 de 136 Reseñas",
             "text_size": 14,
             "star_style": "star",
             "star_size": 0.7,
@@ -60,21 +60,21 @@
         "pb_volume_bundle_Xk9m2Q": {
           "type": "pebblebee-volume-bundle",
           "settings": {
-            "widget_title": "Buy More, Save More",
-            "tier1_title": "Buy 1",
-            "tier2_title": "Buy 2",
-            "tier2_subtitle": "Save 15% & free gift!",
+            "widget_title": "Compra más, ahorra más",
+            "tier1_title": "Compra 1",
+            "tier2_title": "Compra 2",
+            "tier2_subtitle": "¡Ahorra 15% y regalo gratis!",
             "tier2_badge": "POPULAR",
             "tier2_discount": 15,
             "free_gift_tier2": "",
-            "tier3_title": "Buy 3",
-            "tier3_subtitle": "Get 1 Free",
-            "tier3_badge": "BEST VALUE MULTIPACK",
-            "tier3_free_gift_text": "4th unit is free!",
+            "tier3_title": "Compra 3",
+            "tier3_subtitle": "Llévate 1 gratis",
+            "tier3_badge": "MEJOR VALOR MULTIPACK",
+            "tier3_free_gift_text": "¡La 4ta unidad es gratis!",
             "addon_product": "",
-            "addon_text": "Add Alert Live",
+            "addon_text": "Agregar Alert Live",
             "default_tier": "2",
-            "atc_text": "Add to Cart"
+            "atc_text": "Agregar al carrito"
           }
         },
         "price": {
@@ -638,10 +638,10 @@
             "img_ratio": "ratio-1x1",
             "img_border_radius": 0,
             "btn_style": "button--primary",
-            "title": "Frequently Bought Together",
+            "title": "Comprados frecuentemente juntos",
             "title_font_size": "fs-lg",
             "title_text_style": "body",
-            "description": "<p>Save up to 50% with one click!</p>",
+            "description": "<p>¡Ahorra hasta un 50% con un solo clic!</p>",
             "description_font_size": "fs-sm"
           }
         }
@@ -725,34 +725,34 @@
     "images_with_content_evercolor": {
       "type": "images-with-content",
       "settings": {
-        "subtitle": "New Evercolor Drop",
-        "title": "Limited Colors. Never Repeated.",
+        "subtitle": "Nuevo lanzamiento Evercolor",
+        "title": "Colores limitados. Nunca repetidos.",
         "vimeo_id": "1159913822",
         "images_aspect_ratio": "2/1",
-        "text_subheading": "About The Drop",
+        "text_subheading": "Sobre el lanzamiento",
         "text_heading": "Subzero & Hot Coral",
-        "text_content": "<p>Temperature is an invisible force that shapes your instincts long before you’re aware of it. Freeze Frame explores how temperature becomes memory and memory becomes intuition. More than a colorway, Freeze Frame is a reminder that the unseen forces often shape us the most. <strong>When they’re gone, they’re gone. </strong><a href=\"/pages/evercolor\" target=\"_blank\" title=\"Evercolor\">Learn More</a></p>"
+        "text_content": "<p>La temperatura es una fuerza invisible que moldea tus instintos mucho antes de que seas consciente de ello. Freeze Frame explora cómo la temperatura se convierte en memoria y la memoria en intuición. Más que una combinación de colores, Freeze Frame es un recordatorio de que las fuerzas invisibles a menudo nos moldean más. <strong>Cuando se van, se van.</strong> <a href=\"/pages/evercolor\" target=\"_blank\" title=\"Evercolor\">Saber más</a></p>"
       }
     },
     "multicolumn_features_main": {
       "type": "multicolumn-features",
       "settings": {
-        "subtitle": "Built to Keep You Connected",
-        "title": "Every Feature, Thoughtfully Designed"
+        "subtitle": "Diseñado para mantenerte conectado",
+        "title": "Cada función, pensada para ti"
       }
     },
     "content_tabs_specs": {
       "type": "content-tabs",
       "settings": {
-        "title": "Technical Specifications"
+        "title": "Especificaciones técnicas"
       }
     },
     "multicolumn_alert_main": {
       "type": "multicolumn-alert",
       "settings": {
-        "subtitle": "All-new personal safety feature",
-        "title": "Meet Alert",
-        "description": "Alert, a free feature inside every Pebblebee Clip, turns an ordinary key ring into a lifeline: rapid presses activate a strobe, blasts a siren, and sends your location straight to the people you trust."
+        "subtitle": "Nueva función de seguridad personal",
+        "title": "Conoce Alert",
+        "description": "Alert, una función gratuita en cada Pebblebee Clip, convierte un llavero común en un salvavidas: pulsaciones rápidas activan una luz estroboscópica, suena una sirena y envía tu ubicación a las personas en las que confías."
       }
     },
     "testimonials_main": {
@@ -806,8 +806,8 @@
         "testimonial_haley"
       ],
       "settings": {
-        "heading": "millions of devices sold",
-        "review_count": "Over 1,500 5-Star Reviews"
+        "heading": "millones de dispositivos vendidos",
+        "review_count": "Más de 1,500 reseñas de 5 estrellas"
       }
     },
     "image_gallery_main": {
@@ -853,11 +853,11 @@
     "images_with_content_protection_main": {
       "type": "images-with-content-protection",
       "settings": {
-        "subtitle": "Unmatched Protection",
-        "title": "Find Anything, Anytime, From Anywhere",
+        "subtitle": "Protección inigualable",
+        "title": "Encuentra cualquier cosa, en cualquier momento, desde cualquier lugar",
         "images_aspect_ratio": "2/1",
-        "text_1": "<p><strong>Detection of unwanted location tracking</strong> — Receive alerts on both Apple and Android when an unknown tracker has been traveling with you.</p>",
-        "text_2": "<p><strong>Your lost item isn’t really lost</strong> — not when billions of Apple or Android devices can anonymously ping your tracker’s location back to you.</p>"
+        "text_1": "<p><strong>Detección de rastreo no deseado</strong> — Recibe alertas tanto en Apple como en Android cuando un rastreador desconocido ha estado viajando contigo.</p>",
+        "text_2": "<p><strong>Tu objeto perdido no está realmente perdido</strong> — no cuando miles de millones de dispositivos Apple o Android pueden enviar la ubicación de tu rastreador de forma anónima.</p>"
       }
     },
     "faq_pebblebee_main": {
@@ -866,57 +866,57 @@
         "faq_block_1": {
           "type": "collapsible_row",
           "settings": {
-            "question": "Does this tracker work with both Android and iOS?",
-            "answer": "<p>Yes, Pebblebee Clip 5 pairs with Apple Find My on iOS or Google’s Find Hub on Android. That multi-network compatibility means one Clip 5 can be used on either iOS or Android, unlike single-platform trackers that force you to buy a new product if you switch handsets.</p>"
+            "question": "¿Este rastreador funciona con Android y iOS?",
+            "answer": "<p>Sí, Pebblebee Clip 5 se conecta con Apple Find My en iOS o con Find Hub de Google en Android. Esa compatibilidad multinetwork significa que un solo Clip 5 puede usarse en ambos sistemas, a diferencia de otros rastreadores que te obligan a comprar uno nuevo si cambias de teléfono.</p>"
           }
         },
         "faq_block_2": {
           "type": "collapsible_row",
           "settings": {
-            "question": "How long does the battery last on a key tracker?",
-            "answer": "<p>Pebblebee Clip 5 runs for up to 12 months on a single USB-C charge. Its rechargeable design eliminates wasteful coin cells and saves you money, giving Pebblebee a greener edge over disposable-battery tags.</p>"
+            "question": "¿Cuánto dura la batería de un rastreador de llaves?",
+            "answer": "<p>Pebblebee Clip 5 funciona hasta 12 meses con una sola carga USB-C. Su diseño recargable elimina pilas desechables y te ahorra dinero, haciendo a Pebblebee más ecológico que los rastreadores de batería desechable.</p>"
           }
         },
         "faq_block_3": {
           "type": "collapsible_row",
           "settings": {
-            "question": "How far can a Bluetooth tracker reach before it disconnects?",
-            "answer": "<p>Pebblebee Clip 5 holds a direct Bluetooth link out to about 500 feet in open space, nearly double many competitors. Once an item goes beyond direct Bluetooth range it can still be located via the global networks of either Apple Find My or Google’s Find Hub.</p>"
+            "question": "¿Cuál es el alcance de un rastreador Bluetooth antes de desconectarse?",
+            "answer": "<p>Pebblebee Clip 5 mantiene una conexión Bluetooth directa hasta unos 150 metros en espacio abierto, casi el doble que muchos competidores. Si el objeto sale del alcance Bluetooth, aún puede localizarse mediante las redes globales de Apple Find My o Google Find Hub.</p>"
           }
         },
         "faq_block_4": {
           "type": "collapsible_row",
           "settings": {
-            "question": "Is there a better alternative to AirTag for Android users?",
-            "answer": "<p>Yes, Pebblebee Clip 5 integrates natively with Google’s Find Hub while AirTag is iPhone-only. Pebblebee still supports Apple Find My too, so you get true cross-platform coverage in one tag instead of being locked into a single ecosystem.</p>"
+            "question": "¿Hay una mejor alternativa a AirTag para usuarios de Android?",
+            "answer": "<p>Sí, Pebblebee Clip 5 se integra nativamente con Find Hub de Google, mientras que AirTag solo funciona con iPhone. Pebblebee también es compatible con Apple Find My, así que tienes cobertura multiplataforma real en una sola etiqueta.</p>"
           }
         },
         "faq_block_5": {
           "type": "collapsible_row",
           "settings": {
-            "question": "Will the company behind my tracker see everywhere I go?",
-            "answer": "<p>No. Pebblebee never receives or stores your location when connected to Apple or Google; all data stays end-to-end encrypted inside the network you choose. This strict privacy stance delivers peace of mind that many trackers simply can’t match.</p>"
+            "question": "¿La empresa detrás de mi rastreador verá todos mis movimientos?",
+            "answer": "<p>No. Pebblebee nunca recibe ni almacena tu ubicación cuando está conectado a Apple o Google; todos los datos permanecen cifrados de extremo a extremo dentro de la red que elijas. Esta postura estricta de privacidad brinda tranquilidad que muchos rastreadores no pueden igualar.</p>"
           }
         },
         "faq_block_6": {
           "type": "collapsible_row",
           "settings": {
-            "question": "What is Pebblebee’s return and refund policy?",
-            "answer": "<p>We want you to be completely satisfied with your purchase. If you are not happy with your product, you can return it within 30 days of purchase for a full refund, as long as the item is in its original condition and packaging.</p>"
+            "question": "¿Cuál es la política de devoluciones y reembolsos de Pebblebee?",
+            "answer": "<p>Queremos que estés completamente satisfecho con tu compra. Si no estás contento con tu producto, puedes devolverlo dentro de los 30 días posteriores a la compra para un reembolso completo, siempre que el artículo esté en su estado y empaque original.</p>"
           }
         },
         "faq_block_7": {
           "type": "collapsible_row",
           "settings": {
-            "question": "How can I track my Pebblebee order?",
-            "answer": "<p>Once your order has been processed and shipped, you will receive a confirmation email with your tracking number. You can use it to monitor your delivery from the ‘Track Your Order’ link at the bottom of the site.</p>"
+            "question": "¿Cómo puedo rastrear mi pedido de Pebblebee?",
+            "answer": "<p>Una vez que tu pedido haya sido procesado y enviado, recibirás un correo de confirmación con tu número de seguimiento. Puedes usarlo para monitorear la entrega desde el enlace ‘Rastrea tu pedido’ al pie de la página.</p>"
           }
         },
         "faq_block_8": {
           "type": "collapsible_row",
           "settings": {
-            "question": "Will Pebblebee item finders work with my phone?",
-            "answer": "<p>Yes! Pebblebee products work seamlessly with both Android and iOS. You can connect to Apple Find My (iOS) or Google’s Find Hub (Android). Note: each device can be paired with one network at a time. To switch networks, a factory reset is required.</p>"
+            "question": "¿Los localizadores Pebblebee funcionarán con mi teléfono?",
+            "answer": "<p>¡Sí! Los productos Pebblebee funcionan perfectamente tanto con Android como con iOS. Puedes conectarte a Apple Find My (iOS) o Find Hub de Google (Android). Nota: cada dispositivo puede emparejarse con una red a la vez. Para cambiar de red, se requiere un restablecimiento de fábrica.</p>"
           }
         }
       },
@@ -947,13 +947,13 @@
       "type": "compare-pebblebee",
       "settings": {
         "background_color": "#000000",
-        "subtitle": "Universal Compatibility",
-        "title": "Bigger Networks, Better Privacy",
-        "description": "We’ve partnered with both Apple & Google to develop, test, and certify our item finders to ensure they work seamlessly with the Find My network for iOS users or the Find Hub network for Android users.",
+        "subtitle": "Compatibilidad universal",
+        "title": "Redes más grandes, mejor privacidad",
+        "description": "Nos hemos asociado con Apple y Google para desarrollar, probar y certificar nuestros localizadores, asegurando que funcionen perfectamente con la red Find My para usuarios de iOS o Find Hub para usuarios de Android.",
         "label_1": "Apple Find My",
-        "heading_1": "Rechargeable Item Finders for iOS",
-        "label_2": "Google’s Find Hub",
-        "heading_2": "Market Leading Item Finders for Android",
+        "heading_1": "Localizadores recargables para iOS",
+        "label_2": "Find Hub de Google",
+        "heading_2": "Localizadores líderes para Android",
         "aspect_ratio": "56.25",
         "padding_top_mobile": 3.2,
         "padding_bottom_mobile": 3.2,
@@ -1763,8 +1763,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "Oct 2024",
-            "review_head": "Thrilled to discover Organic",
-            "review_text": "As someone who's passionate about clean eating, I was thrilled to discover Organic. Their commitment to sustainability and transparency is inspiring. Every product I've tried has been top-notch, from their fresh produce to pantry staples. Highly recommend!",
+            "review_head": "Encantado de descubrir Organic",
+            "review_text": "Como alguien apasionado por la alimentación saludable, me encantó descubrir Organic. Su compromiso con la sostenibilidad y la transparencia es inspirador. Todos los productos que he probado han sido de primera, desde sus productos frescos hasta los básicos de despensa. ¡Muy recomendado!",
             "like_size": 14,
             "dislike_size": 1,
             "feature_font_size": 16
@@ -1779,8 +1779,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "Sep 2024",
-            "review_head": "Products are unmatched",
-            "review_text": "I've tried so many organic brands, but nothing compares to Organic. The freshness and flavor of their . It's a relief knowing that what I'm feeding my family is not only delicious but also free from harmful chemicals. Organic has become a staple in our household!",
+            "review_head": "Productos incomparables",
+            "review_text": "He probado muchas marcas orgánicas, pero nada se compara con Organic. La frescura y el sabor de sus productos es increíble. Es un alivio saber que lo que le doy a mi familia no solo es delicioso, sino también libre de químicos dañinos. ¡Organic se ha vuelto esencial en nuestro hogar!",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1795,8 +1795,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Nice Product",
-            "review_text": "Nice Product. I'm happy with my purchase.",
+            "review_head": "Buen producto",
+            "review_text": "Buen producto. Estoy feliz con mi compra.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1811,8 +1811,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "Oct 2024",
-            "review_head": "Customer service is outstanding",
-            "review_text": "I switched to Organic products a few months ago, and I've never felt better. The quality of the ingredients really shines through in every meal I prepare. Plus, their customer service is outstanding. Organic truly cares about its customers and the planet.",
+            "review_head": "Atención al cliente excepcional",
+            "review_text": "Cambié a productos Organic hace unos meses y nunca me he sentido mejor. La calidad de los ingredientes realmente se nota en cada comida que preparo. Además, su atención al cliente es excepcional. Organic realmente se preocupa por sus clientes y el planeta.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1827,8 +1827,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Nice Product",
-            "review_text": "Nice Product. I'm happy with my purchase.",
+            "review_head": "Buen producto",
+            "review_text": "Buen producto. Estoy feliz con mi compra.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1843,8 +1843,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Nice Product",
-            "review_text": "Nice Product. I'm happy with my purchase.",
+            "review_head": "Buen producto",
+            "review_text": "Buen producto. Estoy feliz con mi compra.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1859,8 +1859,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Nice Product",
-            "review_text": "Nice Product. I'm happy with my purchase.",
+            "review_head": "Buen producto",
+            "review_text": "Buen producto. Estoy feliz con mi compra.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1875,8 +1875,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Nice Product",
-            "review_text": "Nice Product. I'm happy with my purchase.",
+            "review_head": "Buen producto",
+            "review_text": "Buen producto. Estoy feliz con mi compra.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1891,8 +1891,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Organic has changed the way we eat.",
-            "review_text": "I used to struggle with finding healthy, tasty options for my kids, but now they actually look forward to snack time. The variety is fantastic, and I love that everything is free from artificial additives. Organic has become a staple in our home.",
+            "review_head": "Organic ha cambiado la forma en que comemos.",
+            "review_text": "Antes me costaba encontrar opciones saludables y sabrosas para mis hijos, pero ahora esperan con ansias la hora del snack. La variedad es fantástica y me encanta que todo esté libre de aditivos artificiales. Organic se ha vuelto esencial en nuestro hogar.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1907,8 +1907,8 @@
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2024",
-            "review_head": "Nice Product",
-            "review_text": "Nice Product. I'm happy with my purchase.",
+            "review_head": "Buen producto",
+            "review_text": "Buen producto. Estoy feliz con mi compra.",
             "like_size": 0,
             "dislike_size": 0,
             "feature_font_size": 16
@@ -1947,7 +1947,7 @@
         "review_column_tab": 2,
         "review_column_desk": 3,
         "review_load": 6,
-        "load_text": "Load More",
+        "load_text": "Cargar más",
         "rw_img_size": 100,
         "rw_img_radius": 6,
         "block_name_size": 20,
@@ -1964,7 +1964,7 @@
         "border_radius": 8,
         "section_bg3": "#000000",
         "section_bg2": "#84ac83",
-        "verify_text": "Verified Buyer",
+        "verify_text": "Comprador verificado",
         "review_bg": "#ffffff",
         "feature_acc_color": "#000000",
         "review_pd": 20,
@@ -1972,11 +1972,11 @@
         "show_footer": true,
         "show_product": true,
         "product_image_radius": 4,
-        "like_text": "Was this helpful?",
+        "like_text": "¿Te fue útil?",
         "show_add_review_button": true,
-        "review_cta_heading": "Review this product",
-        "review_cta_subtext": "Share your thoughts with other customers",
-        "add_review_button_text": "Add Your Review",
+        "review_cta_heading": "Reseña este producto",
+        "review_cta_subtext": "Comparte tu experiencia con otros clientes",
+        "add_review_button_text": "Agrega tu reseña",
         "review_cta_heading_color": "#333333",
         "review_cta_subtext_color": "#666666",
         "add_review_button_bg": "#000000",
@@ -2004,7 +2004,7 @@
         "padding_top": 36,
         "padding_bottom": 36,
         "enable_review_popup": true,
-        "popup_helpful_text": "Was this helpful?",
+        "popup_helpful_text": "¿Te fue útil?",
         "show_popup_helpful_buttons": true,
         "show_popup_product_info": true,
         "popup_image_quality": "800",
@@ -2015,7 +2015,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "También te puede interesar",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -2040,12 +2040,12 @@
         "logo_width_desktop": 120,
         "logo_width_mobile": 80,
         "text_color": "#ffffff",
-        "title": "Positive Impact",
-        "stat": "Over 1,000,000 plastic bottles saved",
-        "description": "We’re building a future where technology helps, not harms, the planet. This isn’t a campaign. It’s a promise. To you. To the Earth. To the future. Every order triggers a tangible climate-positive action, from planting trees and restoring habitats to funding clean-energy and plastic-recovery projects.",
-        "badge_1_label": "Trees planted",
-        "badge_2_label": "Plastic bottles saved",
-        "cta_label": "Learn More",
+        "title": "Impacto positivo",
+        "stat": "Más de 1,000,000 de botellas plásticas salvadas",
+        "description": "Estamos construyendo un futuro donde la tecnología ayuda, no daña, al planeta. Esto no es una campaña, es una promesa. Para ti. Para la Tierra. Para el futuro. Cada pedido genera una acción climática positiva, desde plantar árboles y restaurar hábitats hasta financiar proyectos de energía limpia y recuperación de plásticos.",
+        "badge_1_label": "Árboles plantados",
+        "badge_2_label": "Botellas plásticas salvadas",
+        "cta_label": "Saber más",
         "cta_url": "",
         "cta_new_tab": false,
         "padding_top_mobile": 2,
