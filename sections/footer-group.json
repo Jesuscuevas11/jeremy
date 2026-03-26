@@ -209,6 +209,7 @@
       "settings": {
         "bg_color": "#25282a",
         "text_color": "#ffffff",
+        "logo": "shopify://shop_images/Pebblebee_logo-knockcout-05-removebg-preview.png",
         "logo_width": 160,
         "tagline": "Find Anything, Anytime, From Any Device",
         "facebook_url": "",
