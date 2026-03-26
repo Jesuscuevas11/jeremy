@@ -1916,6 +1916,89 @@
         "text_1": "<p><strong>Detection of unwanted location tracking<\/strong> — Receive alerts on both Apple and Android when an unknown tracker has been traveling with you.<\/p>",
         "text_2": "<p><strong>Your lost item isn\u2019t really lost<\/strong> — not when billions of Apple or Android devices can anonymously ping your tracker\u2019s location back to you.<\/p>"
       }
+    },
+    "faq_pebblebee_main": {
+      "type": "collapsible-content-pebblebee",
+      "settings": {
+        "background_color": "#f9f7ef",
+        "title": "FAQs",
+        "heading_alignment": "center",
+        "open_first": true,
+        "padding_top_mobile": 4,
+        "padding_bottom_mobile": 6.4,
+        "padding_top_tablet": 5.6,
+        "padding_bottom_tablet": 8.8,
+        "padding_top_desktop": 8,
+        "padding_bottom_desktop": 14
+      },
+      "blocks": {
+        "faq_block_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Does this tracker work with both Android and iOS?",
+            "answer": "<p>Yes, Pebblebee Clip 5 pairs with Apple Find My on iOS or Google\u2019s Find Hub on Android. That multi-network compatibility means one Clip 5 can be used on either iOS or Android, unlike single-platform trackers that force you to buy a new product if you switch handsets.<\/p>"
+          }
+        },
+        "faq_block_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "How long does the battery last on a key tracker?",
+            "answer": "<p>Pebblebee Clip 5 runs for up to 12 months on a single USB-C charge. Its rechargeable design eliminates wasteful coin cells and saves you money, giving Pebblebee a greener edge over disposable-battery tags.<\/p>"
+          }
+        },
+        "faq_block_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "How far can a Bluetooth tracker reach before it disconnects?",
+            "answer": "<p>Pebblebee Clip 5 holds a direct Bluetooth link out to about 500 feet in open space, nearly double many competitors. Once an item goes beyond direct Bluetooth range it can still be located via the global networks of either Apple Find My or Google\u2019s Find Hub.<\/p>"
+          }
+        },
+        "faq_block_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Is there a better alternative to AirTag for Android users?",
+            "answer": "<p>Yes, Pebblebee Clip 5 integrates natively with Google\u2019s Find Hub while AirTag is iPhone-only. Pebblebee still supports Apple Find My too, so you get true cross-platform coverage in one tag instead of being locked into a single ecosystem.<\/p>"
+          }
+        },
+        "faq_block_5": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Will the company behind my tracker see everywhere I go?",
+            "answer": "<p>No. Pebblebee never receives or stores your location when connected to Apple or Google; all data stays end-to-end encrypted inside the network you choose. This strict privacy stance delivers peace of mind that many trackers simply can\u2019t match.<\/p>"
+          }
+        },
+        "faq_block_6": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "What is Pebblebee\u2019s return and refund policy?",
+            "answer": "<p>We want you to be completely satisfied with your purchase. If you are not happy with your product, you can return it within 30 days of purchase for a full refund, as long as the item is in its original condition and packaging.<\/p>"
+          }
+        },
+        "faq_block_7": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "How can I track my Pebblebee order?",
+            "answer": "<p>Once your order has been processed and shipped, you will receive a confirmation email with your tracking number. You can use it to monitor your delivery from the \u2018Track Your Order\u2019 link at the bottom of the site.<\/p>"
+          }
+        },
+        "faq_block_8": {
+          "type": "collapsible_row",
+          "settings": {
+            "question": "Will Pebblebee item finders work with my phone?",
+            "answer": "<p>Yes! Pebblebee products work seamlessly with both Android and iOS. You can connect to Apple Find My (iOS) or Google\u2019s Find Hub (Android). Note: each device can be paired with one network at a time. To switch networks, a factory reset is required.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_block_1",
+        "faq_block_2",
+        "faq_block_3",
+        "faq_block_4",
+        "faq_block_5",
+        "faq_block_6",
+        "faq_block_7",
+        "faq_block_8"
+      ]
     }
   },
   "order": [
@@ -1927,6 +2010,7 @@
     "testimonials_main",
     "image_gallery_main",
     "images_with_content_protection_main",
+    "faq_pebblebee_main",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",
