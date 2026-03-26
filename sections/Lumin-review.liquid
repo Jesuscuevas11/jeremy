@@ -4767,13 +4767,13 @@ Please review and take appropriate action.`;
         "type": "text",
         "id": "review_head",
         "label": "t:sections.lumin-review.review_title",
-        "default": "Nice Product"
+        "default": "¡Producto excelente!"
       },
-{
+      {
         "type": "text",
         "id": "review_text",
         "label": "t:sections.lumin-review.review_text",
-        "default": "Nice Product. I'm happy with my purchase."
+        "default": "Funciona muy bien y es recargable. La luz es potente y el sonido fuerte. Muy satisfecho con la compra."
       },
           {
     "type":      "range",
@@ -4814,30 +4814,13 @@ Please review and take appropriate action.`;
       "name": "Lumin Review",
       "category": "Lumin Sections",
       "blocks": [
-        {
-          "type": "rating_summary"
-        },
-        {
-          "type": "thumbnail_gallery"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        },
-        {
-          "type": "review"
-        }
+        { "type": "rating_summary" },
+        { "type": "thumbnail_gallery" },
+        { "type": "review", "settings": { "review_head": "¡Producto excelente!", "review_text": "Funciona muy bien y es recargable. La luz es potente y el sonido fuerte. Muy satisfecho con la compra." } },
+        { "type": "review", "settings": { "review_head": "Rastreador Bluetooth", "review_text": "Cumple lo que promete, realmente satisfecho. Fácil de usar y muy útil para no perder las llaves." } },
+        { "type": "review", "settings": { "review_head": "Versátil y multiplataforma", "review_text": "Uso dispositivos Android y Apple, y poder usar Pebblebee en ambos es muy útil. El hecho de que sea recargable lo hace aún mejor." } },
+        { "type": "review", "settings": { "review_head": "Muy fácil de usar", "review_text": "Producto muy bueno y sencillo de configurar. Lo recomiendo para quienes suelen perder objetos." } },
+        { "type": "review", "settings": { "review_head": "Gran compra", "review_text": "Me ayuda a encontrar mis llaves y cartera fácilmente. La integración con la app es perfecta." } }
       ]
     }
   ]
