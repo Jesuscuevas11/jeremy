@@ -2019,6 +2019,25 @@
         "padding_top_desktop": 5.6,
         "padding_bottom_desktop": 5.6
       }
+    },
+    "impact_banner_main": {
+      "type": "impact-banner-native",
+      "settings": {
+        "overlay_color": "#0a2e1a",
+        "overlay_opacity": 75,
+        "logo_width_desktop": 120,
+        "logo_width_mobile": 80,
+        "text_color": "#ffffff",
+        "title": "Positive Impact",
+        "stat": "Over 1,000,000 plastic bottles saved",
+        "description": "We\u2019re building a future where technology helps, not harms, the planet. This isn\u2019t a campaign. It\u2019s a promise. To you. To the Earth. To the future. Every order triggers a tangible climate-positive action, from planting trees and restoring habitats to funding clean-energy and plastic-recovery projects.",
+        "cta_label": "Learn More",
+        "cta_new_tab": false,
+        "padding_top_mobile": 2,
+        "padding_bottom_mobile": 2,
+        "padding_top_desktop": 3.2,
+        "padding_bottom_desktop": 3.2
+      }
     }
   },
   "order": [
@@ -2045,6 +2064,7 @@
     "collapsible_content_JVrqWp",
     "lumin_review_LXNreJ",
     "related-products",
+    "impact_banner_main",
     "174300570336aa0ded"
   ]
 }

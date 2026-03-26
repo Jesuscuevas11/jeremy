@@ -1,0 +1,411 @@
+<style>
+  /* --- Padding --- */
+  .impact-banner-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}rem;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}rem;
+  }
+  @media screen and (min-width: 750px) {
+    .impact-banner-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_desktop }}rem;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}rem;
+    }
+  }
+
+  /* --- Container --- */
+  #shopify-section-{{ section.id }} .container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} .container {
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+  }
+  @media screen and (min-width: 1360px) {
+    #shopify-section-{{ section.id }} .container {
+      max-width: 1440px;
+    }
+  }
+
+  /* --- Outer wrapper --- */
+  #shopify-section-{{ section.id }} .impact-banner__outer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: {{ section.settings.overlay_color }};
+  }
+
+  /* --- Background image --- */
+  #shopify-section-{{ section.id }} .impact-banner__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 0;
+  }
+
+  /* --- Overlay --- */
+  #shopify-section-{{ section.id }} .impact-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: {{ section.settings.overlay_color }};
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    z-index: 1;
+  }
+
+  /* --- Inner layout --- */
+  #shopify-section-{{ section.id }} .impact-banner__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    text-align: center;
+    padding: 4rem 3.2rem;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .impact-banner__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      gap: 4rem;
+      padding: 5.6rem 6.4rem;
+    }
+  }
+
+  /* --- Logo --- */
+  #shopify-section-{{ section.id }} .impact-banner__logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__logo img {
+    display: block;
+    width: {{ section.settings.logo_width_mobile }}px;
+    height: auto;
+    object-fit: contain;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .impact-banner__logo img {
+      width: {{ section.settings.logo_width_desktop }}px;
+    }
+  }
+
+  /* --- Text --- */
+  #shopify-section-{{ section.id }} .impact-banner__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__title {
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0;
+    color: {{ section.settings.text_color }};
+  }
+  #shopify-section-{{ section.id }} .impact-banner__stat {
+    font-family: Poppins, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    color: {{ section.settings.text_color }};
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .impact-banner__stat { font-size: 2.4rem; }
+  }
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} .impact-banner__stat { font-size: 2.8rem; }
+  }
+  #shopify-section-{{ section.id }} .impact-banner__description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.55;
+    margin: 0;
+    color: {{ section.settings.text_color }};
+    opacity: 0.85;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .impact-banner__description { font-size: 1.5rem; }
+  }
+
+  /* --- CTA --- */
+  #shopify-section-{{ section.id }} .impact-banner__cta-wrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2.4rem;
+    border: 2px solid {{ section.settings.text_color }};
+    border-radius: 10rem;
+    font-family: Poppins, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: {{ section.settings.text_color }};
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.25s ease, color 0.25s ease;
+    white-space: nowrap;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__cta:hover {
+    background: {{ section.settings.text_color }};
+    color: {{ section.settings.overlay_color }};
+  }
+</style>
+
+{%- assign bg_image = section.settings.background_image -%}
+{%- assign logo_image = section.settings.logo -%}
+
+<div class="impact-banner-{{ section.id }}-padding spaced-section">
+  <div class="container">
+    <div class="impact-banner__outer">
+
+      {%- if bg_image != blank -%}
+        <img
+          class="impact-banner__bg"
+          src="{{ bg_image | image_url: width: 2000 }}"
+          alt="{{ bg_image.alt | escape }}"
+          srcset="
+            {{ bg_image | image_url: width: 750 }} 750w,
+            {{ bg_image | image_url: width: 1200 }} 1200w,
+            {{ bg_image | image_url: width: 2000 }} 2000w
+          "
+          sizes="100vw"
+          loading="lazy"
+          width="{{ bg_image.width }}"
+          height="{{ bg_image.height }}"
+        >
+      {%- endif -%}
+
+      <div class="impact-banner__overlay"></div>
+
+      <div class="impact-banner__inner">
+
+        {%- if logo_image != blank -%}
+          <div class="impact-banner__logo">
+            <img
+              src="{{ logo_image | image_url: width: 240 }}"
+              alt="{{ logo_image.alt | default: 'Impact logo' | escape }}"
+              width="{{ logo_image.width }}"
+              height="{{ logo_image.height }}"
+              loading="lazy"
+            >
+          </div>
+        {%- endif -%}
+
+        <div class="impact-banner__text">
+          {%- if section.settings.title != blank -%}
+            <p class="impact-banner__title">{{ section.settings.title | escape }}</p>
+          {%- endif -%}
+          {%- if section.settings.stat != blank -%}
+            <p class="impact-banner__stat">{{ section.settings.stat | escape }}</p>
+          {%- endif -%}
+          {%- if section.settings.description != blank -%}
+            <p class="impact-banner__description">{{ section.settings.description | escape }}</p>
+          {%- endif -%}
+        </div>
+
+        {%- if section.settings.cta_label != blank and section.settings.cta_url != blank -%}
+          <div class="impact-banner__cta-wrap">
+            <a
+              class="impact-banner__cta"
+              href="{{ section.settings.cta_url }}"
+              {%- if section.settings.cta_new_tab %} target="_blank" rel="noopener noreferrer"{% endif %}
+            >
+              {{ section.settings.cta_label | escape }}
+            </a>
+          </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Impact Banner",
+  "tag": "section",
+  "class": "section-impact-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Fondo"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Imagen de fondo"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Color del overlay",
+      "default": "#0a2e1a"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Opacidad del overlay",
+      "default": 75
+    },
+    {
+      "type": "header",
+      "content": "Logo / Icono"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo o icono"
+    },
+    {
+      "type": "range",
+      "id": "logo_width_desktop",
+      "min": 40,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Ancho logo — desktop",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 40,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "label": "Ancho logo — mobile",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Contenido"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color del texto",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título (etiqueta superior)",
+      "default": "Positive Impact"
+    },
+    {
+      "type": "text",
+      "id": "stat",
+      "label": "Frase destacada / contador",
+      "default": "Over 1,000,000 plastic bottles saved"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción",
+      "default": "We're building a future where technology helps, not harms, the planet. Every order triggers a tangible climate-positive action."
+    },
+    {
+      "type": "header",
+      "content": "Botón CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Texto del botón",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "checkbox",
+      "id": "cta_new_tab",
+      "label": "Abrir en nueva pestaña",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Padding — Mobile"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 12,
+      "step": 0.4,
+      "unit": "rem",
+      "label": "Top",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 12,
+      "step": 0.4,
+      "unit": "rem",
+      "label": "Bottom",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "Padding — Desktop"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 12,
+      "step": 0.4,
+      "unit": "rem",
+      "label": "Top",
+      "default": 3.2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 12,
+      "step": 0.4,
+      "unit": "rem",
+      "label": "Bottom",
+      "default": 3.2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Impact Banner"
+    }
+  ]
+}
+{% endschema %}
