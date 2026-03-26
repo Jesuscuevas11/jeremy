@@ -1,0 +1,185 @@
+{{ 'section-images-with-content.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .images-with-content-protection-{{ section.id }}-padding {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+  @media screen and (min-width: 750px) {
+    .images-with-content-protection-{{ section.id }}-padding {
+      padding-top: 8.8rem;
+      padding-bottom: 8.8rem;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    --border-radius-block: 12px;
+  }
+
+  /* Contenedor igual al de Pebblebee (.container) */
+  #shopify-section-{{ section.id }} .container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} .container {
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+  }
+  @media screen and (min-width: 1360px) {
+    #shopify-section-{{ section.id }} .container {
+      max-width: 1440px;
+    }
+  }
+</style>
+
+<section class="images-with-content-section spaced-section" data-section-id="{{ section.id }}">
+  <div class="images-with-content color-background-2 background images-with-content-protection-{{ section.id }}-padding" style="background-color: #e6f4eb;">
+    <div class="container">
+
+      {% if section.settings.subtitle != blank or section.settings.title != blank %}
+        <div class="images-with-content__heading-group__titles titles titles--center">
+          {% if section.settings.subtitle != blank %}
+            <div class="images-with-content__heading-group__subtitle subtitle">{{ section.settings.subtitle }}</div>
+          {% endif %}
+          {% if section.settings.title != blank %}
+            <h2 class="images-with-content__heading-group__title title h2">{{ section.settings.title }}</h2>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="images-with-content-main">
+
+        <div class="images-with-content-images images-with-content-images--both-images" style="--images-aspect-ratio: {{ section.settings.images_aspect_ratio }}">
+
+          <div class="images-with-content-img-wrapper images-with-content-img-wrapper--1">
+            {% if section.settings.image_1 != blank %}
+              <img
+                src="{{ section.settings.image_1 | image_url: width: 1500 }}"
+                alt="{{ section.settings.image_1.alt | escape }}"
+                srcset="
+                  {{ section.settings.image_1 | image_url: width: 375 }} 375w,
+                  {{ section.settings.image_1 | image_url: width: 750 }} 750w,
+                  {{ section.settings.image_1 | image_url: width: 1000 }} 1000w,
+                  {{ section.settings.image_1 | image_url: width: 1500 }} 1500w
+                "
+                width="{{ section.settings.image_1.width }}"
+                height="{{ section.settings.image_1.height }}"
+                loading="eager"
+                class="images-with-content-img"
+              >
+            {% else %}
+              <img
+                src="//pebblebee.com/cdn/shop/files/dult4-android.jpg?v=1752266527"
+                alt="DULT4 Android"
+                width="824"
+                height="546"
+                loading="eager"
+                class="images-with-content-img"
+              >
+            {% endif %}
+          </div>
+
+          <div class="images-with-content-img-wrapper images-with-content-img-wrapper--2">
+            {% if section.settings.image_2 != blank %}
+              <img
+                src="{{ section.settings.image_2 | image_url: width: 1500 }}"
+                alt="{{ section.settings.image_2.alt | escape }}"
+                srcset="
+                  {{ section.settings.image_2 | image_url: width: 375 }} 375w,
+                  {{ section.settings.image_2 | image_url: width: 750 }} 750w,
+                  {{ section.settings.image_2 | image_url: width: 1000 }} 1000w,
+                  {{ section.settings.image_2 | image_url: width: 1500 }} 1500w
+                "
+                width="{{ section.settings.image_2.width }}"
+                height="{{ section.settings.image_2.height }}"
+                loading="lazy"
+                class="images-with-content-img"
+              >
+            {% else %}
+              <img
+                src="//pebblebee.com/cdn/shop/files/icloud.png?v=1752267452"
+                alt="iCloud"
+                width="2936"
+                height="1634"
+                loading="lazy"
+                class="images-with-content-img"
+              >
+            {% endif %}
+          </div>
+
+        </div>
+
+        <div class="images-with-content-text">
+          <div class="images-with-content-text__inner-content images-with-content-text__inner-content--no-headings images-with-content-text__inner-content--no-headings-with-images images-with-content-text__inner-content--both-texts">
+            <div class="images-with-content-text__text images-with-content-text__text--1 body-normal rte rte__container">
+              {{ section.settings.text_1 }}
+            </div>
+            <div class="images-with-content-text__text images-with-content-text__text--2 body-normal rte rte__container">
+              {{ section.settings.text_2 }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Images — Protection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Unmatched Protection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Find Anything, Anytime, From Anywhere"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1 — left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2 — right"
+    },
+    {
+      "type": "text",
+      "id": "images_aspect_ratio",
+      "label": "Images aspect ratio (CSS)",
+      "default": "2/1",
+      "info": "e.g. 2/1 o 1264/546"
+    },
+    {
+      "type": "richtext",
+      "id": "text_1",
+      "label": "Text block 1 (left column)",
+      "default": "<p><strong>Detection of unwanted location tracking</strong> — Receive alerts on both Apple and Android when an unknown tracker has been traveling with you.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "text_2",
+      "label": "Text block 2 (right column)",
+      "default": "<p><strong>Your lost item isn't really lost</strong> — not when billions of Apple or Android devices can anonymously ping your tracker's location back to you.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images — Protection"
+    }
+  ]
+}
+{% endschema %}

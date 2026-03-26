@@ -1870,6 +1870,52 @@
         "heading": "millions of devices sold",
         "review_count": "Over 1,500 5-Star Reviews"
       }
+    },
+    "image_gallery_main": {
+      "type": "image-gallery",
+      "blocks": {
+        "slide_car_keys": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_car-keys.png?v=1762378617"
+          }
+        },
+        "slide_snowmobile": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_snowmobile.png?v=1770713081"
+          }
+        },
+        "slide_open_backpack": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_open-backpack.png?v=1770712962"
+          }
+        },
+        "slide_gym_bag": {
+          "type": "slide",
+          "settings": {
+            "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_gym-bag_5f0a4edd-f125-4562-b172-2562d6fdc34e.png?v=1762378755"
+          }
+        }
+      },
+      "block_order": [
+        "slide_car_keys",
+        "slide_snowmobile",
+        "slide_open_backpack",
+        "slide_gym_bag"
+      ],
+      "settings": {}
+    },
+    "images_with_content_protection_main": {
+      "type": "images-with-content-protection",
+      "settings": {
+        "subtitle": "Unmatched Protection",
+        "title": "Find Anything, Anytime, From Anywhere",
+        "images_aspect_ratio": "2/1",
+        "text_1": "<p><strong>Detection of unwanted location tracking<\/strong> — Receive alerts on both Apple and Android when an unknown tracker has been traveling with you.<\/p>",
+        "text_2": "<p><strong>Your lost item isn\u2019t really lost<\/strong> — not when billions of Apple or Android devices can anonymously ping your tracker\u2019s location back to you.<\/p>"
+      }
     }
   },
   "order": [
@@ -1879,6 +1925,8 @@
     "content_tabs_specs",
     "multicolumn_alert_main",
     "testimonials_main",
+    "image_gallery_main",
+    "images_with_content_protection_main",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",
