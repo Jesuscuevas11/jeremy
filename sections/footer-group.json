@@ -206,6 +206,9 @@
     },
     "footer_pebblebee": {
       "type": "footer-pebblebee-clone",
+      "custom_css": [
+        "{height: 300px;}"
+      ],
       "settings": {
         "bg_color": "#25282a",
         "text_color": "#ffffff",
