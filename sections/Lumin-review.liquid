@@ -3226,6 +3226,20 @@ Please review and take appropriate action.`;
       }
       .rw-sub-wrapper{
         margin-bottom: {{section.settings.rw_margin}}px;
+        max-width: 100% !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+      @media screen and (min-width: 1200px) {
+        .rw-sub-wrapper {
+          padding-left: 8rem !important;
+          padding-right: 8rem !important;
+        }
+      }
+      @media screen and (min-width: 1360px) {
+        .rw-sub-wrapper {
+          max-width: 1440px !important;
+        }
       }
       .stars-rw {
         color: {{section.settings.feature_svg_color}};

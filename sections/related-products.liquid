@@ -19,6 +19,24 @@
     }
   }
 {%- endstyle -%}
+<style>
+  #shopify-section-{{ section.id }} .related-products {
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} .related-products {
+      padding-left: 8rem !important;
+      padding-right: 8rem !important;
+    }
+  }
+  @media screen and (min-width: 1360px) {
+    #shopify-section-{{ section.id }} .related-products {
+      max-width: 1440px !important;
+    }
+  }
+</style>
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations
