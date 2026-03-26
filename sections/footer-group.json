@@ -207,17 +207,32 @@
     "footer_pebblebee": {
       "type": "footer-pebblebee-clone",
       "settings": {
-        "bg_color": "#0f2518",
+        "bg_color": "#25282a",
         "text_color": "#ffffff",
         "logo_width": 160,
         "tagline": "Find Anything, Anytime, From Any Device",
+        "facebook_url": "",
+        "instagram_url": "",
+        "youtube_url": "",
+        "menu_1": "footer",
+        "menu_1_heading": "",
+        "menu_2": "",
+        "menu_2_heading": "",
+        "menu_3": "",
+        "menu_3_heading": "",
         "newsletter_heading": "Sign Up & Save",
         "newsletter_text": "Receive exclusive email-only deals. Stay connected and ensure you never lose track of what matters most.",
         "newsletter_placeholder": "Your email",
         "newsletter_btn": "Subscribe",
+        "info_text": "Apple®, the Apple logo, and Find My® are trademarks of Apple Inc. Google™, Google Play™, Find Hub™, and Android™ are trademarks of Google LLC. The Bluetooth® word mark and logos are registered trademarks owned by Bluetooth SIG, Inc.",
+        "enable_country_selector": true,
         "copyright_name": "PB Inc.",
-        "info_text": "Apple\u00ae, the Apple logo, and Find My\u00ae are trademarks of Apple Inc. Google\u2122, Google Play\u2122, Find Hub\u2122, and Android\u2122 are trademarks of Google LLC. The Bluetooth\u00ae word mark and logos are registered trademarks owned by Bluetooth SIG, Inc.",
-        "enable_country_selector": true
+        "policy_1_label": "Privacy Policy",
+        "policy_1_url": "",
+        "policy_2_label": "Terms of Service",
+        "policy_2_url": "",
+        "policy_3_label": "Terms of use",
+        "policy_3_url": ""
       }
     }
   },
