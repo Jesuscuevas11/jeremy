@@ -1920,7 +1920,7 @@
         "star_size_top": 1,
         "rating_count": "Based on 16 Reviews",
         "show_customer_images": true,
-        "show_country_flags": true,
+        "show_country_flags": false,
         "customer_image_size": 40,
         "customer_image_radius": 30,
         "customer_initials_bg": "#ffd700",
