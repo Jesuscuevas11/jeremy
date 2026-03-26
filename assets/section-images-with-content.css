@@ -92,13 +92,15 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 1.6rem;
+    max-width: calc(1264px + 1.6rem);
+    margin: 0 auto;
   }
 }
 
 .images-with-content-text__inner-header {
   display: flex;
   flex-direction: column;
-  row-gap: 1.2rem;
+  row-gap: 0.4rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -115,6 +117,7 @@
   white-space: pre-line;
   width: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .images-with-content-text__inner-content {
@@ -186,7 +189,16 @@
 
 .images-with-content-text__text.rte > *,
 .images-with-content-text__text.rte * {
-  color: rgba(var(--color-foreground-secondary));
+  color: #5A5A5A;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13.8px;
+}
+
+@media screen and (min-width: 750px) {
+  .images-with-content-text__text.rte > *,
+  .images-with-content-text__text.rte * {
+    font-size: 16.1px;
+  }
 }
 
 .images-with-content-text__text.rte > * {
@@ -195,7 +207,7 @@
 
 .images-with-content-text__text.rte a {
   color: rgba(var(--color-foreground));
-  background-image: linear-gradient(to right, rgba(var(--color-foreground)) 0%, rgba(var(--color-foreground)) 100%);
+  background-image: none;
 }
 
 /* Heading group center alignment */
@@ -239,6 +251,12 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1.4;
+}
+
+@media screen and (min-width: 750px) {
+  .images-with-content-text__subheading {
+    font-size: 12px;
+  }
 }
 
 /* Main headings — "Limited Colors. Never Repeated." / "Subzero & Hot Coral" */
