@@ -1816,6 +1816,22 @@
             "feature_font_size": 16
           }
         },
+        "review_qtbXnP": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Maria Vivas D.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "June 2025",
+            "review_head": "Versátil y multiplataforma",
+            "review_text": "Uso dispositivos Android y Apple, y poder usar Pebblebee en ambos es muy útil. El hecho de que sea recargable lo hace aún mejor.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
         "review_PTqV7C": {
           "type": "review",
           "settings": {
@@ -1887,6 +1903,7 @@
         "review_twazyQ",
         "review_gFK9wh",
         "review_q7BbJh",
+        "review_qtbXnP",
         "review_PTqV7C",
         "review_p9jwdH",
         "review_wkMajB",
