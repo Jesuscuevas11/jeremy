@@ -49,8 +49,6 @@
   .images-with-content-images {
     display: grid;
     grid-template-columns: 524px 740px;
-    grid-template-rows: 640px;
-    height: 640px;
     width: calc(1264px + 1.6rem);
     gap: 1.6rem;
     position: relative;
@@ -76,7 +74,7 @@
   grid-column: 1 / -1;
   grid-row: 1 / 1;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .images-with-content-img {
@@ -298,5 +296,20 @@
   .images-with-content__heading-group__title,
   .images-with-content-text__heading {
     font-size: 4.2rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .images-with-content-img-wrapper--1 {
+    width: 524px !important;
+    height: 411.91px !important;
+    max-width: 524px !important;
+    max-height: 411.91px !important;
+  }
+  .images-with-content-img-wrapper--2 {
+    width: 740px !important;
+    height: 411.91px !important;
+    max-width: 740px !important;
+    max-height: 411.91px !important;
   }
 }
