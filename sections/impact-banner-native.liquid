@@ -74,12 +74,17 @@
     padding: 4rem 3.2rem;
   }
   @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .impact-banner__outer {
+      min-height: 691px;
+    }
     #shopify-section-{{ section.id }} .impact-banner__inner {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-      gap: 4rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.6rem;
       padding: 5.6rem 6.4rem;
+      min-height: 691px;
     }
   }
 
@@ -90,14 +95,16 @@
     align-items: center;
     justify-content: center;
   }
-  #shopify-section-{{ section.id }} .impact-banner__logo img {
+  #shopify-section-{{ section.id }} .impact-banner__logo img,
+  #shopify-section-{{ section.id }} .impact-banner__logo svg {
     display: block;
     width: {{ section.settings.logo_width_mobile }}px;
     height: auto;
     object-fit: contain;
   }
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .impact-banner__logo img {
+    #shopify-section-{{ section.id }} .impact-banner__logo img,
+    #shopify-section-{{ section.id }} .impact-banner__logo svg {
       width: {{ section.settings.logo_width_desktop }}px;
     }
   }
@@ -107,42 +114,88 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
   }
   #shopify-section-{{ section.id }} .impact-banner__title {
-    font-family: Poppins, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    line-height: 1.3;
-    margin: 0;
-    color: {{ section.settings.text_color }};
-  }
-  #shopify-section-{{ section.id }} .impact-banner__stat {
-    font-family: Poppins, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0;
-    color: {{ section.settings.text_color }};
+    font-family: Cabin, sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    color: {{ section.settings.text_color }} !important;
   }
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .impact-banner__stat { font-size: 2.4rem; }
+    #shopify-section-{{ section.id }} .impact-banner__title { font-size: 4rem !important; }
+  }
+  #shopify-section-{{ section.id }} .impact-banner__stat {
+    font-family: Poppins, sans-serif !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    color: {{ section.settings.text_color }} !important;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .impact-banner__stat { font-size: 2.4rem !important; }
   }
   @media screen and (min-width: 990px) {
-    #shopify-section-{{ section.id }} .impact-banner__stat { font-size: 2.8rem; }
+    #shopify-section-{{ section.id }} .impact-banner__stat { font-size: 2.8rem !important; }
   }
   #shopify-section-{{ section.id }} .impact-banner__description {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.4rem;
-    line-height: 1.55;
-    margin: 0;
-    color: {{ section.settings.text_color }};
+    font-family: Cabin, sans-serif !important;
+    font-size: 1.92rem !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+    color: {{ section.settings.text_color }} !important;
     opacity: 0.85;
   }
   @media screen and (min-width: 750px) {
-    #shopify-section-{{ section.id }} .impact-banner__description { font-size: 1.5rem; }
+    #shopify-section-{{ section.id }} .impact-banner__description {
+      font-family: Cabin, sans-serif !important;
+      font-size: 26px !important;
+      font-weight: 400 !important;
+      line-height: 32px !important;
+      max-width: 788px !important;
+      width: 788px !important;
+      margin: 0 auto 40px auto !important;
+      text-align: center !important;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  /* --- Badge icons --- */
+  #shopify-section-{{ section.id }} .impact-banner__badges {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.6rem;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__badge img,
+  #shopify-section-{{ section.id }} .impact-banner__badge svg {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+  #shopify-section-{{ section.id }} .impact-banner__badge-label {
+    font-family: Cabin, sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: {{ section.settings.text_color }} !important;
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
   }
 
   /* --- CTA --- */
@@ -219,12 +272,41 @@
           {%- if section.settings.title != blank -%}
             <p class="impact-banner__title">{{ section.settings.title | escape }}</p>
           {%- endif -%}
-          {%- if section.settings.stat != blank -%}
-            <p class="impact-banner__stat">{{ section.settings.stat | escape }}</p>
-          {%- endif -%}
           {%- if section.settings.description != blank -%}
             <p class="impact-banner__description">{{ section.settings.description | escape }}</p>
           {%- endif -%}
+
+          <div class="impact-banner__badges">
+            <div class="impact-banner__badge">
+              {%- if section.settings.badge_1 != blank -%}
+                <img src="{{ section.settings.badge_1 | image_url: width: 120 }}" alt="{{ section.settings.badge_1.alt | default: '' | escape }}" width="56" height="56" loading="lazy">
+              {%- else -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                  <circle cx="28" cy="28" r="28" fill="{{ section.settings.text_color }}" fill-opacity="0.15"/>
+                  <path d="M28 10c0 0-12 7-12 18 0 6.63 5.37 12 12 12s12-5.37 12-12C40 17 28 10 28 10Z" fill="{{ section.settings.text_color }}" fill-opacity="0.85"/>
+                  <path d="M28 24v12M23 30c1.5-3 3.5-4.5 5-7" stroke="{{ section.settings.overlay_color }}" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              {%- endif -%}
+              {%- if section.settings.badge_1_label != blank -%}
+                <p class="impact-banner__badge-label">{{ section.settings.badge_1_label | escape }}</p>
+              {%- endif -%}
+            </div>
+            <div class="impact-banner__badge">
+              {%- if section.settings.badge_2 != blank -%}
+                <img src="{{ section.settings.badge_2 | image_url: width: 120 }}" alt="{{ section.settings.badge_2.alt | default: '' | escape }}" width="56" height="56" loading="lazy">
+              {%- else -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                  <circle cx="28" cy="28" r="28" fill="{{ section.settings.text_color }}" fill-opacity="0.15"/>
+                  <path d="M20 38c0 0 2-10 8-12s10 2 10 2-4 10-10 12S20 38 20 38Z" fill="{{ section.settings.text_color }}" fill-opacity="0.85"/>
+                  <path d="M28 20v6M25 23h6" stroke="{{ section.settings.overlay_color }}" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="28" cy="19" r="3" fill="{{ section.settings.text_color }}" fill-opacity="0.85"/>
+                </svg>
+              {%- endif -%}
+              {%- if section.settings.badge_2_label != blank -%}
+                <p class="impact-banner__badge-label">{{ section.settings.badge_2_label | escape }}</p>
+              {%- endif -%}
+            </div>
+          </div>
         </div>
 
         {%- if section.settings.cta_label != blank and section.settings.cta_url != blank -%}
@@ -334,6 +416,32 @@
     },
     {
       "type": "header",
+      "content": "Iconos / Badges"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_1",
+      "label": "Icono 1"
+    },
+    {
+      "type": "text",
+      "id": "badge_1_label",
+      "label": "Etiqueta icono 1",
+      "default": "Trees planted"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_2",
+      "label": "Icono 2"
+    },
+    {
+      "type": "text",
+      "id": "badge_2_label",
+      "label": "Etiqueta icono 2",
+      "default": "Plastic bottles saved"
+    },
+    {
+      "type": "header",
       "content": "Botón CTA"
     },
     {
@@ -365,7 +473,7 @@
       "step": 0.4,
       "unit": "rem",
       "label": "Top",
-      "default": 2
+      "default": 0
     },
     {
       "type": "range",
@@ -375,7 +483,7 @@
       "step": 0.4,
       "unit": "rem",
       "label": "Bottom",
-      "default": 2
+      "default": 0
     },
     {
       "type": "header",
@@ -389,7 +497,7 @@
       "step": 0.4,
       "unit": "rem",
       "label": "Top",
-      "default": 3.2
+      "default": 0
     },
     {
       "type": "range",
@@ -399,7 +507,7 @@
       "step": 0.4,
       "unit": "rem",
       "label": "Bottom",
-      "default": 3.2
+      "default": 0
     }
   ],
   "presets": [
