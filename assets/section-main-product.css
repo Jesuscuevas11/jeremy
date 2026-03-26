@@ -2886,3 +2886,29 @@ a.product__text {
     transform: translateY(-50%) scale(1) translateZ(0) !important;
   }
 }
+
+/* Thumbnail strip: match carousel width and alignment */
+@media screen and (min-width: 1307px) {
+  media-gallery .thumbnail-slider {
+    width: 632px !important;
+    max-width: 632px !important;
+    margin-left: 78px !important;
+    margin-right: 0 !important;
+    align-self: flex-start !important;
+  }
+  media-gallery .thumbnail-slider .thumbnail-list {
+    justify-content: flex-start !important;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  media-gallery .thumbnail-slider {
+    max-width: 350px !important;
+    width: 350px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  media-gallery .thumbnail-slider .thumbnail-list {
+    justify-content: flex-start !important;
+  }
+}
