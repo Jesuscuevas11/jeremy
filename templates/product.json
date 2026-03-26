@@ -1999,6 +1999,26 @@
         "faq_block_7",
         "faq_block_8"
       ]
+    },
+    "compare_pebblebee_main": {
+      "type": "compare-pebblebee",
+      "settings": {
+        "background_color": "#000000",
+        "subtitle": "Universal Compatibility",
+        "title": "Bigger Networks, Better Privacy",
+        "description": "We\u2019ve partnered with both Apple & Google to develop, test, and certify our item finders to ensure they work seamlessly with the Find My network for iOS users or the Find Hub network for Android users.",
+        "label_1": "Apple Find My",
+        "heading_1": "Rechargeable Item Finders for iOS",
+        "label_2": "Google\u2019s Find Hub",
+        "heading_2": "Market Leading Item Finders for Android",
+        "aspect_ratio": "56.25",
+        "padding_top_mobile": 3.2,
+        "padding_bottom_mobile": 3.2,
+        "padding_top_tablet": 4,
+        "padding_bottom_tablet": 4,
+        "padding_top_desktop": 5.6,
+        "padding_bottom_desktop": 5.6
+      }
     }
   },
   "order": [
@@ -2011,6 +2031,7 @@
     "image_gallery_main",
     "images_with_content_protection_main",
     "faq_pebblebee_main",
+    "compare_pebblebee_main",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",

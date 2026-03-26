@@ -1,0 +1,494 @@
+<style>
+  /* ============================================================
+     section-compare.css — extraído de Pebblebee t/106
+  ============================================================ */
+  img-comparison-slider{visibility:hidden}
+  img-comparison-slider [slot=second]{display:none}
+  img-comparison-slider.rendered{visibility:inherit}
+  img-comparison-slider.rendered [slot=second]{display:unset}
+  .compare{overflow:hidden}
+  .compare__wrapper--split{display:flex;flex-direction:column}
+  @media(min-width:990px){.compare__wrapper--split{flex-direction:row}}
+  .compare__images{position:relative;width:100%;display:flex;flex-direction:row;border-radius:var(--border-radius-block);overflow:hidden}
+  .compare__images:after{content:"";display:block;width:0;padding-bottom:var(--padding-bottom-mobile)}
+  @media(min-width:576px){.compare__images:after{padding-bottom:var(--padding-bottom-desktop)}}
+  .compare img-comparison-slider{-webkit-user-select:none;user-select:none;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;overflow:hidden;border-radius:var(--border-radius-block);outline:none}
+  .compare img-comparison-slider .second{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%}
+  .compare img-comparison-slider .divider:after{border-left-color:rgb(var(--color-background,255,255,255))}
+  .compare__figure{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;margin:0;padding:0;width:100%;height:100%;background-color:rgb(var(--color-background-secondary,245,245,245))}
+  .compare__figure-image{width:100%;height:100%;position:absolute;top:0;right:0;bottom:0;left:0}
+  .compare__figure img{display:block;width:100%;height:100%;object-fit:cover}
+  .compare__figure-before .compare__content{align-items:flex-start;right:auto;left:0;margin-right:auto}
+  .compare__figure-before .compare__text{align-items:flex-start;text-align:left}
+  .compare__figure-after .compare__content{align-items:flex-end;right:0;left:auto;margin-left:auto}
+  .compare__figure-after .compare__text{align-items:flex-end;text-align:right}
+  .compare__label{font-size:1.2rem;line-height:1.66;display:block;max-width:30rem;word-wrap:break-word;color:rgb(var(--color-foreground,42,42,42))}
+  .compare__handle{width:2.6rem;height:4.35rem;display:flex;align-items:center;justify-content:center;background-color:rgb(var(--color-background,255,255,255));color:rgb(var(--color-foreground,42,42,42));border-radius:5rem;overflow:hidden}
+  .compare__handle .icon-compare{width:1.575rem;height:3rem}
+  @media(min-width:576px){.compare__handle{width:3.5rem;height:5.8rem}.compare__handle .icon-compare{width:2.1rem;height:4rem}}
+  .compare__content{position:relative;max-width:100%;height:100%;display:flex;flex-direction:column;padding:2.4rem}
+  @media(min-width:750px){.compare__content{padding:4rem;max-width:50%}}
+  .compare__content--vertical-align-top{justify-content:flex-start}
+  .compare__content--vertical-align-center{justify-content:center}
+  .compare__content--vertical-align-bottom{justify-content:flex-end}
+  .compare__content--vertical-align-space_between{justify-content:space-between}
+  .compare__text{width:100%;display:flex;flex-direction:column;gap:1.6rem}
+  .compare__heading{margin:0;padding:0;max-width:55rem}
+  .compare__overlay{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:0;border-radius:var(--border-radius-block)}
+  .compare__top{margin-bottom:2.4rem}
+  @media screen and (min-width:750px){.compare__top{margin-bottom:3.2rem}}
+  @media screen and (min-width:1200px){.compare__top{margin-bottom:5.6rem}}
+  .compare .compare__heading__description{margin-bottom:0!important}
+  .no-js .compare img-comparison-slider{visibility:visible}
+  .no-js .compare img-comparison-slider:after{content:"";position:absolute;left:50%;top:50%;display:block;height:100%;width:.2rem;background-color:rgb(var(--color-background,255,255,255));transform:translate(-50%,-50%)}
+  .no-js .compare img-comparison-slider .compare__figure{position:absolute;top:0;bottom:0;left:0;right:50%;width:50%}
+  .no-js .compare img-comparison-slider .compare__figure[slot=second]{left:50%;right:0;display:block}
+  .no-js .compare img-comparison-slider .compare__figure img{width:100%;height:100%;object-fit:cover}
+  .no-js .compare .compare__handle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1}
+
+  /* ============================================================
+     Padding responsivo — idéntico a Pebblebee
+  ============================================================ */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}rem;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}rem;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_tablet }}rem;
+      padding-bottom: {{ section.settings.padding_bottom_tablet }}rem;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_desktop }}rem;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}rem;
+    }
+  }
+
+  /* ============================================================
+     Fondo negro en mobile
+  ============================================================ */
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .compare {
+      background-color: #000 !important;
+    }
+    #shopify-section-{{ section.id }} .compare__heading__subtitle,
+    #shopify-section-{{ section.id }} .compare__heading__title,
+    #shopify-section-{{ section.id }} .compare__heading__description {
+      color: #fff !important;
+    }
+  }
+
+  /* ============================================================
+     Variables de sección
+  ============================================================ */
+  #shopify-section-{{ section.id }} {
+    --border-radius-block: 12px;
+    --color-overlay: 0, 0, 0;
+  }
+
+  /* ============================================================
+     Container
+  ============================================================ */
+  #shopify-section-{{ section.id }} .container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #shopify-section-{{ section.id }} .container {
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+  }
+  @media screen and (min-width: 1360px) {
+    #shopify-section-{{ section.id }} .container {
+      max-width: 1440px;
+    }
+  }
+
+  /* ============================================================
+     Tipografía — heading group
+  ============================================================ */
+  #shopify-section-{{ section.id }} .compare__heading__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    margin-bottom: 1.6rem;
+  }
+  #shopify-section-{{ section.id }} .compare__heading__subtitle {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .compare__heading__title {
+    font-family: Poppins, sans-serif;
+    font-size: 2.52rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .compare__heading__title { font-size: 2.94rem; }
+  }
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} .compare__heading__title { font-size: 3.36rem; }
+  }
+  @media screen and (min-width: 1360px) {
+    #shopify-section-{{ section.id }} .compare__heading__title { font-size: 4.2rem; }
+  }
+  #shopify-section-{{ section.id }} .compare__heading__description {
+    text-align: center;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+  @media only screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .compare__heading__description { max-width: 100%; }
+    #shopify-section-{{ section.id }} .compare__label {
+      font-family: Montserrat, sans-serif !important;
+      font-size: 0.9rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      line-height: 1.3 !important;
+    }
+    #shopify-section-{{ section.id }} .compare__heading.h3 {
+      font-family: Poppins, sans-serif !important;
+      font-size: 1.2rem !important;
+      font-weight: 700 !important;
+      max-width: 43% !important;
+      line-height: 1.2 !important;
+    }
+  }
+
+  /* ============================================================
+     Label & heading dentro del slider — Desktop (≥750px)
+  ============================================================ */
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .compare__label {
+      font-family: Montserrat, sans-serif !important;
+      font-size: 1.2rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      line-height: 1.66 !important;
+      color: #2a2a2a !important;
+    }
+    #shopify-section-{{ section.id }} .compare__heading.h3 {
+      font-family: Poppins, sans-serif !important;
+      font-size: 2rem !important;
+      font-weight: 700 !important;
+      color: #2a2a2a !important;
+      margin: 0 !important;
+      max-width: 55rem !important;
+      line-height: 1.2 !important;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} .compare__heading.h3 {
+      font-size: 2.4rem !important;
+    }
+  }
+</style>
+
+<section class="compare section-{{ section.id }}-padding background" style="background-color: {{ section.settings.background_color }};">
+
+  <div class="compare__top container">
+    {%- if section.settings.subtitle != blank or section.settings.title != blank -%}
+      <div class="compare__heading__titles titles titles--center">
+        {%- if section.settings.subtitle != blank -%}
+          <div class="compare__heading__subtitle subtitle">{{ section.settings.subtitle }}</div>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <h2 class="compare__heading__title title h2 size--h2">{{ section.settings.title }}</h2>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <div class="compare__heading__description">{{ section.settings.description }}</div>
+    {%- endif -%}
+  </div>
+
+  <div class="compare__wrapper container">
+    <div
+      class="compare__images"
+      style="--padding-bottom-mobile: {{ section.settings.aspect_ratio }}%; --padding-bottom-desktop: {{ section.settings.aspect_ratio }}%;"
+    >
+      <img-comparison-slider>
+
+        <!-- Slot FIRST (izquierda) -->
+        <div class="compare__figure compare__figure-before color-background-1 background" slot="first">
+          <div class="compare__figure-image">
+            {%- if section.settings.image_1 != blank -%}
+              <img
+                src="{{ section.settings.image_1 | image_url: width: 1840 }}"
+                alt="{{ section.settings.image_1.alt | escape }}"
+                srcset="
+                  {{ section.settings.image_1 | image_url: width: 400 }} 400w,
+                  {{ section.settings.image_1 | image_url: width: 600 }} 600w,
+                  {{ section.settings.image_1 | image_url: width: 900 }} 900w,
+                  {{ section.settings.image_1 | image_url: width: 1200 }} 1200w,
+                  {{ section.settings.image_1 | image_url: width: 1840 }} 1840w
+                "
+                width="{{ section.settings.image_1.width }}"
+                height="{{ section.settings.image_1.height }}"
+                loading="lazy"
+              >
+            {%- else -%}
+              <img
+                src="//pebblebee.com/cdn/shop/files/find-my_a602cec3-806e-4ad6-8001-d18b21732811.jpg?v=1752176553&width=1840"
+                alt="Apple Find My"
+                width="1840"
+                height="1035"
+                loading="lazy"
+              >
+            {%- endif -%}
+            <div
+              class="compare__overlay"
+              style="background: linear-gradient(180deg, rgba(var(--color-overlay),0.051) 0, rgba(var(--color-overlay),0.051) 50%, rgba(var(--color-overlay),0.17) 100%);"
+            ></div>
+          </div>
+          <div class="compare__content compare__content--vertical-align-center">
+            {%- if section.settings.label_1 != blank -%}
+              <div class="compare__label compare__label--left subtitle body-small">{{ section.settings.label_1 }}</div>
+            {%- endif -%}
+            {%- if section.settings.heading_1 != blank -%}
+              <div class="compare__text">
+                <h3 class="compare__heading h3">{{ section.settings.heading_1 }}</h3>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <!-- Slot SECOND (derecha) -->
+        <div class="compare__figure compare__figure-after color-background-1 background" slot="second">
+          <div class="compare__figure-image">
+            {%- if section.settings.image_2 != blank -%}
+              <img
+                src="{{ section.settings.image_2 | image_url: width: 1280 }}"
+                alt="{{ section.settings.image_2.alt | escape }}"
+                srcset="
+                  {{ section.settings.image_2 | image_url: width: 400 }} 400w,
+                  {{ section.settings.image_2 | image_url: width: 600 }} 600w,
+                  {{ section.settings.image_2 | image_url: width: 900 }} 900w,
+                  {{ section.settings.image_2 | image_url: width: 1280 }} 1280w
+                "
+                width="{{ section.settings.image_2.width }}"
+                height="{{ section.settings.image_2.height }}"
+                loading="lazy"
+              >
+            {%- else -%}
+              <img
+                src="//pebblebee.com/cdn/shop/files/find-hub_11ffa509-4228-4cae-b408-ba325eca28d9.jpg?v=1752176567&width=1280"
+                alt="Google Find Hub"
+                width="1280"
+                height="720"
+                loading="lazy"
+              >
+            {%- endif -%}
+            <div
+              class="compare__overlay"
+              style="background: linear-gradient(180deg, rgba(var(--color-overlay),0.051) 0, rgba(var(--color-overlay),0.051) 50%, rgba(var(--color-overlay),0.17) 100%);"
+            ></div>
+          </div>
+          <div class="compare__content compare__content--vertical-align-center">
+            {%- if section.settings.label_2 != blank -%}
+              <div class="compare__label compare__label--right subtitle body-small">{{ section.settings.label_2 }}</div>
+            {%- endif -%}
+            {%- if section.settings.heading_2 != blank -%}
+              <div class="compare__text">
+                <h3 class="compare__heading h3">{{ section.settings.heading_2 }}</h3>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <!-- Handle -->
+        <div class="compare__handle" slot="handle">
+          <svg class="icon icon-compare" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 1.5L5.5 1.5L5.5 18.5L4.5 18.5L4.5 1.5ZM9.5 1.5L10.5 1.5L10.5 18.5L9.5 18.5L9.5 1.5ZM15.5 1.5L14.5 1.5L14.5 18.5L15.5 18.5L15.5 1.5Z" fill="currentColor"/>
+          </svg>
+        </div>
+
+      </img-comparison-slider>
+    </div>
+  </div>
+
+</section>
+
+<script>
+(()=>{const comparison=()=>{(()=>{"use strict";var t={792:(t2,e2,i2)=>{i2.d(e2,{Z:()=>n});var s=i2(609),o=i2.n(s)()(function(t3){return t3[1]});o.push([t2.id,':host{--divider-width: 2px;--divider-color: rgb(var(--color-background));--divider-shadow: none;--default-handle-width: 50px;--default-handle-color: currentColor;--default-handle-opacity: 1;--default-handle-shadow: none;--handle-position-start: 50%;position:relative;display:inline-block;overflow:hidden;line-height:0;direction:ltr}@media screen and (-webkit-min-device-pixel-ratio: 0)and (min-resolution: 0.001dpcm){:host{outline-offset:1px}}::slotted(*){-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.first{position:absolute;left:0;top:0;right:0;line-height:normal;font-size:100%;max-height:100%;height:100%;width:100%;--exposure: 80%;--keyboard-transition-time: 0ms;--default-transition-time: 0ms;--transition-time: var(--default-transition-time)}.first .first-overlay-container{position:relative;clip-path:inset(0 var(--exposure) 0 0);transition:clip-path var(--transition-time);height:100%}.first .first-overlay{overflow:hidden;height:100%}.first.focused{will-change:clip-path}.first.focused .first-overlay-container{will-change:clip-path}.second{position: absolute;inset: 0;width: 100%;height: 100%;line-height:normal;font-size:100%;max-height:100%;}.handle-container{transform:translateX(50%);position:absolute;top:0;right:var(--exposure);height:100%;transition:right var(--transition-time),bottom var(--transition-time)}.focused .handle-container{will-change:right}.divider{position:absolute;height:100%;width:100%;left:0;top:0;display:flex;align-items:center;justify-content:center;flex-direction:column;padding-inline: 2rem;margin-left: -2rem;cursor:pointer;}.divider:after{content:" ";display:block;height:100%;border-left-width:var(--divider-width);border-left-style:solid;border-left-color:var(--divider-color);box-shadow:var(--divider-shadow);cursor: pointer;}.handle{position:absolute;top:var(--handle-position-start);cursor: pointer;box-sizing:border-box;margin-left:1px;transform:translate(calc(-50% - 0.5px), -50%);line-height:0}.default-handle{width:var(--default-handle-width);opacity:var(--default-handle-opacity);transition:all 1s;filter:drop-shadow(var(--default-handle-shadow))}.default-handle path{stroke:var(--default-handle-color)}.vertical .first-overlay-container{clip-path:inset(0 0 var(--exposure) 0)}.vertical .handle-container{transform:translateY(50%);height:auto;top:unset;bottom:var(--exposure);width:100%;left:0;flex-direction:row}.vertical .divider:after{height:1px;width:100%;border-top-width:var(--divider-width);border-top-style:solid;border-top-color:var(--divider-color);border-left:0;cursor: pointer;}.vertical .handle{top:auto;left:var(--handle-position-start);transform:translate(calc(-50% - 0.5px), -50%) rotate(90deg)}',""]);const n=o},609:t2=>{t2.exports=function(t3){var e2=[];return e2.toString=function(){return this.map(function(e3){var i2=t3(e3);return e3[2]?"@media ".concat(e3[2]," {").concat(i2,"}"):i2}).join("")},e2.i=function(t4,i2,s){typeof t4=="string"&&(t4=[[null,t4,""]]);var o={};if(s)for(var n=0;n<this.length;n++){var r=this[n][0];r!=null&&(o[r]=!0)}for(var a=0;a<t4.length;a++){var d=[].concat(t4[a]);s&&o[d[0]]||(i2&&(d[2]?d[2]="".concat(i2," and ").concat(d[2]):d[2]=i2),e2.push(d))}},e2}}},e={};function i(s){var o=e[s];if(o!==void 0)return o.exports;var n=e[s]={id:s,exports:{}};return t[s](n,n.exports,i),n.exports}i.n=t2=>{var e2=t2&&t2.__esModule?()=>t2.default:()=>t2;return i.d(e2,{a:e2}),e2},i.d=(t2,e2)=>{for(var s in e2)i.o(e2,s)&&!i.o(t2,s)&&Object.defineProperty(t2,s,{enumerable:!0,get:e2[s]})},i.o=(t2,e2)=>Object.prototype.hasOwnProperty.call(t2,e2),(()=>{var t2=i(792);const e2="rendered",s=(t3,e3)=>{const i2=t3.getBoundingClientRect();let s2,o2;return e3.type==="mousedown"?(s2=e3.clientX,o2=e3.clientY):(s2=e3.touches[0].clientX,o2=e3.touches[0].clientY),s2>=i2.x&&s2<=i2.x+i2.width&&o2>=i2.y&&o2<=i2.y+i2.height},o=document.createElement("template");o.innerHTML='<div class="second" id="second"> <slot name="second"><slot name="before"></slot></slot> </div> <div class="first" id="first"> <div class="first-overlay"> <div class="first-overlay-container" id="firstImageContainer"> <slot name="first"><slot name="after"></slot></slot> </div> </div> <div class="handle-container"> <div class="divider"></div> <div class="handle" id="handle"> <slot name="handle"> <svg xmlns="http://www.w3.org/2000/svg" class="default-handle" viewBox="-8 -3 16 6"> <path d="M -5 -2 L -7 0 L -5 2 M 5 -2 L 7 0 L 5 2" fill="none" vector-effect="non-scaling-stroke"/> </svg> </slot> </div> </div> </div> ';const n={ArrowLeft:-1,ArrowRight:1},r=["horizontal","vertical"],a=t3=>({x:t3.touches[0].pageX,y:t3.touches[0].pageY}),d=t3=>({x:t3.pageX,y:t3.pageY});class h extends HTMLElement{constructor(){super(),this.exposure=this.hasAttribute("value")?parseFloat(this.getAttribute("value")):20,this.slideOnHover=!1,this.slideDirection="horizontal",this.keyboard="enabled",this.isMouseDown=!1,this.animationDirection=0,this.isFocused=!1,this.handle=!1,this.onMouseMove=t3=>{if(this.isMouseDown||this.slideOnHover){const e4=d(t3);this.slideToPage(e4)}},this.bodyUserSelectStyle="",this.onMouseDown=t3=>{if(this.slideOnHover||this.handle&&!s(this.handleElement,t3))return;t3.preventDefault(),window.addEventListener("mousemove",this.onMouseMove),window.addEventListener("mouseup",this.onWindowMouseUp),this.isMouseDown=!0,this.enableTransition();const e4=d(t3);this.slideToPage(e4),this.focus(),this.bodyUserSelectStyle=window.document.body.style.userSelect,window.document.body.style.userSelect="none"},this.onWindowMouseUp=()=>{this.isMouseDown=!1,window.document.body.style.userSelect=this.bodyUserSelectStyle,window.removeEventListener("mousemove",this.onMouseMove),window.removeEventListener("mouseup",this.onWindowMouseUp)},this.touchStartPoint=null,this.isTouchComparing=!1,this.hasTouchMoved=!1,this.onTouchStart=t3=>{this.handle&&!s(this.handleElement,t3)||(this.touchStartPoint=a(t3),this.isFocused&&(this.enableTransition(),this.slideToPage(this.touchStartPoint)))},this.onTouchMove=t3=>{if(this.touchStartPoint===null)return;const e4=a(t3);if(this.isTouchComparing)return this.slideToPage(e4),t3.preventDefault(),!1;if(!this.hasTouchMoved){const i3=Math.abs(e4.y-this.touchStartPoint.y),s2=Math.abs(e4.x-this.touchStartPoint.x);if(this.slideDirection==="horizontal"&&i3<s2||this.slideDirection==="vertical"&&i3>s2)return this.isTouchComparing=!0,this.focus(),this.slideToPage(e4),t3.preventDefault(),!1;this.hasTouchMoved=!0}},this.onTouchEnd=()=>{this.isTouchComparing=!1,this.hasTouchMoved=!1,this.touchStartPoint=null},this.onBlur=()=>{this.stopSlideAnimation(),this.isFocused=!1,this.firstElement.classList.remove("focused")},this.onFocus=()=>{this.isFocused=!0,this.firstElement.classList.add("focused")},this.onKeyDown=t3=>{if(this.keyboard==="disabled")return;const e4=n[t3.key];this.animationDirection!==e4&&e4!==void 0&&(this.animationDirection=e4,this.startSlideAnimation())},this.onKeyUp=t3=>{if(this.keyboard==="disabled")return;const e4=n[t3.key];e4!==void 0&&this.animationDirection===e4&&this.stopSlideAnimation()},this.resetDimensions=()=>{this.imageWidth=this.offsetWidth,this.imageHeight=this.offsetHeight};const e3=this.attachShadow({mode:"open"}),i2=document.createElement("style");i2.innerHTML=t2.Z,this.getAttribute("nonce")&&i2.setAttribute("nonce",this.getAttribute("nonce")),e3.appendChild(i2),e3.appendChild(o.content.cloneNode(!0)),this.firstElement=e3.getElementById("first"),this.secondElement=e3.getElementById("second"),this.handleElement=e3.getElementById("handle")}get value(){return this.exposure}set value(t3){const e3=parseFloat(t3);e3!==this.exposure&&(this.exposure=e3,this.enableTransition(),this.setExposure())}get hover(){return this.slideOnHover}set hover(t3){this.slideOnHover=t3.toString().toLowerCase()!=="false",this.removeEventListener("mousemove",this.onMouseMove),this.slideOnHover&&this.addEventListener("mousemove",this.onMouseMove)}get direction(){return this.slideDirection}set direction(t3){this.slideDirection=t3.toString().toLowerCase(),this.slide(0),this.firstElement.classList.remove(...r),r.includes(this.slideDirection)&&this.firstElement.classList.add(this.slideDirection)}static get observedAttributes(){return["hover","direction"]}connectedCallback(){this.hasAttribute("tabindex")||(this.tabIndex=0),this.addEventListener("dragstart",t3=>(t3.preventDefault(),!1)),new ResizeObserver(this.resetDimensions).observe(this),this.setExposure(0),this.observeElement(),this.keyboard=this.hasAttribute("keyboard")&&this.getAttribute("keyboard")==="disabled"?"disabled":"enabled",this.addEventListener("keydown",this.onKeyDown),this.addEventListener("keyup",this.onKeyUp),this.addEventListener("focus",this.onFocus),this.addEventListener("blur",this.onBlur),this.addEventListener("touchstart",this.onTouchStart,{passive:!0}),this.addEventListener("touchmove",this.onTouchMove,{passive:!1}),this.addEventListener("touchend",this.onTouchEnd),this.addEventListener("mousedown",this.onMouseDown),this.handle=this.hasAttribute("handle"),this.hover=!!this.hasAttribute("hover")&&this.getAttribute("hover"),this.direction=this.hasAttribute("direction")?this.getAttribute("direction"):"horizontal",this.resetDimensions(),this.classList.contains(e2)||this.classList.add(e2)}disconnectedCallback(){this.transitionTimer&&window.clearTimeout(this.transitionTimer)}attributeChangedCallback(t3,e3,i2){t3==="hover"&&(this.hover=i2),t3==="direction"&&(this.direction=i2),t3==="keyboard"&&(this.keyboard=i2==="disabled"?"disabled":"enabled")}setExposure(t3=0){this.exposure=(t3=this.exposure+t3)<0?0:100<t3?100:t3,this.firstElement.style.setProperty("--exposure",100-this.exposure+"%")}observeElement(){const e3=new IntersectionObserver(t3=>{var[t3]=t3;t3.isIntersecting&&(this.enableLongTransition(),setTimeout(()=>{this.setExposure(30)},500),e3.disconnect())},{threshold:.25});e3.observe(this)}slide(t3=0){this.setExposure(t3);const e3=new Event("slide");this.dispatchEvent(e3)}slideToPage(t3){this.slideDirection==="horizontal"&&this.slideToPageX(t3.x),this.slideDirection==="vertical"&&this.slideToPageY(t3.y)}slideToPageX(t3){const e3=t3-this.getBoundingClientRect().left-window.scrollX;this.exposure=e3/this.imageWidth*100,this.slide(0)}slideToPageY(t3){const e3=t3-this.getBoundingClientRect().top-window.scrollY;this.exposure=e3/this.imageHeight*100,this.slide(0)}enableTransition(){this.firstElement.style.setProperty("--transition-time","100ms"),this.transitionTimer=window.setTimeout(()=>{this.firstElement.style.setProperty("--transition-time","var(--default-transition-time)"),this.transitionTimer=null},100)}enableLongTransition(){this.firstElement.style.setProperty("--transition-time","800ms"),this.transitionTimer=window.setTimeout(()=>{this.firstElement.style.setProperty("--transition-time","var(--default-transition-time)"),this.transitionTimer=null},800)}startSlideAnimation(){let t3=null,e3=this.animationDirection;this.firstElement.style.setProperty("--transition-time","var(--keyboard-transition-time)");const i2=s2=>{if(this.animationDirection===0||e3!==this.animationDirection)return;t3===null&&(t3=s2);const o2=(s2-t3)/16.666666666666668*this.animationDirection;this.slide(o2),setTimeout(()=>window.requestAnimationFrame(i2),0),t3=s2};window.requestAnimationFrame(i2)}stopSlideAnimation(){this.animationDirection=0,this.firstElement.style.setProperty("--transition-time","var(--default-transition-time)")}}typeof window<"u"&&!window.customElements.get("img-comparison-slider")&&window.customElements.define("img-comparison-slider",h)})()})()};comparison();document.addEventListener("shopify:section:load",function(){comparison()})})();
+</script>
+
+{% schema %}
+{
+  "name": "Image Comparison",
+  "tag": "section",
+  "class": "section-compare",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Color de fondo",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Encabezado"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Universal Compatibility"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Bigger Networks, Better Privacy"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción",
+      "default": "We've partnered with both Apple & Google to develop, test, and certify our item finders to ensure they work seamlessly with the Find My network for iOS users or the Find Hub network for Android users."
+    },
+    {
+      "type": "header",
+      "content": "Imagen izquierda (slot: first)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Imagen izquierda"
+    },
+    {
+      "type": "text",
+      "id": "label_1",
+      "label": "Label",
+      "default": "Apple Find My"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading",
+      "default": "Rechargeable Item Finders for iOS"
+    },
+    {
+      "type": "header",
+      "content": "Imagen derecha (slot: second)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Imagen derecha"
+    },
+    {
+      "type": "text",
+      "id": "label_2",
+      "label": "Label",
+      "default": "Google's Find Hub"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading",
+      "default": "Market Leading Item Finders for Android"
+    },
+    {
+      "type": "header",
+      "content": "Proporciones del slider"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Aspect ratio",
+      "options": [
+        { "value": "56.25", "label": "16:9" },
+        { "value": "66.67", "label": "3:2" },
+        { "value": "75",    "label": "4:3" },
+        { "value": "50",    "label": "2:1" },
+        { "value": "100",   "label": "1:1" }
+      ],
+      "default": "56.25"
+    },
+    {
+      "type": "header",
+      "content": "Padding — Móvil"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0, "max": 16, "step": 0.4, "unit": "rem",
+      "label": "Top",
+      "default": 3.2
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0, "max": 16, "step": 0.4, "unit": "rem",
+      "label": "Bottom",
+      "default": 3.2
+    },
+    {
+      "type": "header",
+      "content": "Padding — Tablet (≥750px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_tablet",
+      "min": 0, "max": 16, "step": 0.4, "unit": "rem",
+      "label": "Top",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_tablet",
+      "min": 0, "max": 16, "step": 0.4, "unit": "rem",
+      "label": "Bottom",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Padding — Desktop (≥1440px)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0, "max": 16, "step": 0.4, "unit": "rem",
+      "label": "Top",
+      "default": 5.6
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0, "max": 16, "step": 0.4, "unit": "rem",
+      "label": "Bottom",
+      "default": 5.6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Comparison"
+    }
+  ]
+}
+{% endschema %}
