@@ -1810,6 +1810,14 @@
       "settings": {
         "title": "Technical Specifications"
       }
+    },
+    "multicolumn_alert_main": {
+      "type": "multicolumn-alert",
+      "settings": {
+        "subtitle": "All-new personal safety feature",
+        "title": "Meet Alert",
+        "description": "Alert, a free feature inside every Pebblebee Clip, turns an ordinary key ring into a lifeline: rapid presses activate a strobe, blasts a siren, and sends your location straight to the people you trust."
+      }
     }
   },
   "order": [
@@ -1817,6 +1825,7 @@
     "images_with_content_evercolor",
     "multicolumn_features_main",
     "content_tabs_specs",
+    "multicolumn_alert_main",
     "announcement_bar_scrolling_iYN9yh",
     "lumin_mega_aQdCbn",
     "lumin_cards_zYt8t7",
