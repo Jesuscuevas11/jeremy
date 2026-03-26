@@ -317,7 +317,7 @@
         {% assign fg2_variant = free_gift_tier2_product.selected_or_first_available_variant %}
         <div class="pb-volume-bundle__free-gift-collapsed">
           <img class="pb-volume-bundle__free-gift-collapsed-img" src="{{ free_gift_tier2_product.featured_image | image_url: width: 80 }}" alt="{{ free_gift_tier2_product.title }}" loading="lazy">
-          <span class="pb-volume-bundle__free-gift-label">FREE with purchase</span>
+          <span class="pb-volume-bundle__free-gift-label">GRATIS con la compra</span>
         </div>
         <div class="pb-volume-bundle__free-gift-expanded" data-variant-id="{{ fg2_variant.id }}">
           <div class="pb-volume-bundle__free-gift-left">
@@ -452,7 +452,7 @@
       {%- comment -%} Tier 3 Free Gift (4th unit of same product) {%- endcomment -%}
       <div class="pb-volume-bundle__free-gift-collapsed">
         <img class="pb-volume-bundle__free-gift-collapsed-img" src="{{ product.featured_image | image_url: width: 80 }}" alt="{{ product.title }}" loading="lazy">
-        <span class="pb-volume-bundle__free-gift-label">FREE with purchase</span>
+        <span class="pb-volume-bundle__free-gift-label">GRATIS con la compra</span>
       </div>
       <div class="pb-volume-bundle__free-gift-expanded" data-variant-id="{{ current_variant.id }}">
         <div class="pb-volume-bundle__free-gift-left">
