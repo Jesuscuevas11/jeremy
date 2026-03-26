@@ -3,6 +3,13 @@
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 749px) {
+  .images-with-content-section .page-width {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .images-with-content__heading-group__title.title {
   max-width: 84.8rem;
 }

@@ -23,7 +23,7 @@
 }
 .multicolumn__header__subtitle {
   font-family: Montserrat, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   color: rgb(42, 42, 42);
   letter-spacing: 0.08em;
@@ -32,17 +32,41 @@
 }
 .multicolumn__header__title {
   font-family: Poppins, sans-serif;
+  font-size: 25.2px;
   font-weight: 700;
   color: rgb(42, 42, 42);
   letter-spacing: -0.02em;
   line-height: 1.1;
   margin: 0;
 }
+.multicolumn-features-section .multicolumn-card__text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12.8px;
+  color: #2a2a2a;
+}
+@media screen and (min-width: 750px) {
+  .multicolumn-features-section .multicolumn__header__title {
+    font-size: 42px;
+    max-width: 620px;
+  }
+  .multicolumn-features-section .multicolumn-card__text {
+    font-size: 12.8px;
+    color: #2a2a2a;
+  }
+}
 
 /* Section padding */
 .multicolumn-features-padding {
   padding-top: 3.2rem;
   padding-bottom: 6.4rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 750px) {
+  .multicolumn-features-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media screen and (min-width: 750px) {
   .multicolumn-features-padding {
@@ -55,6 +79,14 @@
     padding-top: 5.6rem;
     padding-bottom: 14rem;
   }
+}
+
+/* Align content with images-with-content text section */
+.multicolumn-features-section .multicolumn__header__titles,
+.multicolumn-features-section .multicolumn-grid {
+  max-width: calc(1264px + 1.6rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* CSS variables for grid gaps */
