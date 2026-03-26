@@ -1727,14 +1727,14 @@
         "padding_bottom": 44
       }
     },
-    "lumin_review_VwUUBa": {
+    "lumin_review_pGmekW": {
       "type": "Lumin-review",
       "blocks": {
-        "rating_summary_6RHQd8": {
+        "rating_summary_zJ9rik": {
           "type": "rating_summary",
           "settings": {
             "rating_summary_score": "4.8",
-            "rating_summary_total": "731 Revisiones",
+            "rating_summary_total": "731 Reviews",
             "rating_bar_5_width": 85,
             "rating_bar_5_count": "624",
             "rating_bar_4_width": 14,
@@ -1747,28 +1747,27 @@
             "rating_bar_1_count": "0",
             "rating_summary_border_radius": 12,
             "rating_summary_bg": "#fafafa",
-            "rating_summary_score_color": "#333333",
-            "rating_summary_text_color": "#666666",
+            "rating_summary_score_color": "#333",
+            "rating_summary_text_color": "#666",
             "rating_bar_bg": "#e5e5e5",
-            "rating_bar_fill": "#333333",
-            "rating_summary_border_color": "#dddddd"
+            "rating_bar_fill": "#333",
+            "rating_summary_border_color": "#ddd"
           }
         },
-        "thumbnail_gallery_r8RPaQ": {
+        "thumbnail_gallery_MzWfL7": {
           "type": "thumbnail_gallery",
-          "disabled": true,
           "settings": {
             "thumbnail_align": "center",
             "gallery_title": "Customer Reviews",
             "gallery_bg": "#f8f8f8",
-            "gallery_title_color": "#333333",
-            "gallery_accent_color": "#000000",
+            "gallery_title_color": "#333",
+            "gallery_accent_color": "#000",
             "border_thickness": 0,
             "border_radius": 8,
             "image_size": 60
           }
         },
-        "review_Ma9Pjn": {
+        "review_twazyQ": {
           "type": "review",
           "settings": {
             "selected_product": "",
@@ -1784,12 +1783,12 @@
             "feature_font_size": 16
           }
         },
-        "review_LJbbnG": {
+        "review_gFK9wh": {
           "type": "review",
           "settings": {
             "selected_product": "",
             "star_rating": 5,
-            "name_text": "Johan D.",
+            "name_text": "Daniel Velez.",
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2025",
@@ -1800,7 +1799,7 @@
             "feature_font_size": 16
           }
         },
-        "review_cnpKhT": {
+        "review_q7BbJh": {
           "type": "review",
           "settings": {
             "selected_product": "",
@@ -1816,7 +1815,7 @@
             "feature_font_size": 16
           }
         },
-        "review_hGTKYF": {
+        "review_PTqV7C": {
           "type": "review",
           "settings": {
             "selected_product": "",
@@ -1832,12 +1831,12 @@
             "feature_font_size": 16
           }
         },
-        "review_FY7FPg": {
+        "review_p9jwdH": {
           "type": "review",
           "settings": {
             "selected_product": "",
             "star_rating": 5,
-            "name_text": "Johan D.",
+            "name_text": "Pedro Salvatierra.",
             "country_code": "US",
             "show_country_flag": true,
             "date_text": "June 2025",
@@ -1850,29 +1849,29 @@
         }
       },
       "block_order": [
-        "rating_summary_6RHQd8",
-        "thumbnail_gallery_r8RPaQ",
-        "review_Ma9Pjn",
-        "review_LJbbnG",
-        "review_cnpKhT",
-        "review_hGTKYF",
-        "review_FY7FPg"
+        "rating_summary_zJ9rik",
+        "thumbnail_gallery_MzWfL7",
+        "review_twazyQ",
+        "review_gFK9wh",
+        "review_q7BbJh",
+        "review_PTqV7C",
+        "review_p9jwdH"
       ],
       "name": "Lumin Review",
       "settings": {
         "editing": true,
         "color_scheme": "",
-        "header_text": "Lo que dicen nuestros clientes sobre nosotros",
+        "header_text": "what our customers say about us",
         "show_top": true,
         "rating_text": "4.8",
         "rating_range": 4.5,
         "star_size_top": 1,
-        "rating_count": "Basado en 16 Reviews",
+        "rating_count": "Based on 16 Reviews",
         "show_customer_images": true,
         "show_country_flags": true,
         "customer_image_size": 40,
         "customer_image_radius": 30,
-        "customer_initials_bg": "#ffd700",
+        "customer_initials_bg": "#FFD700",
         "customer_initials_color": "#000000",
         "review_column_mobile": 1,
         "review_column_tab": 2,
@@ -1888,43 +1887,43 @@
         "star_style": "star",
         "star_size": 0.7,
         "star_radius": 0,
-        "feature_svg_color": "#000000",
+        "feature_svg_color": "#000",
         "inactive_star_color": "#e2e2e2",
         "show_border": true,
         "rw_border": "#f2f2f2",
         "border_radius": 10,
-        "section_bg3": "#000000",
-        "section_bg2": "#000000",
+        "section_bg3": "#000",
+        "section_bg2": "#000",
         "verify_text": "Verified Buyer",
-        "review_bg": "#ffffff",
-        "feature_acc_color": "#000000",
+        "review_bg": "#fff",
+        "feature_acc_color": "#000",
         "review_pd": 20,
         "review_pd_m": 20,
         "show_footer": true,
         "show_product": true,
         "product_image_radius": 4,
-        "like_text": "¿Fue útil esto?",
+        "like_text": "Was this helpful?",
         "show_add_review_button": true,
-        "review_cta_heading": "Reseñas de este producto",
-        "review_cta_subtext": "Comparte tus opiniones con otros clientes",
-        "add_review_button_text": "Agregar tu reseña",
-        "review_cta_heading_color": "#333333",
-        "review_cta_subtext_color": "#666666",
-        "add_review_button_bg": "#000000",
-        "add_review_button_text_color": "#ffffff",
-        "modal_title": "Escribe tu reseña",
-        "name_label": "Tu nombre",
-        "rating_label": "Calificación",
-        "title_label": "Título de la reseña",
-        "review_label": "Tu reseña",
-        "email_label": "Tu correo electrónico",
+        "review_cta_heading": "Review this product",
+        "review_cta_subtext": "Share your thoughts with other customers",
+        "add_review_button_text": "Add Your Review",
+        "review_cta_heading_color": "#333",
+        "review_cta_subtext_color": "#666",
+        "add_review_button_bg": "#000",
+        "add_review_button_text_color": "#fff",
+        "modal_title": "Write Your Review",
+        "name_label": "Your Name",
+        "rating_label": "Rating",
+        "title_label": "Review Title",
+        "review_label": "Your Review",
+        "email_label": "Your Email",
         "date_format": "detailed",
         "cancel_button_text": "Cancel",
         "submit_button_text": "Submit Review",
         "success_message_title": "Thank you for your review!",
         "success_message_body": "Your review has been submitted successfully and will be forwarded to our team.",
         "success_message_duration": "3",
-        "success_message_bg": "#4caf50",
+        "success_message_bg": "#4CAF50",
         "success_message_text": "#ffffff",
         "success_message_position": "top-right",
         "success_message_font_size": 16,
@@ -2014,7 +2013,7 @@
     "extra_button_rJamqn",
     "multicolumn_33iRDt",
     "collapsible_content_JVrqWp",
-    "lumin_review_VwUUBa",
+    "lumin_review_pGmekW",
     "related-products",
     "impact_banner_main",
     "174300570336aa0ded"
