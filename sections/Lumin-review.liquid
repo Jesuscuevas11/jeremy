@@ -2434,7 +2434,7 @@
       function showProducts() {
           for (let i = visibleProductsCount; i < visibleProductsCount + productsPerPage; i++) {
               if (products[i]) {
-                  products[i].style.display = "block";
+                  products[i].style.display = "flex";
               }
           }
           visibleProductsCount += productsPerPage;
@@ -3201,6 +3201,38 @@ Please review and take appropriate action.`;
     }
        }
 
+    /* Grid override for equal-height cards */
+    .rw-container {
+      display: grid !important;
+      column-count: unset !important;
+      -webkit-column-count: unset !important;
+      -moz-column-count: unset !important;
+      grid-template-columns: repeat({{section.settings.review_column_desk}}, 1fr);
+      gap: 15px;
+      align-items: stretch;
+    }
+    @media screen and (max-width: 600px) {
+      .rw-container {
+        grid-template-columns: repeat({{section.settings.review_column_mobile}}, 1fr);
+      }
+    }
+    @media only screen and (min-width: 600px) and (max-width: 900px) {
+      .rw-container {
+        grid-template-columns: repeat({{section.settings.review_column_tab}}, 1fr);
+      }
+    }
+    .rw-container-contant {
+      flex-direction: column;
+      height: 100%;
+      break-inside: unset;
+      margin-bottom: 0;
+    }
+    .review-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
       .rating-box {
       display: flex;
       flex-direction: column;
@@ -3853,7 +3885,7 @@ Please review and take appropriate action.`;
         "type": "text",
         "id": "load_text",
         "label": "t:sections.lumin-review.button_text",
-        "default": "Load More"
+        "default": "Cargar más"
       },
     {
         "type": "header",
