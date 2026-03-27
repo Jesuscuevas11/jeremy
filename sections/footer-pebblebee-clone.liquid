@@ -389,7 +389,7 @@
         {%- comment -%} HEAD: logo + tagline + social {%- endcomment -%}
         <div class="fpb__head">
 
-          <a href="{{ section.settings.logo_url | default: routes.root_url }}" class="fpb__logo">
+          <a href="{{ section.settings.logo_url | default: '#' }}"{% if section.settings.logo_url == blank %} onclick="event.preventDefault()"{% endif %} class="fpb__logo">
             {%- if section.settings.logo != blank -%}
               <img
                 src="{{ section.settings.logo | image_url: width: 350 }}"
@@ -655,9 +655,10 @@
       "label": "Logo"
     },
     {
-      "type": "url",
+      "type": "text",
       "id": "logo_url",
-      "label": "URL del logo"
+      "label": "URL del logo",
+      "info": "Deja vacío para que el logo no redirija"
     },
     {
       "type": "range",

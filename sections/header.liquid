@@ -341,7 +341,7 @@
           {% if section.settings.enable_transparent-header %}
             {% render 'transparent-header', section: section %}
           {% else %}
-              <a href="{{ section.settings.logo_url | default: routes.root_url }}" class="header__heading-link link link--text focus-inset">
+              <a href="{{ section.settings.logo_url | default: '#' }}"{% if section.settings.logo_url == blank %} onclick="event.preventDefault()"{% endif %} class="header__heading-link link link--text focus-inset">
                 {%- if settings.logo != blank -%}
                 <div class="header__heading-logo-wrapper">
                   {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
@@ -414,7 +414,7 @@
           {% if section.settings.enable_transparent-header %}
             {% render 'transparent-header', section: section %}
           {% else %}
-              <a href="{{ section.settings.logo_url | default: routes.root_url }}" class="header__heading-link link link--text focus-inset">
+              <a href="{{ section.settings.logo_url | default: '#' }}"{% if section.settings.logo_url == blank %} onclick="event.preventDefault()"{% endif %} class="header__heading-link link link--text focus-inset">
                 {%- if settings.logo != blank -%}
                   <div class="header__heading-logo-wrapper">
                     {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
@@ -910,9 +910,10 @@ document.querySelectorAll('header-menu').forEach(headerMenu => {
       "info": "t:sections.header.settings.logo_help.content"
     },
     {
-      "type": "url",
+      "type": "text",
       "id": "logo_url",
-      "label": "URL del logo"
+      "label": "URL del logo",
+      "info": "Deja vacío para que el logo no redirija"
     },
     {
       "type": "link_list",
