@@ -389,7 +389,7 @@
         {%- comment -%} HEAD: logo + tagline + social {%- endcomment -%}
         <div class="fpb__head">
 
-          <a href="{{ routes.root_url }}" class="fpb__logo">
+          <a href="{{ section.settings.logo_url | default: routes.root_url }}" class="fpb__logo">
             {%- if section.settings.logo != blank -%}
               <img
                 src="{{ section.settings.logo | image_url: width: 350 }}"
@@ -653,6 +653,11 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo"
+    },
+    {
+      "type": "url",
+      "id": "logo_url",
+      "label": "URL del logo"
     },
     {
       "type": "range",
