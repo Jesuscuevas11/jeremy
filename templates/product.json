@@ -743,8 +743,66 @@
     },
     "content_tabs_specs": {
       "type": "content-tabs",
+      "blocks": {
+        "spec_dim": {
+          "type": "spec",
+          "settings": { "tab": "1", "title": "Dimensiones del producto", "content": "<p>1.77 in (45 mm) x 1.49 in (38 mm) x 0.37 in (9.50 mm)</p>" }
+        },
+        "spec_garantia": {
+          "type": "spec",
+          "settings": { "tab": "1", "title": "Período de garantía", "content": "<p>1 año de garantía limitada contra defectos del producto, efectiva desde el momento de la entrega.</p>" }
+        },
+        "spec_peso": {
+          "type": "spec",
+          "settings": { "tab": "1", "title": "Peso del producto", "content": "<p>0.35 oz (10 g)</p>" }
+        },
+        "spec_bt": {
+          "type": "spec",
+          "settings": { "tab": "1", "title": "Alcance Bluetooth", "content": "<p>Hasta 500 ft (150 m)</p>" }
+        },
+        "spec_agua": {
+          "type": "spec",
+          "settings": { "tab": "1", "title": "Resistencia al agua", "content": "<p>Clasificación IP66</p>" }
+        },
+        "spec_empaque": {
+          "type": "spec",
+          "settings": { "tab": "1", "title": "Dimensiones del empaque", "content": "<p>3.8 in x 4.2 in x 0.5 in (96 mm x 106 mm x 14 mm)</p>" }
+        },
+        "desc_main": {
+          "type": "spec",
+          "settings": { "tab": "2", "title": "", "content": "<p>El <strong>Pebblebee Clip 5</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el Clip 5 te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>" }
+        },
+        "incl_main": {
+          "type": "spec",
+          "settings": { "tab": "3", "title": "Incluye", "content": "<p>Pebblebee Clip 5</p>" }
+        },
+        "bat_vida": {
+          "type": "spec",
+          "settings": { "tab": "4", "title": "Vida de la batería", "content": "<p>Hasta 12 meses con una sola carga</p>" }
+        },
+        "bat_tipo": {
+          "type": "spec",
+          "settings": { "tab": "4", "title": "Tipo de carga", "content": "<p>USB-C (cable no incluido)</p>" }
+        },
+        "req_min": {
+          "type": "spec",
+          "settings": { "tab": "5", "title": "Requisitos mínimos", "content": "<p>App Apple Buscar Mi o Google Find Hub.<br>Los servicios de ubicación y Bluetooth deben estar activados.<br>Requiere servicio celular o conexión a internet.<br>Funciona en Android 9+ y en ciertos países para usuarios mayores de edad.</p>" }
+        }
+      },
+      "block_order": [
+        "spec_dim", "spec_garantia", "spec_peso", "spec_bt", "spec_agua", "spec_empaque",
+        "desc_main",
+        "incl_main",
+        "bat_vida", "bat_tipo",
+        "req_min"
+      ],
       "settings": {
-        "title": "Especificaciones técnicas"
+        "title": "Especificaciones técnicas",
+        "tab1_title": "Especificaciones",
+        "tab2_title": "Descripción",
+        "tab3_title": "Qué incluye",
+        "tab4_title": "Vida de la batería",
+        "tab5_title": "Requisitos"
       }
     },
     "multicolumn_alert_main": {

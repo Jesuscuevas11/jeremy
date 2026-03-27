@@ -1,6 +1,8 @@
 {{ 'section-content-tabs.css' | asset_url | stylesheet_tag }}
 {{ 'content-tabs.js' | asset_url | script_tag }}
 
+{%- assign tab_ids = "tech-specs,description,whats-included,battery-life,requirements" | split: "," -%}
+
 <div class="content-tabs-section color-background-1 background">
   <div class="content-tabs-section-padding">
 
@@ -11,43 +13,34 @@
     <div class="content-tabs__wrapper">
       <div class="content-tabs__tabs">
         <div class="content-tabs__tabs-wrapper content-tabs__tabs-wrapper--5 content-tabs__tabs-wrapper--equal">
-          <div class="content-tabs__tab content-tabs__tab--active focus-inset" data-content-tab-id="#content-tab-tech-specs" tabindex="0">
-            <span>{{ section.settings.tab1_title }}</span>
-          </div>
-          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-description" tabindex="0">
-            <span>{{ section.settings.tab2_title }}</span>
-          </div>
-          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-whats-included" tabindex="0">
-            <span>{{ section.settings.tab3_title }}</span>
-          </div>
-          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-battery-life" tabindex="0">
-            <span>{{ section.settings.tab4_title }}</span>
-          </div>
-          <div class="content-tabs__tab focus-inset" data-content-tab-id="#content-tab-requirements" tabindex="0">
-            <span>{{ section.settings.tab5_title }}</span>
-          </div>
+          {%- for i in (1..5) -%}
+            {%- assign tab_id = tab_ids[forloop.index0] -%}
+            {%- assign tab_title_key = "tab" | append: forloop.index | append: "_title" -%}
+            <div class="content-tabs__tab{% if forloop.first %} content-tabs__tab--active{% endif %} focus-inset" data-content-tab-id="#content-tab-{{ tab_id }}" tabindex="0">
+              <span>{{ section.settings[tab_title_key] }}</span>
+            </div>
+          {%- endfor -%}
         </div>
       </div>
 
-      <div class="content-tabs__content content-tabs__content--2-column content-tabs__content--active animate left" data-content-tab-id="#content-tab-tech-specs">
-        {{ section.settings.tab1_content }}
-      </div>
-
-      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-description">
-        {{ section.settings.tab2_content }}
-      </div>
-
-      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-whats-included">
-        {{ section.settings.tab3_content }}
-      </div>
-
-      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-battery-life">
-        {{ section.settings.tab4_content }}
-      </div>
-
-      <div class="content-tabs__content content-tabs__content--2-column left" data-content-tab-id="#content-tab-requirements">
-        {{ section.settings.tab5_content }}
-      </div>
+      {%- for i in (1..5) -%}
+        {%- assign tab_id = tab_ids[forloop.index0] -%}
+        {%- assign tab_num = forloop.index | append: "" -%}
+        <div class="content-tabs__content content-tabs__content--2-column{% if forloop.first %} content-tabs__content--active animate{% endif %} left" data-content-tab-id="#content-tab-{{ tab_id }}">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.tab == tab_num -%}
+              <div class="content-tabs__content-block" {{ block.shopify_attributes }}>
+                {%- if block.settings.title != blank -%}
+                  <h4 class="content-tabs__content-title">{{ block.settings.title }}</h4>
+                {%- endif -%}
+                {%- if block.settings.content != blank -%}
+                  <div class="content-tabs__content-text rte rte__container">{{ block.settings.content }}</div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
 
     </div>
   </div>
@@ -57,6 +50,7 @@
 {% schema %}
 {
   "name": "Pestañas de Contenido",
+  "max_blocks": 50,
   "settings": [
     {
       "type": "text",
@@ -67,62 +61,63 @@
     {
       "type": "text",
       "id": "tab1_title",
-      "label": "Título pestaña 1",
+      "label": "Nombre pestaña 1",
       "default": "Especificaciones"
-    },
-    {
-      "type": "richtext",
-      "id": "tab1_content",
-      "label": "Contenido pestaña 1",
-      "default": "<p>Agrega aquí las especificaciones técnicas.</p>"
     },
     {
       "type": "text",
       "id": "tab2_title",
-      "label": "Título pestaña 2",
+      "label": "Nombre pestaña 2",
       "default": "Descripción"
-    },
-    {
-      "type": "richtext",
-      "id": "tab2_content",
-      "label": "Contenido pestaña 2",
-      "default": "<p>Agrega aquí la descripción del producto.</p>"
     },
     {
       "type": "text",
       "id": "tab3_title",
-      "label": "Título pestaña 3",
+      "label": "Nombre pestaña 3",
       "default": "Qué incluye"
-    },
-    {
-      "type": "richtext",
-      "id": "tab3_content",
-      "label": "Contenido pestaña 3",
-      "default": "<p>Agrega aquí el contenido de lo que incluye.</p>"
     },
     {
       "type": "text",
       "id": "tab4_title",
-      "label": "Título pestaña 4",
-      "default": "Batería"
-    },
-    {
-      "type": "richtext",
-      "id": "tab4_content",
-      "label": "Contenido pestaña 4",
-      "default": "<p>Agrega aquí la información de la batería.</p>"
+      "label": "Nombre pestaña 4",
+      "default": "Vida de la batería"
     },
     {
       "type": "text",
       "id": "tab5_title",
-      "label": "Título pestaña 5",
+      "label": "Nombre pestaña 5",
       "default": "Requisitos"
-    },
+    }
+  ],
+  "blocks": [
     {
-      "type": "richtext",
-      "id": "tab5_content",
-      "label": "Contenido pestaña 5",
-      "default": "<p>Agrega aquí los requisitos.</p>"
+      "type": "spec",
+      "name": "Ítem de contenido",
+      "settings": [
+        {
+          "type": "select",
+          "id": "tab",
+          "label": "Pestaña",
+          "options": [
+            { "value": "1", "label": "Pestaña 1 – Especificaciones" },
+            { "value": "2", "label": "Pestaña 2 – Descripción" },
+            { "value": "3", "label": "Pestaña 3 – Qué incluye" },
+            { "value": "4", "label": "Pestaña 4 – Batería" },
+            { "value": "5", "label": "Pestaña 5 – Requisitos" }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título del ítem"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Contenido"
+        }
+      ]
     }
   ],
   "presets": [
