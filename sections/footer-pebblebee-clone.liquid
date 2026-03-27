@@ -24,10 +24,17 @@
     font-family: inherit;
     font-size: 1.4rem;
     max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     border-radius: 1.6rem;
     box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  @media screen and (min-width: 750px) {
+    .fpb {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   /* ── Container ── */
@@ -220,9 +227,13 @@
   }
   .fpb__newsletter-form-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
     margin-top: 1.6rem;
+  }
+  @media screen and (min-width: 750px) {
+    .fpb__newsletter-form-row { flex-wrap: nowrap; }
   }
   .fpb__newsletter-input {
     flex: 1;
@@ -258,6 +269,10 @@
   }
   .fpb__newsletter-btn:hover { opacity: 0.9; }
   .fpb__newsletter-btn svg { width: 11px; height: 11px; }
+  @media screen and (max-width: 749px) {
+    .fpb__newsletter-input { width: 100%; }
+    .fpb__newsletter-btn { width: 100%; justify-content: center; }
+  }
 
   /* ── Trademark / info block ── */
   .fpb__info-block { width: 100%; }
@@ -275,6 +290,16 @@
   /* ── Bottom bar ── */
   .fpb__bottom {
     background: #ffffff;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 0 0 1.6rem 1.6rem;
+  }
+  @media screen and (min-width: 750px) {
+    .fpb__bottom {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1280px;
+    }
   }
   .fpb__bottom-inner {
     display: flex;

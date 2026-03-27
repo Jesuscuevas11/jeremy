@@ -2188,7 +2188,7 @@
         "editing": true,
         "color_scheme": "",
         "header_text": "Lo que dicen nuestros clientes sobre nosotros",
-        "show_top": true,
+        "show_top": false,
         "rating_text": "4.8",
         "rating_range": 4.5,
         "star_size_top": 1,

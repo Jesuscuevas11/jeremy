@@ -7,6 +7,16 @@
 {%- endif -%}
 
 {%- style -%}
+  .related-products .card--card,
+  .related-products .card--standard .card__inner {
+    border: none;
+    box-shadow: none;
+  }
+  .related-products .card--card:after,
+  .related-products .card--standard .card__inner:after {
+    box-shadow: none;
+  }
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
