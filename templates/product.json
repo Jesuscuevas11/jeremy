@@ -855,13 +855,93 @@
             "author": "Haley B.",
             "stars": 5
           }
+        },
+        "rev_miguel": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"¡Me encantan! Tengo al menos 8 rastreadores ya. Fueron fáciles de configurar y funcionan de maravilla.\"",
+            "author": "Miguel S. — Nueva York, NY",
+            "stars": 5
+          }
+        },
+        "rev_bradley": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Clip 5\"",
+            "author": "Bradley P. — Sioux City, IA",
+            "stars": 4
+          }
+        },
+        "rev_shawn": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"¡Me encanta! Excelente rastreador, me encantó el color, tiene un sonido muy potente. Mis llaves y estuche de audífonos están seguros. Lo pondré en mi equipaje cuando viaje. Definitivamente vale la pena.\"",
+            "author": "Shawn M. — Marietta, GA",
+            "stars": 5
+          }
+        },
+        "rev_christopher": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Excelente calidad. Es mi segundo pedido de Clip 5 de Pebblebee porque pude ver lo útiles que son. Fáciles de usar, resistentes y con carga duradera; superiores a otros rastreadores del mercado.\"",
+            "author": "Christopher B. — Battle Creek, MI",
+            "stars": 5
+          }
+        },
+        "rev_david": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Preciso y rápido. Funcionó con mucha precisión y rapidez desde el primer momento. Nunca tuve que buscar para encontrarlo.\"",
+            "author": "David L.S. — Swansea, IL",
+            "stars": 5
+          }
+        },
+        "rev_sean": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Gran producto. Soy cliente habitual y nunca decepcionan. Los productos son siempre de alta calidad y los precios son justos. Los recomiendo a cualquiera.\"",
+            "author": "Sean — Courtenay, BC",
+            "stars": 5
+          }
+        },
+        "rev_albert": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Gran producto. Funciona de maravilla. Bien fabricado.\"",
+            "author": "Albert I. — Houthalen-Helchteren",
+            "stars": 5
+          }
+        },
+        "rev_aristotelis": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"Empecé con dificultades, ¡luego todo bien!\"",
+            "author": "Aristotelis B. — Atenas",
+            "stars": 4
+          }
+        },
+        "rev_andrew": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\"La batería recargable es excelente. Sin duda uno de los mejores rastreadores que he probado.\"",
+            "author": "Andrew H. — Zagreb",
+            "stars": 4
+          }
         }
       },
       "block_order": [
         "testimonial_lacy",
         "testimonial_jack",
         "testimonial_steph",
-        "testimonial_haley"
+        "testimonial_haley",
+        "rev_miguel",
+        "rev_shawn",
+        "rev_christopher",
+        "rev_david",
+        "rev_sean",
+        "rev_albert",
+        "rev_aristotelis",
+        "rev_andrew"
       ],
       "settings": {
         "heading": "millones de dispositivos vendidos",
@@ -1953,6 +2033,134 @@
             "dislike_size": 0,
             "feature_font_size": 16
           }
+        },
+        "review_miguel_s": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Miguel S.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "March 2026",
+            "review_head": "¡Me encantan!",
+            "review_text": "Tengo al menos 8 de estos rastreadores. Fueron fáciles de configurar y funcionan de maravilla.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_shawn_m": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Shawn M.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "March 2026",
+            "review_head": "¡Me encanta!",
+            "review_text": "Excelente rastreador, me encantó el color, tiene un sonido muy potente. Mis llaves y estuche de audífonos están seguros. Lo pondré en mi equipaje cuando viaje. Definitivamente vale la pena.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_christopher_b": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Christopher B.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "March 2026",
+            "review_head": "Excelente calidad de producto",
+            "review_text": "Es mi segundo pedido de Clip 5 de Pebblebee porque pude ver lo útiles que son. Fáciles de usar, resistentes y con carga duradera; superiores a otros rastreadores del mercado.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_david_ls": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "David L.S.",
+            "country_code": "US",
+            "show_country_flag": true,
+            "date_text": "March 2026",
+            "review_head": "Preciso y rápido",
+            "review_text": "Funcionó con mucha precisión y rapidez desde el primer momento. Nunca tuve que buscar para encontrarlo.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_sean": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Sean.",
+            "country_code": "CA",
+            "show_country_flag": true,
+            "date_text": "March 2026",
+            "review_head": "Gran producto",
+            "review_text": "Soy cliente habitual y nunca decepcionan. Los productos son siempre de alta calidad y los precios son justos. Los recomiendo a cualquiera.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_albert_i": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 5,
+            "name_text": "Albert I.",
+            "country_code": "BE",
+            "show_country_flag": true,
+            "date_text": "February 2026",
+            "review_head": "Gran producto",
+            "review_text": "Funciona de maravilla. Bien fabricado.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_aristotelis": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 4,
+            "name_text": "Aristotelis B.",
+            "country_code": "GR",
+            "show_country_flag": true,
+            "date_text": "February 2026",
+            "review_head": "Empecé con dificultades, ¡luego todo bien!",
+            "review_text": "Al principio tuve algunos inconvenientes para configurarlo, pero una vez funcionando va perfecto.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
+        },
+        "review_andrew_h": {
+          "type": "review",
+          "settings": {
+            "selected_product": "",
+            "star_rating": 4,
+            "name_text": "Andrew H.",
+            "country_code": "HR",
+            "show_country_flag": true,
+            "date_text": "February 2026",
+            "review_head": "La batería recargable es excelente",
+            "review_text": "Sin duda uno de los mejores rastreadores que he probado. La duración de la batería es impresionante.",
+            "like_size": 0,
+            "dislike_size": 0,
+            "feature_font_size": 16
+          }
         }
       },
       "block_order": [
@@ -1965,7 +2173,15 @@
         "review_PTqV7C",
         "review_p9jwdH",
         "review_wkMajB",
-        "review_7JqJTF"
+        "review_7JqJTF",
+        "review_miguel_s",
+        "review_shawn_m",
+        "review_christopher_b",
+        "review_david_ls",
+        "review_sean",
+        "review_albert_i",
+        "review_aristotelis",
+        "review_andrew_h"
       ],
       "name": "Lumin Review",
       "settings": {
