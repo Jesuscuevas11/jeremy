@@ -64,7 +64,7 @@
         "color-hover-background": "#ffffff",
         "color-hover-text": "#212121",
         "logo_position": "middle-left",
-        "logo_url": "#",
+        "logo_url": "",
         "menu": "",
         "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
