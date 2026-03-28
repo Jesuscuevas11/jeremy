@@ -63,7 +63,7 @@
             "widget_title": "Compra más, ahorra más",
             "tier1_title": "Compra 1",
             "tier2_title": "Compra 2",
-            "tier2_subtitle": "¡Ahorra 15% y regalo gratis!",
+            "tier2_subtitle": "¡Ahorra 15%!",
             "tier2_badge": "POPULAR",
             "tier2_discount": 15,
             "free_gift_tier2": "",
@@ -746,54 +746,104 @@
       "blocks": {
         "spec_dim": {
           "type": "spec",
-          "settings": { "tab": "1", "title": "Dimensiones del producto", "content": "<p>1.77 in (45 mm) x 1.49 in (38 mm) x 0.37 in (9.50 mm)</p>" }
+          "settings": {
+            "tab": "1",
+            "title": "Dimensiones del producto",
+            "content": "<p>1.77 in (45 mm) x 1.49 in (38 mm) x 0.37 in (9.50 mm)</p>"
+          }
         },
         "spec_garantia": {
           "type": "spec",
-          "settings": { "tab": "1", "title": "Período de garantía", "content": "<p>1 año de garantía limitada contra defectos del producto, efectiva desde el momento de la entrega.</p>" }
+          "settings": {
+            "tab": "1",
+            "title": "Período de garantía",
+            "content": "<p>1 año de garantía limitada contra defectos del producto, efectiva desde el momento de la entrega.</p>"
+          }
         },
         "spec_peso": {
           "type": "spec",
-          "settings": { "tab": "1", "title": "Peso del producto", "content": "<p>0.35 oz (10 g)</p>" }
+          "settings": {
+            "tab": "1",
+            "title": "Peso del producto",
+            "content": "<p>0.35 oz (10 g)</p>"
+          }
         },
         "spec_bt": {
           "type": "spec",
-          "settings": { "tab": "1", "title": "Alcance Bluetooth", "content": "<p>Hasta 500 ft (150 m)</p>" }
+          "settings": {
+            "tab": "1",
+            "title": "Alcance Bluetooth",
+            "content": "<p>Hasta 500 ft (150 m)</p>"
+          }
         },
         "spec_agua": {
           "type": "spec",
-          "settings": { "tab": "1", "title": "Resistencia al agua", "content": "<p>Clasificación IP66</p>" }
+          "settings": {
+            "tab": "1",
+            "title": "Resistencia al agua",
+            "content": "<p>Clasificación IP66</p>"
+          }
         },
         "spec_empaque": {
           "type": "spec",
-          "settings": { "tab": "1", "title": "Dimensiones del empaque", "content": "<p>3.8 in x 4.2 in x 0.5 in (96 mm x 106 mm x 14 mm)</p>" }
+          "settings": {
+            "tab": "1",
+            "title": "Dimensiones del empaque",
+            "content": "<p>3.8 in x 4.2 in x 0.5 in (96 mm x 106 mm x 14 mm)</p>"
+          }
         },
         "desc_main": {
           "type": "spec",
-          "settings": { "tab": "2", "title": "", "content": "<p>El <strong>Pebblebee Clip 5</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el Clip 5 te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>" }
+          "settings": {
+            "tab": "2",
+            "title": "",
+            "content": "<p>El <strong>Pebblebee Clip 5</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el Clip 5 te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>"
+          }
         },
         "incl_main": {
           "type": "spec",
-          "settings": { "tab": "3", "title": "Incluye", "content": "<p>Pebblebee Clip 5</p>" }
+          "settings": {
+            "tab": "3",
+            "title": "Incluye",
+            "content": "<p>Pebblebee Clip 5</p>"
+          }
         },
         "bat_vida": {
           "type": "spec",
-          "settings": { "tab": "4", "title": "Vida de la batería", "content": "<p>Hasta 12 meses con una sola carga</p>" }
+          "settings": {
+            "tab": "4",
+            "title": "Vida de la batería",
+            "content": "<p>Hasta 12 meses con una sola carga</p>"
+          }
         },
         "bat_tipo": {
           "type": "spec",
-          "settings": { "tab": "4", "title": "Tipo de carga", "content": "<p>USB-C (cable no incluido)</p>" }
+          "settings": {
+            "tab": "4",
+            "title": "Tipo de carga",
+            "content": "<p>USB-C (cable no incluido)</p>"
+          }
         },
         "req_min": {
           "type": "spec",
-          "settings": { "tab": "5", "title": "Requisitos mínimos", "content": "<p>App Apple Buscar Mi o Google Find Hub.<br>Los servicios de ubicación y Bluetooth deben estar activados.<br>Requiere servicio celular o conexión a internet.<br>Funciona en Android 9+ y en ciertos países para usuarios mayores de edad.</p>" }
+          "settings": {
+            "tab": "5",
+            "title": "Requisitos mínimos",
+            "content": "<p>App Apple Buscar Mi o Google Find Hub.<br>Los servicios de ubicación y Bluetooth deben estar activados.<br>Requiere servicio celular o conexión a internet.<br>Funciona en Android 9+ y en ciertos países para usuarios mayores de edad.</p>"
+          }
         }
       },
       "block_order": [
-        "spec_dim", "spec_garantia", "spec_peso", "spec_bt", "spec_agua", "spec_empaque",
+        "spec_dim",
+        "spec_garantia",
+        "spec_peso",
+        "spec_bt",
+        "spec_agua",
+        "spec_empaque",
         "desc_main",
         "incl_main",
-        "bat_vida", "bat_tipo",
+        "bat_vida",
+        "bat_tipo",
         "req_min"
       ],
       "settings": {
@@ -859,22 +909,18 @@
         "rev_miguel": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"¡Me encantan! Tengo al menos 8 rastreadores ya. Fueron fáciles de configurar y funcionan de maravilla.\"",
             "author": "Miguel S. — Nueva York, NY",
             "stars": 5
           }
         },
-        "rev_bradley": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "\"Clip 5\"",
-            "author": "Bradley P. — Sioux City, IA",
-            "stars": 4
-          }
-        },
         "rev_shawn": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"¡Me encanta! Excelente rastreador, me encantó el color, tiene un sonido muy potente. Mis llaves y estuche de audífonos están seguros. Lo pondré en mi equipaje cuando viaje. Definitivamente vale la pena.\"",
             "author": "Shawn M. — Marietta, GA",
             "stars": 5
@@ -883,6 +929,8 @@
         "rev_christopher": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"Excelente calidad. Es mi segundo pedido de Clip 5 de Pebblebee porque pude ver lo útiles que son. Fáciles de usar, resistentes y con carga duradera; superiores a otros rastreadores del mercado.\"",
             "author": "Christopher B. — Battle Creek, MI",
             "stars": 5
@@ -891,6 +939,8 @@
         "rev_david": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"Preciso y rápido. Funcionó con mucha precisión y rapidez desde el primer momento. Nunca tuve que buscar para encontrarlo.\"",
             "author": "David L.S. — Swansea, IL",
             "stars": 5
@@ -899,6 +949,8 @@
         "rev_sean": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"Gran producto. Soy cliente habitual y nunca decepcionan. Los productos son siempre de alta calidad y los precios son justos. Los recomiendo a cualquiera.\"",
             "author": "Sean — Courtenay, BC",
             "stars": 5
@@ -907,6 +959,8 @@
         "rev_albert": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"Gran producto. Funciona de maravilla. Bien fabricado.\"",
             "author": "Albert I. — Houthalen-Helchteren",
             "stars": 5
@@ -915,6 +969,8 @@
         "rev_aristotelis": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"Empecé con dificultades, ¡luego todo bien!\"",
             "author": "Aristotelis B. — Atenas",
             "stars": 4
@@ -923,6 +979,8 @@
         "rev_andrew": {
           "type": "testimonial",
           "settings": {
+            "fallback_image_url": "",
+            "image_position": "",
             "quote": "\"La batería recargable es excelente. Sin duda uno de los mejores rastreadores que he probado.\"",
             "author": "Andrew H. — Zagreb",
             "stars": 4
