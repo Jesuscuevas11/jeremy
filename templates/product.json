@@ -728,6 +728,7 @@
         "subtitle": "Nuevo lanzamiento Evercolor",
         "title": "Colores limitados. Nunca repetidos.",
         "vimeo_id": "1159913822",
+        "image_2": "shopify://shop_images/ChatGPT_Image_Mar_12_2026_08_49_03_AM.png",
         "images_aspect_ratio": "2/1",
         "text_subheading": "Sobre el lanzamiento",
         "text_heading": "Subzero & Hot Coral",
@@ -1012,6 +1013,7 @@
         "slide_car_keys": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_27_mar_2026_12_43_32.png",
             "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_car-keys.png?v=1762378617",
             "image_position": ""
           }
@@ -1019,6 +1021,7 @@
         "slide_snowmobile": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_27_mar_2026_12_38_24.png",
             "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_snowmobile.png?v=1770713081",
             "image_position": ""
           }
@@ -1026,6 +1029,7 @@
         "slide_open_backpack": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_27_mar_2026_12_40_40.png",
             "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_open-backpack.png?v=1770712962",
             "image_position": ""
           }
@@ -1033,6 +1037,7 @@
         "slide_gym_bag": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_27_mar_2026_12_40_40.png",
             "fallback_image_url": "https://pebblebee.com/cdn/shop/files/type_lifestyle_view_gym-bag_5f0a4edd-f125-4562-b172-2562d6fdc34e.png?v=1762378755",
             "image_position": ""
           }
@@ -1051,6 +1056,8 @@
       "settings": {
         "subtitle": "Protección inigualable",
         "title": "Encuentra cualquier cosa, en cualquier momento, desde cualquier lugar",
+        "image_1": "shopify://shop_images/ChatGPT_Image_26_mar_2026_16_24_49.jpg",
+        "image_2": "shopify://shop_images/icloud.webp",
         "images_aspect_ratio": "2/1",
         "text_1": "<p><strong>Detección de rastreo no deseado</strong> — Recibe alertas tanto en Apple como en Android cuando un rastreador desconocido ha estado viajando contigo.</p>",
         "text_2": "<p><strong>Tu objeto perdido no está realmente perdido</strong> — no cuando miles de millones de dispositivos Apple o Android pueden enviar la ubicación de tu rastreador de forma anónima.</p>"
