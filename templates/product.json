@@ -675,6 +675,8 @@
       ],
       "custom_css": [],
       "settings": {
+        "pb_tooltip_image": "shopify://shop_images/ChatGPT_Image_28_mar_2026_18_05_24.png",
+        "pb_tooltip_text": "Wherever you go, your items are backed by the world's largest networks: Apple Find My for iOS and Google's Find Hub for Android.",
         "enable_sticky_info": true,
         "no_scroll": false,
         "show_feature_image_first": true,
