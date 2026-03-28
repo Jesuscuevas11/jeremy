@@ -1510,10 +1510,14 @@
             }
           </style>
 
+          {%- if section.settings.pb_tooltip_image != blank -%}
           <div class="pb-tooltip-container">
-            <img src="https://cdn.shopify.com/s/files/1/0066/1474/5152/files/content_well_false_left_item_android_padding_false_c14375ff-9c42-4788-bd45-9b6bdcbdd5dd.png?v=1755307156" alt="Apple Find My or Google's Find My Device">
-            <span class="pb-tooltip-text">Wherever you go, your items are backed by the world's largest networks: Apple Find My for iOS and Google's Find Hub for Android.</span>
+            <img src="{{ section.settings.pb_tooltip_image | image_url: width: 800 }}" alt="{{ section.settings.pb_tooltip_image.alt | escape }}">
+            {%- if section.settings.pb_tooltip_text != blank -%}
+              <span class="pb-tooltip-text">{{ section.settings.pb_tooltip_text }}</span>
+            {%- endif -%}
           </div>
+          {%- endif -%}
 
           <div class="pb-about">
             <button class="pb-about__accordion-toggle" aria-label="toggle" type="button" onclick="this.closest('.pb-about').classList.toggle('is-open')">
@@ -10851,6 +10855,21 @@
     }
   ],
   "settings": [
+    {
+      "type": "header",
+      "content": "Tooltip imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "pb_tooltip_image",
+      "label": "Imagen tooltip"
+    },
+    {
+      "type": "text",
+      "id": "pb_tooltip_text",
+      "label": "Texto tooltip",
+      "default": "Wherever you go, your items are backed by the world's largest networks: Apple Find My for iOS and Google's Find Hub for Android."
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
