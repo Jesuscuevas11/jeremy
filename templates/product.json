@@ -734,7 +734,7 @@
         "images_aspect_ratio": "2/1",
         "text_subheading": "Sobre el lanzamiento",
         "text_heading": "Subzero & Hot Coral",
-        "text_content": "<p>La temperatura es una fuerza invisible que moldea tus instintos mucho antes de que seas consciente de ello. Freeze Frame explora cómo la temperatura se convierte en memoria y la memoria en intuición. Más que una combinación de colores, Freeze Frame es un recordatorio de que las fuerzas invisibles a menudo nos moldean más. <strong>Cuando se van, se van.</strong> <a href=\"/pages/evercolor\" target=\"_blank\" title=\"Evercolor\">Saber más</a></p>"
+        "text_content": "<p>La temperatura es una fuerza invisible que moldea tus instintos mucho antes de que seas consciente de ello. Freeze Frame explora cómo la temperatura se convierte en memoria y la memoria en intuición. Más que una combinación de colores, Freeze Frame es un recordatorio de que las fuerzas invisibles a menudo nos moldean más. <strong>Cuando se van, se van.</strong></p>"
       }
     },
     "multicolumn_features_main": {
@@ -800,7 +800,7 @@
           "settings": {
             "tab": "2",
             "title": "",
-            "content": "<p>El <strong>Pebblebee Clip 5</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el Clip 5 te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>"
+            "content": "<p>El <strong>ubicore Clip 5</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el Clip 5 te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>"
           }
         },
         "incl_main": {
@@ -808,7 +808,7 @@
           "settings": {
             "tab": "3",
             "title": "Incluye",
-            "content": "<p>Pebblebee Clip 5</p>"
+            "content": "<p>Ubicore Clip 5</p>"
           }
         },
         "bat_vida": {
@@ -863,7 +863,7 @@
       "settings": {
         "subtitle": "Nueva función de seguridad personal",
         "title": "Conoce Alert",
-        "description": "Alert, una función gratuita en cada Pebblebee Clip, convierte un llavero común en un salvavidas: pulsaciones rápidas activan una luz estroboscópica, suena una sirena y envía tu ubicación a las personas en las que confías."
+        "description": "Alert, una función gratuita en cada Ubicore Clip, convierte un llavero común en un salvavidas: pulsaciones rápidas activan una luz estroboscópica, suena una sirena y envía tu ubicación a las personas en las que confías."
       }
     },
     "testimonials_main": {
