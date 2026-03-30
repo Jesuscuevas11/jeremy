@@ -800,7 +800,7 @@
           "settings": {
             "tab": "2",
             "title": "",
-            "content": "<p>El <strong>ubicore Clip 5</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el Clip 5 te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>"
+            "content": "<p>El <strong>GPS Ubicore</strong> es un localizador Bluetooth compacto y versátil diseñado para ayudarte a mantener el control de tus pertenencias. Con su resistente diseño de clip, se sujeta fácilmente a llaveros, bolsos, maletas o cualquier objeto que desees monitorear. Gracias a su alerta audible, LEDs brillantes y mayor alcance Bluetooth, el GPS Ubicore te permite localizar tus cosas rápidamente desde tu smartphone. La función gratuita de seguridad personal <strong>Alert</strong> te ayuda a mantenerte seguro.</p><p>Se integra perfectamente con <strong>Apple Buscar Mi</strong> o la red <strong>Google Find Hub</strong>, ofreciendo amplia compatibilidad y cobertura global. La batería recargable brinda energía duradera, siendo una solución ecológica y conveniente para el uso diario.</p>"
           }
         },
         "incl_main": {
@@ -808,7 +808,7 @@
           "settings": {
             "tab": "3",
             "title": "Incluye",
-            "content": "<p>Ubicore Clip 5</p>"
+            "content": "<p>GPS Ubicore</p>"
           }
         },
         "bat_vida": {
@@ -1072,28 +1072,28 @@
           "type": "collapsible_row",
           "settings": {
             "question": "¿Este rastreador funciona con Android y iOS?",
-            "answer": "<p>Sí, Ubicore Clip 5 se conecta con Apple Find My en iOS o con Find Hub de Google en Android. Esa compatibilidad multinetwork significa que un solo Clip 5 puede usarse en ambos sistemas, a diferencia de otros rastreadores que te obligan a comprar uno nuevo si cambias de teléfono.</p>"
+            "answer": "<p>Sí, GPS Ubicorese conecta con Apple Find My en iOS o con Find Hub de Google en Android. Esa compatibilidad multinetwork significa que un solo GPS puede usarse en ambos sistemas, a diferencia de otros rastreadores que te obligan a comprar uno nuevo si cambias de teléfono.</p>"
           }
         },
         "faq_block_2": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿Cuánto dura la batería de un rastreador de llaves?",
-            "answer": "<p>Ubicore Clip 5 funciona hasta 12 meses con una sola carga USB-C. Su diseño recargable elimina pilas desechables y te ahorra dinero, haciendo a Ubicore más ecológico que los rastreadores de batería desechable.</p>"
+            "answer": "<p>GPS Ubicore funciona hasta 12 meses con una sola carga USB-C. Su diseño recargable elimina pilas desechables y te ahorra dinero, haciendo a Ubicore más ecológico que los rastreadores de batería desechable.</p>"
           }
         },
         "faq_block_3": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿Cuál es el alcance de un rastreador Bluetooth antes de desconectarse?",
-            "answer": "<p>Ubicore Clip 5 mantiene una conexión Bluetooth directa hasta unos 150 metros en espacio abierto, casi el doble que muchos competidores. Si el objeto sale del alcance Bluetooth, aún puede localizarse mediante las redes globales de Apple Find My o Google Find Hub.</p>"
+            "answer": "<p>GPS Ubicore mantiene una conexión Bluetooth directa hasta unos 150 metros en espacio abierto, casi el doble que muchos competidores. Si el objeto sale del alcance Bluetooth, aún puede localizarse mediante las redes globales de Apple Find My o Google Find Hub.</p>"
           }
         },
         "faq_block_4": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿Hay una mejor alternativa a AirTag para usuarios de Android?",
-            "answer": "<p>Sí, Ubicore Clip 5 se integra nativamente con Find Hub de Google, mientras que AirTag solo funciona con iPhone. Ubicore también es compatible con Apple Find My, así que tienes cobertura multiplataforma real en una sola etiqueta.</p>"
+            "answer": "<p>Sí, GPS Ubicore se integra nativamente con Find Hub de Google, mientras que AirTag solo funciona con iPhone. Ubicore también es compatible con Apple Find My, así que tienes cobertura multiplataforma real en una sola etiqueta.</p>"
           }
         },
         "faq_block_5": {
