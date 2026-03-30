@@ -44,7 +44,7 @@
         "layout": "horizontal",
         "text_alignment": "left",
         "text_alignment_mobile": "center",
-        "color_scheme_main": "",
+        "color_scheme_main": "inverse",
         "color_scheme": "inverse",
         "full_width": false,
         "border_radius": 12,
