@@ -11,141 +11,13 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "announcement_bar_scrolling_mczYxd": {
-      "type": "announcement-bar-scrolling",
-      "blocks": {
-        "announcement_dTpxWa": {
-          "type": "announcement",
-          "settings": {
-            "text": "<strong>Theme Created </strong><em>by</em><strong> Lumintheme</strong>",
-            "link": "",
-            "font_family": "body",
-            "text_size": 16,
-            "text_size_mobile": 14,
-            "text_color": "#ffffff",
-            "use_gradient": false,
-            "gradient_color_1": "#000000",
-            "gradient_color_2": "#a3a1a1",
-            "gradient_angle": 90,
-            "margin": 20,
-            "letter_spacing": 0,
-            "letter_spacing_mobile": 0,
-            "icon": "none",
-            "custom_image_height": 20
-          }
-        }
-      },
-      "block_order": [
-        "announcement_dTpxWa"
-      ],
-      "disabled": true,
-      "name": "t:sections.announcement-bar.presets.name-scrolling",
-      "settings": {
-        "background_color": "#000000",
-        "background_gradient": "",
-        "show_line_separator": true,
-        "scroll_speed": 80,
-        "scroll_direction": "1",
-        "mobile_height": 40,
-        "desktop_height": 40
-      }
-    },
-    "trust_badges_FHUXaB": {
-      "type": "trust-badges",
-      "blocks": {
-        "image_fjBiUW": {
-          "type": "image",
-          "settings": {
-            "feature_title": "<strong>Fast Shipping</strong>",
-            "feature_text": "<p>Doorstep delivery to most of the US.</p>",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_Kig7Lp": {
-          "type": "image",
-          "settings": {
-            "feature_title": "<strong>Price-match guarantee</strong>",
-            "feature_text": "<p>Safe money when ordering with us</p>",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_NcbnLf": {
-          "type": "image",
-          "settings": {
-            "feature_title": "<strong>Hassle-free exchange</strong>",
-            "feature_text": "<p>No questions ask</p>",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_aPngVT": {
-          "type": "image",
-          "settings": {
-            "feature_title": "<strong>5 Star Reviews</strong>",
-            "feature_text": "<p>Customer satisfaction No.1 priority</p>",
-            "feature_url": "",
-            "hide_image": false
-          }
-        }
-      },
-      "block_order": [
-        "image_fjBiUW",
-        "image_Kig7Lp",
-        "image_NcbnLf",
-        "image_aPngVT"
-      ],
-      "disabled": true,
-      "name": "Feature Blocks",
-      "settings": {
-        "feature_row": 4,
-        "feature_row_mobile": 2,
-        "feature_gap": 20,
-        "feature_gap_mobile": 20,
-        "feature_padding_horizontal": 0,
-        "feature_padding_vertical": 0,
-        "feature_radius": 16,
-        "feature_border_thickness": 0,
-        "feature_shadow": false,
-        "feature_heading_size": 14,
-        "feature_heading_size_mobile": 12,
-        "feature_heading_height": 130,
-        "feature_heading_mt": 8,
-        "feature_text_size": 12,
-        "feature_text_size_mobile": 12,
-        "feature_text_height": 130,
-        "feature_text_mt": 4,
-        "feature_icon_size": 42,
-        "feature_icon_size_mobile": 42,
-        "feature_bg": "#ffffff",
-        "feature_border_color": "#000000",
-        "feature_shadow_color": "#000000",
-        "feature_heading_color": "#000000",
-        "feature_text_color": "#000000",
-        "feature_icon_color": "#000000",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 40,
-        "padding_bottom": 16,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 210,
-        "border_thickness": 0,
-        "lazy": true
-      }
-    },
     "newsletter_VVgzTd": {
       "type": "newsletter",
       "blocks": {
         "heading_VBJKEe": {
           "type": "heading",
           "settings": {
-            "heading": "Want the chance to trial our new products?",
+            "heading": "¿Quieres tener la oportunidad de probar nuestros nuevos productos?",
             "heading_size": "h2",
             "subheading": ""
           }
@@ -153,7 +25,7 @@
         "paragraph_gK63td": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+            "text": "<p>Sé el primero en enterarte de nuevas colecciones y ofertas exclusivas.</p>"
           }
         },
         "email_form_Np3YfU": {
@@ -166,7 +38,6 @@
         "paragraph_gK63td",
         "email_form_Np3YfU"
       ],
-      "disabled": true,
       "settings": {
         "background_style": "normal",
         "overlay_opacity": 15,
@@ -206,6 +77,7 @@
     },
     "footer_pebblebee": {
       "type": "footer-pebblebee-clone",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "bg_color": "#25282a",
@@ -240,8 +112,6 @@
     }
   },
   "order": [
-    "announcement_bar_scrolling_mczYxd",
-    "trust_badges_FHUXaB",
     "newsletter_VVgzTd",
     "section_divider_RzyyxR",
     "footer_pebblebee"
