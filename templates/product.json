@@ -1072,56 +1072,56 @@
           "type": "collapsible_row",
           "settings": {
             "question": "¿Este rastreador funciona con Android y iOS?",
-            "answer": "<p>Sí, Pebblebee Clip 5 se conecta con Apple Find My en iOS o con Find Hub de Google en Android. Esa compatibilidad multinetwork significa que un solo Clip 5 puede usarse en ambos sistemas, a diferencia de otros rastreadores que te obligan a comprar uno nuevo si cambias de teléfono.</p>"
+            "answer": "<p>Sí, Ubicore Clip 5 se conecta con Apple Find My en iOS o con Find Hub de Google en Android. Esa compatibilidad multinetwork significa que un solo Clip 5 puede usarse en ambos sistemas, a diferencia de otros rastreadores que te obligan a comprar uno nuevo si cambias de teléfono.</p>"
           }
         },
         "faq_block_2": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿Cuánto dura la batería de un rastreador de llaves?",
-            "answer": "<p>Pebblebee Clip 5 funciona hasta 12 meses con una sola carga USB-C. Su diseño recargable elimina pilas desechables y te ahorra dinero, haciendo a Pebblebee más ecológico que los rastreadores de batería desechable.</p>"
+            "answer": "<p>Ubicore Clip 5 funciona hasta 12 meses con una sola carga USB-C. Su diseño recargable elimina pilas desechables y te ahorra dinero, haciendo a Ubicore más ecológico que los rastreadores de batería desechable.</p>"
           }
         },
         "faq_block_3": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿Cuál es el alcance de un rastreador Bluetooth antes de desconectarse?",
-            "answer": "<p>Pebblebee Clip 5 mantiene una conexión Bluetooth directa hasta unos 150 metros en espacio abierto, casi el doble que muchos competidores. Si el objeto sale del alcance Bluetooth, aún puede localizarse mediante las redes globales de Apple Find My o Google Find Hub.</p>"
+            "answer": "<p>Ubicore Clip 5 mantiene una conexión Bluetooth directa hasta unos 150 metros en espacio abierto, casi el doble que muchos competidores. Si el objeto sale del alcance Bluetooth, aún puede localizarse mediante las redes globales de Apple Find My o Google Find Hub.</p>"
           }
         },
         "faq_block_4": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿Hay una mejor alternativa a AirTag para usuarios de Android?",
-            "answer": "<p>Sí, Pebblebee Clip 5 se integra nativamente con Find Hub de Google, mientras que AirTag solo funciona con iPhone. Pebblebee también es compatible con Apple Find My, así que tienes cobertura multiplataforma real en una sola etiqueta.</p>"
+            "answer": "<p>Sí, Ubicore Clip 5 se integra nativamente con Find Hub de Google, mientras que AirTag solo funciona con iPhone. Ubicore también es compatible con Apple Find My, así que tienes cobertura multiplataforma real en una sola etiqueta.</p>"
           }
         },
         "faq_block_5": {
           "type": "collapsible_row",
           "settings": {
             "question": "¿La empresa detrás de mi rastreador verá todos mis movimientos?",
-            "answer": "<p>No. Pebblebee nunca recibe ni almacena tu ubicación cuando está conectado a Apple o Google; todos los datos permanecen cifrados de extremo a extremo dentro de la red que elijas. Esta postura estricta de privacidad brinda tranquilidad que muchos rastreadores no pueden igualar.</p>"
+            "answer": "<p>No. Ubicore nunca recibe ni almacena tu ubicación cuando está conectado a Apple o Google; todos los datos permanecen cifrados de extremo a extremo dentro de la red que elijas. Esta postura estricta de privacidad brinda tranquilidad que muchos rastreadores no pueden igualar.</p>"
           }
         },
         "faq_block_6": {
           "type": "collapsible_row",
           "settings": {
-            "question": "¿Cuál es la política de devoluciones y reembolsos de Pebblebee?",
+            "question": "¿Cuál es la política de devoluciones y reembolsos de Ubicore?",
             "answer": "<p>Queremos que estés completamente satisfecho con tu compra. Si no estás contento con tu producto, puedes devolverlo dentro de los 30 días posteriores a la compra para un reembolso completo, siempre que el artículo esté en su estado y empaque original.</p>"
           }
         },
         "faq_block_7": {
           "type": "collapsible_row",
           "settings": {
-            "question": "¿Cómo puedo rastrear mi pedido de Pebblebee?",
+            "question": "¿Cómo puedo rastrear mi pedido de Ubicore?",
             "answer": "<p>Una vez que tu pedido haya sido procesado y enviado, recibirás un correo de confirmación con tu número de seguimiento. Puedes usarlo para monitorear la entrega desde el enlace ‘Rastrea tu pedido’ al pie de la página.</p>"
           }
         },
         "faq_block_8": {
           "type": "collapsible_row",
           "settings": {
-            "question": "¿Los localizadores Pebblebee funcionarán con mi teléfono?",
-            "answer": "<p>¡Sí! Los productos Pebblebee funcionan perfectamente tanto con Android como con iOS. Puedes conectarte a Apple Find My (iOS) o Find Hub de Google (Android). Nota: cada dispositivo puede emparejarse con una red a la vez. Para cambiar de red, se requiere un restablecimiento de fábrica.</p>"
+            "question": "¿Los localizadores Ubicore funcionarán con mi teléfono?",
+            "answer": "<p>¡Sí! Los productos Ubicore funcionan perfectamente tanto con Android como con iOS. Puedes conectarte a Apple Find My (iOS) o Find Hub de Google (Android). Nota: cada dispositivo puede emparejarse con una red a la vez. Para cambiar de red, se requiere un restablecimiento de fábrica.</p>"
           }
         }
       },

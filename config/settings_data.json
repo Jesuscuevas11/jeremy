@@ -36,7 +36,7 @@
     "spacing_grid_vertical": 16,
     "animations_reveal_on_scroll": false,
     "animations_hover_elements": "default",
-    "show_sticky_cart_button": true,
+    "show_sticky_cart_button": false,
     "show_vendor_atc": true,
     "show_atc_desktop_full": false,
     "sticky_atc_desktop_img_width": 36,
